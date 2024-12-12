@@ -1,0 +1,13 @@
+/* ================================= Tab Css Start =========================== */
+.common-tab {
+    .nav-link {
+        &.active {
+            color: var(--main-two-600) !important; 
+            font-weight: 700 !important;
+        }
+        &:hover {
+            color: var(--main-two-600);
+        }
+    }
+}
+/* ================================= Tab Css End =========================== */

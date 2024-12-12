@@ -1,0 +1,130 @@
+/* ================================= Padding Css Start =========================== */
+@each $property, $value in $spaces {
+  .tw-p-#{$property} {
+    padding: var(--size-#{$property});
+  }
+}
+
+@each $property, $value in $spaces {
+  .tw-px-#{$property} {
+    padding-inline: var(--size-#{$property});
+  }
+}
+
+@each $property, $value in $spaces {
+  .tw-py-#{$property} {
+    padding-block: var(--size-#{$property});
+  }
+}
+
+@each $property, $value in $spaces {
+  .tw-ps-#{$property} {
+    padding-inline-start: var(--size-#{$property});
+  }
+}
+
+@each $property, $value in $spaces {
+  .tw-pe-#{$property} {
+    padding-inline-end: var(--size-#{$property});
+  }
+}
+
+@each $property, $value in $spaces {
+  .tw-pt-#{$property} {
+    padding-block-start: var(--size-#{$property});
+  }
+}
+
+@each $property, $value in $spaces {
+  .tw-pb-#{$property} {
+    padding-block-end: var(--size-#{$property});
+  }
+}
+
+.tw {
+  &-px {
+    &-36-px {
+      padding-inline: clamp(1rem, -1rem + 8vw, 2.25rem);
+    }
+  }
+  &-px {
+    &-56-px {
+      padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+    }
+  }
+  &-py {
+    &-84-px {
+      padding-block: clamp(2.5rem, -1rem + 8vw, 5.25rem);
+    }
+  }
+  &-ps {
+    &-56-px {
+      padding-inline-start: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+    }
+    &-98-px {
+      padding-inline-start: 98px;
+    }
+  }
+}
+
+.py-120 {
+  padding-block-start: 60px;
+  padding-block-end: 60px;
+  @media (min-width: 576px) {
+    padding-block-start: 80px;
+    padding-block-end: 80px;
+  }
+  @media (min-width: 992px) {
+    padding-block-start: 120px;
+    padding-block-end: 120px;
+  }
+}
+.pt-120 {
+    padding-block-start: 60px;
+    @media (min-width: 576px) {
+      padding-block-start: 80px;
+    }
+    @media (min-width: 992px) {
+    padding-block-start: 120px;
+  }
+}
+.pb-120 {
+    padding-block-end: 60px;
+    @media (min-width: 576px) {
+      padding-block-end: 80px;
+    }
+    @media (min-width: 992px) {
+      padding-block-end: 120px;
+    }
+}
+.py-60 {
+    padding-block-start: 30px;
+    padding-block-end: 30px;
+    @media (min-width: 576px) {
+      padding-block-start: 40px;
+      padding-block-end: 40px;
+    }
+    @media (min-width: 992px) {
+      padding-block-start: 60px;
+      padding-block-end: 60px;
+    }
+}
+.pt-60 {
+    padding-block-start: 30px;
+    @media (min-width: 576px) {
+      padding-block-start: 40px;
+    }
+    @media (min-width: 992px) {
+      padding-block-start: 60px;
+    }
+}
+  .pb-60 {
+    padding-block-end: 30px;
+    @media (min-width: 576px) {
+      padding-block-end: 40px;
+    }
+    @media (min-width: 992px) {
+      padding-block-end: 60px;
+    }
+}
+/* ================================= Padding Css End =========================== */

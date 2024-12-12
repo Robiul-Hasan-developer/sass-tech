@@ -1,0 +1,50 @@
+/* hover bg class start */
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background-color: var(--#{$color}-#{$shade}) !important;
+    }
+  }
+}
+
+// hover background
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .hover-bg-#{$color}-#{$shade} {
+      &:hover {
+          background-color: var(--#{$color}-#{$shade}) !important;
+      }
+    }
+  }
+}
+
+.bg-white {
+  &-13 {
+    background-color: hsl(var(--white)/.13);
+  }
+  &-7 {
+    background-color: hsl(var(--white)/.7);
+  }
+}
+
+.hover-bg-white {
+  &:hover {
+    background-color: hsl(var(--white)) !important;
+  }
+}
+
+.bg {
+  &-green {
+    background-color: #00b67a;
+  }
+  &-pink {
+    background-color: #fd1774;
+  }
+}
+
+.section-bg {
+  &-one {
+    background-color: #f5f5f8;
+  }
+}
+/* hover bg class end */

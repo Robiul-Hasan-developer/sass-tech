@@ -1,0 +1,16 @@
+/* Gap Css start */
+@each $property, $value in $spaces {
+  .tw-gap-#{$property} {
+    gap: var(--size-#{$property});
+  }
+}
+
+.tw-gap {
+  &-26-px {
+    gap: clamp(1rem, 0.0938rem + 4.5vw, 1.625rem);
+  }
+  &-42-px {
+    gap: clamp(1.5rem, 0.0938rem + 4.5vw, 2.625rem);
+  }
+}
+/* Gap Css end */

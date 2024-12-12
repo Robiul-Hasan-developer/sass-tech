@@ -1,0 +1,14 @@
+
+/* Box shadow start */
+.common-shadow {
+  &-one {
+    box-shadow: 0 8px 22px 0px rgba(0, 0, 0, 0.04);
+  }
+  &-two {
+    box-shadow: 0 30px 50px 0px rgba(18, 17, 22, 0.08);
+  }
+  &-three {
+    box-shadow: 9px -2px 19px 9px rgba(0, 0, 0, 0.02);
+  }
+}
+/* Box shadow End */

@@ -1,0 +1,48 @@
+/* Max width Css Class Start */
+.max-w {
+    &-1400-px {
+        max-width: 1400px;
+    }
+    &-154-px {
+        max-width: 154px;
+    }
+    &-194-px {
+        max-width: 194px;
+    }
+    &-200-px {
+        max-width: 200px;
+    }
+    &-218-px {
+        max-width: 218px;
+    }
+    &-228-px {
+        max-width: 228px;
+    }
+    &-288-px {
+        @media (min-width: 991px) {
+            max-width: 288px;
+        }
+    }
+    &-388-px {
+        @media (min-width: 991px) {
+            max-width: 388px;
+        }
+    }
+    &-400-px {
+        max-width: 400px;
+    }
+    &-490-px {
+        @media (min-width: 991px) {
+            max-width: 490px;
+        }
+    }
+    &-500-px {
+        max-width: 500px;
+    }
+    &-514-px {
+        @media (min-width: 991px) {
+            max-width: 514px;
+        }
+    }
+}
+/* Max width Css Class End */
