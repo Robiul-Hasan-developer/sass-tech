@@ -46,20 +46,40 @@
     &-36-px {
       padding-inline: clamp(1rem, -1rem + 8vw, 2.25rem);
     }
+    &-90-px {
+      padding-inline: clamp(1.5rem, -1rem + 8vw, 5.625rem);
+    }
   }
   &-px {
+    &-40-px {
+      padding-inline: clamp(1.25rem, -1rem + 8vw, 2.5rem);
+    }
     &-56-px {
       padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
     }
   }
   &-py {
+    &-76-px {
+      padding-block: clamp(2.5rem, -1rem + 8vw, 5.25rem);
+    }
     &-84-px {
       padding-block: clamp(2.5rem, -1rem + 8vw, 5.25rem);
+    }
+  }
+  &-pb {
+    &-84-px {
+      padding-block-end: 84px;
+    }
+    &-136-px {
+      padding-block-end: 136px;
     }
   }
   &-ps {
     &-56-px {
       padding-inline-start: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+    }
+    &-74-px {
+      padding-inline-start: clamp(1.5rem, -1rem + 8vw, 4.625rem);
     }
     &-98-px {
       padding-inline-start: 98px;

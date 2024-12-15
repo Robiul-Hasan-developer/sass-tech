@@ -19,6 +19,9 @@
 }
 
 .bg-white {
+  &-08 {
+    background-color: hsl(var(--white)/.08);
+  }
   &-13 {
     background-color: hsl(var(--white)/.13);
   }
@@ -34,11 +37,41 @@
 }
 
 .bg {
+  &-black {
+    background-color: #1c1c1c;
+  }
   &-green {
     background-color: #00b67a;
   }
   &-pink {
     background-color: #fd1774;
+  }
+  &-pink-dark {
+    background-color: #f5f5f8;
+  }
+  &-pink-light {
+    background-color: #f97289;
+  }
+  &-pink-lighter {
+    background-color: #f9728924;
+  }
+  &-sky {
+    background-color: #41a5fa;
+  }
+  &-sky-deep {
+    background-color: #1b89aa;
+  }
+  &-dark-deep {
+    background-color: #31336b;
+  }
+  &-purple-light {
+    background-color: #f5f5f8;
+  }
+  &-paste {
+    background-color: #3af062;
+  }
+  &-paste-light {
+    background-color: #3af0622b;
   }
 }
 

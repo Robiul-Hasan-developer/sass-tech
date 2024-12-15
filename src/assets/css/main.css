@@ -14,7 +14,7 @@
     --heading-two: clamp(1.875rem, 0.7133rem + 2.8846vw, 3.75rem);
     --heading-three: clamp(1.75rem, 0.3353rem + 2.1661vw, 3rem);
     --heading-four: clamp(1.5rem, 0.5569rem + 1.444vw, 1.875rem);
-    --heading-five: clamp(1.25rem, 1.2rem + 0.722vw, 1.5rem);
+    --heading-five: clamp(1.125rem, 1.2rem + 0.722vw, 1.5rem);
     --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
   /* Font Size End */
   /* template main color */
@@ -105,56 +105,13 @@
     margin-block-end: 20px;
 }
 
-.common-accordion:first-of-type .accordion-button.collapsed {
-    border-radius: 5px;
+.accordion-item:has(.accordion-collapse.show), .accordion-item:has(.accordion-button[aria-expanded=true]) {
+    border-left: 4px solid var(--main-600) !important;
+    background: #fff !important;
 }
 
-.common-accordion:last-of-type .accordion-button.collapsed {
-    border-radius: 5px;
-}
-
-.common-accordion .accordion-button::after {
-    background-image: none;
-}
-
-.common-accordion .accordion-button:focus {
-    box-shadow: none;
-}
-
-.common-accordion .accordion-button:not(.collapsed) {
-    background-color: transparent !important;
-    box-shadow: none;
-    color: var(--main-600);
-}
-
-.common-accordion .accordion-button:not(.collapsed)::after {
-    background-image: none;
-    color: var(--main-600);
-}
-
-.common-accordion .accordion-button[aria-expanded=true]::after, .common-accordion .accordion-button[aria-expanded=false]::after {
-    font-family: "Phosphor";
-    font-weight: 900;
-    content: "\f106";
-    color: var(--main-600);
-    display: inline-block;
-    position: absolute;
-    inset-block-start: 50%;
-    transform: translateY(-50%);
-    inset-inline-end: 30px;
-    height: unset;
-    text-align: center;
-}
-
-@media screen and (max-width: 575px) {
-    .common-accordion .accordion-button[aria-expanded=true]::after, .common-accordion .accordion-button[aria-expanded=false]::after {
-        inset-inline-end: 20px;
-    }
-}
-
-.common-accordion .accordion-button[aria-expanded=false]::after {
-    content: "\f107";
-    color: hsl(var(--heading-color));
+.accordion-button::after {
+    display: none;
 }
 
 /* ================================= Accordion Css End =========================== */
@@ -265,6 +222,18 @@
 
 .hover-style-two .button__flair::before {
     background-color: var(--main-600);
+}
+
+.hover-style-three:hover, .hover-style-three:active {
+    color: var(--main-two-600) !important;
+}
+
+.hover-style-three:hover.button--stroke::after, .hover-style-three:active.button--stroke::after {
+    border-color: transparent;
+}
+
+.hover-style-three .button__flair::before {
+    background-color: #fff;
 }
 
 /* =========================== Button Css End =================== */
@@ -886,6 +855,10 @@ input:focus, input:focus-visible {
     background-color: var(--neutral-950) !important;
 }
 
+.bg-white-08 {
+    background-color: hsl(var(--white)/0.08);
+}
+
 .bg-white-13 {
     background-color: hsl(var(--white)/0.13);
 }
@@ -898,12 +871,52 @@ input:focus, input:focus-visible {
     background-color: hsl(var(--white)) !important;
 }
 
+.bg-black {
+    background-color: #1c1c1c;
+}
+
 .bg-green {
     background-color: #00b67a;
 }
 
 .bg-pink {
     background-color: #fd1774;
+}
+
+.bg-pink-dark {
+    background-color: #f5f5f8;
+}
+
+.bg-pink-light {
+    background-color: #f97289;
+}
+
+.bg-pink-lighter {
+    background-color: #f9728924;
+}
+
+.bg-sky {
+    background-color: #41a5fa;
+}
+
+.bg-sky-deep {
+    background-color: #1b89aa;
+}
+
+.bg-dark-deep {
+    background-color: #31336b;
+}
+
+.bg-purple-light {
+    background-color: #f5f5f8;
+}
+
+.bg-paste {
+    background-color: #3af062;
+}
+
+.bg-paste-light {
+    background-color: #3af0622b;
 }
 
 .section-bg-one {
@@ -1428,6 +1441,34 @@ input:focus, input:focus-visible {
     color: var(--main-600);
 }
 
+.text-green {
+    color: #00b67a;
+}
+
+.text-pink {
+    color: #fd1774;
+}
+
+.text-sky {
+    color: #41a5fa;
+}
+
+.text-sky-deep {
+    color: #1b89aa;
+}
+
+.text-dark-deep {
+    color: #31336b;
+}
+
+.text-purple {
+    color: #606df1;
+}
+
+.text-paste {
+    background-color: #3af062;
+}
+
 /* Colors class End */
 /* Hover color class start */
 .hover-text-main-50:hover {
@@ -1582,6 +1623,11 @@ input:focus, input:focus-visible {
         width: 50%;
     }
 }
+
+.container {
+    max-width: 1400px;
+}
+
 /* ================================= Classes Css End =========================== */
 /* Font Size Class Start */
 .text-inherit {
@@ -1827,8 +1873,20 @@ input:focus, input:focus-visible {
     height: 4.25rem;
 }
 
+.tw-h-84-px {
+    height: 84px;
+}
+
 .tw-h-114-px {
     height: 114px;
+}
+
+.tw-h-150-px {
+    height: 150px;
+}
+
+.tw-h-180-px {
+    height: 180px;
 }
 
 .tw-h-300-px {
@@ -1841,6 +1899,10 @@ input:focus, input:focus-visible {
 
 .tw-min-h-184-px {
     min-height: 184px;
+}
+
+.tw-min-h-400-px {
+    min-height: 400px;
 }
 
 /* Height Css Class End */
@@ -1953,6 +2015,14 @@ input:focus, input:focus-visible {
     gap: clamp(1.5rem, 0.0938rem + 4.5vw, 2.625rem);
 }
 
+.tw-gap-100-px {
+    gap: clamp(1.5rem, -24.8393rem + 28.0952vw, 6.25rem);
+}
+
+.tw-gap-126-px {
+    gap: clamp(1.5rem, -24.8393rem + 28.0952vw, 7.875rem);
+}
+
 /* Gap Css end */
 /* ======================== Group Css Start =============================== */
 .group:hover .group-hover-text-white {
@@ -1963,12 +2033,20 @@ input:focus, input:focus-visible {
     color: var(--main-600) !important;
 }
 
+.group:hover .group-hover-text-main-two-600 {
+    color: var(--main-two-600) !important;
+}
+
 .group:hover .group-hover-bg-white {
     background-color: hsl(var(--white)) !important;
 }
 
 .group:hover .group-hover-bg-main-600 {
     background-color: var(--main-600) !important;
+}
+
+.group:hover .group-hover-bg-main-two-600 {
+    background-color: var(--main-two-600) !important;
 }
 
 .group-hover-text-transition {
@@ -1989,6 +2067,14 @@ input:focus, input:focus-visible {
 
 .group-item:hover .group-hover-item-mt-0 {
     margin-top: 0;
+}
+
+.group-item:hover .group-hover-item-scale-12 {
+    transform: scale(1.2);
+}
+
+.group-item:hover .group-hover-item-scale-1 {
+    transform: scale(1);
 }
 
 /* ======================== Group Css End =============================== */
@@ -2765,8 +2851,24 @@ input:focus, input:focus-visible {
     margin-inline-end: auto;
 }
 
+.tw-ms-148-px {
+    margin-inline-start: 148px;
+}
+
+.tw-mt-160-px {
+    margin-block-start: 160px;
+}
+
 .tw-mt-194-px {
     margin-block-start: 194px;
+}
+
+.tw-me-90-px {
+    margin-inline-end: 90px;
+}
+
+.tw-mb-148-px {
+    margin-block-end: 148px;
 }
 
 .tw--m-24-px {
@@ -2777,12 +2879,28 @@ input:focus, input:focus-visible {
     margin-inline-start: -10px;
 }
 
+.tw--ms-24-px {
+    margin-inline-start: -24px;
+}
+
+.tw--ms-76-px {
+    margin-inline-start: -76px;
+}
+
 .tw--me-8-px {
     margin-inline-end: -8px;
 }
 
 .tw--me-12-px {
     margin-inline-end: -12px;
+}
+
+.tw--me-32-px {
+    margin-inline-end: -32px;
+}
+
+.tw--me-48-px {
+    margin-inline-end: -48px;
 }
 
 .tw--me-74-px {
@@ -2795,6 +2913,10 @@ input:focus, input:focus-visible {
 
 .tw--mt-12-px {
     margin-block-start: -12px;
+}
+
+.tw--mt-28-px {
+    margin-block-start: -28px;
 }
 
 .my-120 {
@@ -2885,10 +3007,26 @@ input:focus, input:focus-visible {
     height: 100vh;
 }
 
+.tw-max-h-410-px {
+    max-height: 410px;
+}
+
 /* Max Height Css Class End */
 /* Max width Css Class Start */
 .max-w-1400-px {
     max-width: 1400px;
+}
+
+.max-w-1440-px {
+    max-width: 1440px;
+}
+
+.max-w-118-px {
+    max-width: 118px;
+}
+
+.max-w-150-px {
+    max-width: 150px;
 }
 
 .max-w-154-px {
@@ -2923,8 +3061,20 @@ input:focus, input:focus-visible {
     }
 }
 
+.max-w-330-px {
+    max-width: 330px;
+}
+
 .max-w-400-px {
     max-width: 400px;
+}
+
+.max-w-432-px {
+    max-width: 432px;
+}
+
+.max-w-480-px {
+    max-width: 480px;
 }
 
 @media (min-width: 991px) {
@@ -2937,11 +3087,24 @@ input:focus, input:focus-visible {
     max-width: 500px;
 }
 
+.max-w-532-px {
+    max-width: 532px;
+}
+
 @media (min-width: 991px) {
     .max-w-514-px {
         max-width: 514px;
     }
 }
+
+.max-w-602-px {
+    max-width: 602px;
+}
+
+.max-w-672-px {
+    max-width: 672px;
+}
+
 /* Max width Css Class End */
 /* Overlay Start */
 .overlay {
@@ -3690,16 +3853,40 @@ input:focus, input:focus-visible {
     padding-inline: clamp(1rem, -1rem + 8vw, 2.25rem);
 }
 
+.tw-px-90-px {
+    padding-inline: clamp(1.5rem, -1rem + 8vw, 5.625rem);
+}
+
+.tw-px-40-px {
+    padding-inline: clamp(1.25rem, -1rem + 8vw, 2.5rem);
+}
+
 .tw-px-56-px {
     padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+}
+
+.tw-py-76-px {
+    padding-block: clamp(2.5rem, -1rem + 8vw, 5.25rem);
 }
 
 .tw-py-84-px {
     padding-block: clamp(2.5rem, -1rem + 8vw, 5.25rem);
 }
 
+.tw-pb-84-px {
+    padding-block-end: 84px;
+}
+
+.tw-pb-136-px {
+    padding-block-end: 136px;
+}
+
 .tw-ps-56-px {
     padding-inline-start: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+}
+
+.tw-ps-74-px {
+    padding-inline-start: clamp(1.5rem, -1rem + 8vw, 4.625rem);
 }
 
 .tw-ps-98-px {
@@ -3880,7 +4067,7 @@ input:focus, input:focus-visible {
 }
 
 .tw-rounded-xl {
-    border-radius: 0.75rem;
+    border-radius: 0.75rem !important;
   /* 12px */
 }
 
@@ -3892,6 +4079,10 @@ input:focus, input:focus-visible {
 .tw-rounded-3xl {
     border-radius: 1.5rem;
   /* 24px */
+}
+
+.tw-rounded-28-px {
+    border-radius: 28px;
 }
 
 .tw-rounded-40-px {
@@ -3910,6 +4101,10 @@ input:focus, input:focus-visible {
 
 /* Rotate Css End */
 /* Hover Scale Css start */
+.tw-scale-04 {
+    transform: scale(0.4);
+}
+
 .hover-scale-09:hover {
     transform: scale(0.9);
 }
@@ -4025,6 +4220,14 @@ input:focus, input:focus-visible {
     box-shadow: 9px -2px 19px 9px rgba(0, 0, 0, 0.02);
 }
 
+.common-shadow-four {
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
+}
+
+.common-shadow-five {
+    box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.05);
+}
+
 /* Box shadow End */
 /* transition Css Class start */
 .tw-transition {
@@ -4088,6 +4291,11 @@ input:focus, input:focus-visible {
 
 .hover--translate-y-2:hover {
     transform: translateY(-8px);
+}
+
+.active--translate-y-scale-9:active {
+    transform: translateY(-4px) scale(0.94);
+    transition: 0.06s;
 }
 
 .active--translate-y-05:active {
@@ -4235,6 +4443,14 @@ input:focus, input:focus-visible {
     width: max-content;
 }
 
+.tw-w-84-px {
+    width: 84px;
+}
+
+.tw-w-180-px {
+    width: 180px;
+}
+
 @media (max-width: 991px) {
     .max-md-w-100 {
         width: 100%;
@@ -4271,6 +4487,12 @@ input:focus, input:focus-visible {
     line-height: 1.04;
 }
 
+/* Aspect ratio css start */
+.aspect-1 {
+    aspect-ratio: 1;
+}
+
+/* Aspect ratio css end */
 /* ================================= preload Css Start =========================== */
 .preloader {
     background-color: hsl(var(--white));
@@ -4482,7 +4704,6 @@ input:focus, input:focus-visible {
     inset-inline-end: 36px;
     inset-block-end: 36px;
     height: 46px;
-    line-height: 46px;
     width: 46px;
     cursor: pointer;
     display: block;
@@ -4628,6 +4849,20 @@ input:focus, input:focus-visible {
 /* Gradient bg start */
 .gradient-bg-one {
     background: linear-gradient(180deg, rgba(19, 81, 216, 0.07) 0%, rgba(245, 245, 248, 0.32) 100%);
+}
+
+.gradient-overlay {
+    position: relative;
+}
+
+.gradient-overlay::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #000000 89.89%);
+    inset-inline-start: 0;
+    inset-block-start: 0;
 }
 
 /* Gradient bg end */
@@ -4908,4 +5143,118 @@ svg.radial-progress text {
     }
 }
 /* ======================== Animation Css End ==================================== */
+/* about Css Start */
+.throwable-element {
+    position: absolute;
+    display: inline-block;
+    margin-bottom: 0;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    pointer-events: auto;
+    transition: none;
+}
+
+/* about Css end */
+/* ================================= Testimonials section css start =============================== */
+.testimonials-item__content {
+    display: none;
+}
+
+.testimonials-item__image {
+    display: none;
+}
+
+.testimonials-item__info {
+    justify-content: center;
+    text-align: center;
+    padding-block-start: clamp(1.125rem, -1rem + 4vw, 2rem);
+}
+
+.testimonials-item__desc {
+    padding-block-end: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+}
+
+@media (max-width: 575px) {
+    .swiper-slide-active .testimonials-item {
+        padding-block: clamp(2rem, -1.4375rem + 8vw, 4.75rem);
+        padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+        border-color: var(--neutral-200) !important;
+    }
+
+    .swiper-slide-active .testimonials-item__thumb {
+        display: none;
+    }
+
+    .swiper-slide-active .testimonials-item__info {
+        padding-block-end: 0 !important;
+    }
+
+    .swiper-slide-active .testimonials-item__content {
+        display: block;
+    }
+
+    .swiper-slide-active .testimonials-item__image {
+        display: block;
+    }
+
+    .swiper-slide-active .testimonials-item__info {
+        justify-content: start;
+        text-align: start;
+    }
+
+    .testimonials-item__thumb {
+        max-height: 300px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 576px) {
+    .swiper-slide-next .testimonials-item {
+        padding-block: clamp(2rem, -1.4375rem + 8vw, 4.75rem);
+        padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+        border-color: var(--neutral-200) !important;
+    }
+
+    .swiper-slide-next .testimonials-item__thumb {
+        display: none;
+    }
+
+    .swiper-slide-next .testimonials-item__info {
+        padding-block-end: 0 !important;
+    }
+
+    .swiper-slide-next .testimonials-item__content {
+        display: block;
+    }
+
+    .swiper-slide-next .testimonials-item__image {
+        display: block;
+    }
+
+    .swiper-slide-next .testimonials-item__info {
+        justify-content: start;
+        text-align: start;
+    }
+}
+
+@media (max-width: 1200px) {
+    .testimonials-item__thumb {
+        max-height: 300px;
+        overflow: hidden;
+    }
+}
+/* Base style for the slides */
+@media (min-width: 1201px) {
+    .testimonials .swiper-slide {
+        flex: 0 0 calc(25% - 12px);
+    }
+
+    .testimonials .swiper-slide-next {
+        flex: 0 0 calc(50% - 12px);
+    /* Double the normal width */
+    }
+}
+/* ================================= Testimonials section css End =============================== */
 /*# sourceMappingURL=main.css.map */

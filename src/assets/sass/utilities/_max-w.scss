@@ -3,9 +3,19 @@
     &-1400-px {
         max-width: 1400px;
     }
+    &-1440-px {
+        max-width: 1440px;
+    }
+    &-118-px {
+        max-width: 118px;
+    }
+    &-150-px {
+        max-width: 150px;
+    }
     &-154-px {
         max-width: 154px;
     }
+   
     &-194-px {
         max-width: 194px;
     }
@@ -28,8 +38,17 @@
             max-width: 388px;
         }
     }
+    &-330-px {
+        max-width: 330px;
+    }
     &-400-px {
         max-width: 400px;
+    }
+    &-432-px {
+        max-width: 432px;
+    }
+    &-480-px {
+        max-width: 480px;
     }
     &-490-px {
         @media (min-width: 991px) {
@@ -39,10 +58,19 @@
     &-500-px {
         max-width: 500px;
     }
+    &-532-px {
+        max-width: 532px;
+    }
     &-514-px {
         @media (min-width: 991px) {
             max-width: 514px;
         }
+    }
+    &-602-px {
+        max-width: 602px;
+    }
+    &-672-px {
+        max-width: 672px;
     }
 }
 /* Max width Css Class End */

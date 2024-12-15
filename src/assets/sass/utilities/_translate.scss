@@ -30,6 +30,13 @@
     }
 }
 
+.active--translate-y-scale-9 {
+    &:active {
+        transform: translateY(-4px) scale(.94);
+        transition: .06s;
+    }
+}
+
 .active--translate-y {
     &-05 {
         &:active {

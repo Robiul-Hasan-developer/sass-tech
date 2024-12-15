@@ -8,6 +8,9 @@
             &-main-600 {
                 color: var(--main-600) !important;
             }
+             &-main-two-600 {
+                color: var(--main-two-600) !important;
+            }
         }
         .group-hover-bg {
             &-white {
@@ -15,6 +18,9 @@
             }
             &-main-600 {
                 background-color: var(--main-600) !important;
+            }
+            &-main-two-600 {
+                background-color: var(--main-two-600) !important;
             }
         }
     }
@@ -38,6 +44,12 @@
         }
         .group-hover-item-mt-0 {
             margin-top: 0;
+        }
+        .group-hover-item-scale-12 {
+            transform: scale(1.2);
+        }
+        .group-hover-item-scale-1 {
+            transform: scale(1);
         }
     }
 }

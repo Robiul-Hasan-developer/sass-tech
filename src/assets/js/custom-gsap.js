@@ -138,64 +138,36 @@ mmm.add("(max-width: 991px)", () => {
 
 
 // =================================== Custom Split text Js Start =====================================
-// if ($(".splitTextStyleOne").length > 0) {
-//   let character = gsap.utils.toArray(".splitTextStyleOne");
-//   character.forEach((character) => {
-//     let split_char = new SplitText(character, {
-//       type: "chars, words",
-//       lineThreshold: 0.5,
-//     });
-//     const tl2 = gsap.timeline({ 
-//       scrollTrigger: {
-//         trigger: character,
-//         start: "top 90%",
-//         end: "bottom 60%",
-//         scrub: false,
-//         markers: false,
-//         toggleActions: "play none none none",
-//       },
-//     });
-//     tl2.from(split_char.chars, {
-//       autoAlpha: 0,
-//       y: 40,
-//       duration: 0.5,
-//       opacity: 0,
-//       stagger: 0.05,
-//       ease: "back.out(1.7)"
-//     });
-//   });
-// }
-
-
 if ($('.splitTextStyleOne').length > 0) {
   let splitTextLines = gsap.utils.toArray(".splitTextStyleOne");
 
-  splitTextLines.forEach(splitTextLine => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: splitTextLine,
-      start: 'top 90%',
-      duration: 2,
-      end: 'bottom 60%',
-      scrub: false,
-      markers: false,
-      toggleActions: 'play none none none'
-    }
-  });
+  splitTextLines.forEach(splitTextLine => { 
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: splitTextLine,
+        start: 'top 99%',
+        duration: .6,
+        end: 'bottom 90%',
+        scrub: false,
+        markers: false,
+        toggleActions: 'restart none none none'
+      }
+    });
 
-  const itemSplitted = new SplitText(splitTextLine, { type: "lines" });
+    const itemSplitted = new SplitText(splitTextLine, { type: "lines" });
 
-  gsap.set(splitTextLine, { perspective: 400 });
-  itemSplitted.split({ type: "lines" })
+    gsap.set(splitTextLine, { perspective: 500 });
+    itemSplitted.split({ type: "lines" })
 
-  tl.from(itemSplitted.lines, { 
-    duration: 1, 
-    delay: 0.7, 
-    opacity: 0, 
-    rotationX: -80, 
-    force3D: true, 
-    transformOrigin: "top center -50",
-     stagger: 0.1 });
+    tl.from(itemSplitted.lines, { 
+      duration: .6, 
+      delay: 0.7, 
+      opacity: 0, 
+      rotationX: -80, 
+      force3D: true, 
+      transformOrigin: "top center -50",
+      stagger: 0.1 
+    });
   });
 }
 // =================================== Custom Split text Js End =====================================
@@ -291,9 +263,67 @@ const buttonElements = document.querySelectorAll('[data-block="button"]');
 buttonElements.forEach((buttonElement) => {
   new Button(buttonElement);
 });
-
 // **************************** Position Aware button hover js End ****************************
 
+// **************************** Banner js start ****************************
+gsap.from(".flower", {
+  scale: 0,
+  x: 50,
+  y: 50,
+  ease: "circ.inOut",
+  ease: "elastic.inOut(1,0.3)",
+  duration: 3,
+  stagger: 0.12,
+  scrollTrigger: {
+    trigger: ".banner",
+    start: "top 90%",
+    toggleActions: "restart none restart none",
+  }
+});
+// **************************** Banner js End ****************************
+
+// **************************** Ball Bounce js start ****************************
+gsap.from(".ball", {
+    y: -140,
+    ease: "bounce.out", 
+    duration: 1.8,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#roadmap-section",
+      start: "top 90%",
+      toggleActions: "restart none restart none",
+    }
+});
+// **************************** Ball Bounce js End ****************************
+
+// **************************** Choose Us js start ****************************
+gsap.from(".box", {
+    scale: .4,
+    rotate: '90deg',
+    ease: "bounce.out", 
+    duration: 2,
+    stagger: 0.12,
+    scrollTrigger: {
+      trigger: "#box-wrapper",
+      start: "top 90%",
+      toggleActions: "restart none restart none",
+    }
+});
+// **************************** Choose Us js End ****************************
+
+// **************************** Blog js start ****************************
+gsap.to(".line", {
+    ease: "bounce.out",
+    width: '100%',
+    duration: 2,
+    stagger: 0.12,
+    scrollTrigger: {
+      trigger: ".blog",
+      start: "top 90%",
+      toggleActions: "restart none restart none",
+    }
+});
+// **************************** Blog js End ****************************
 
 
 

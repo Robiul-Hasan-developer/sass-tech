@@ -1,0 +1,95 @@
+/* ================================= Testimonials section css start =============================== */
+.testimonials-item {
+    &__content {
+        display: none;
+    }
+    &__image {
+        display: none;
+    }
+    &__info {
+        justify-content: center;
+        text-align: center;
+        padding-block-start: clamp(1.125rem, -1rem + 4vw, 2rem);
+    }
+    &__desc {
+        padding-block-end: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+    }
+}
+
+@media (max-width: 575px) {
+    .swiper-slide-active {
+        .testimonials-item {
+            padding-block: clamp(2rem, -1.4375rem + 8vw, 4.75rem);
+            padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+            border-color: var(--neutral-200) !important;
+            &__thumb {
+                display: none;
+            }
+            &__info {
+                padding-block-end: 0 !important;
+            }
+            &__content {
+                display: block;
+            }
+            &__image {
+                display: block;
+            }
+            &__info {
+                justify-content: start;
+                text-align: start;
+            }
+        }
+    }
+    .testimonials-item__thumb {
+        max-height: 300px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 576px) {
+    .swiper-slide-next {
+        .testimonials-item {
+            padding-block: clamp(2rem, -1.4375rem + 8vw, 4.75rem);
+            padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+            border-color: var(--neutral-200) !important;
+            &__thumb {
+                display: none;
+            }
+            &__info {
+                padding-block-end: 0 !important;
+            }
+            &__content {
+                display: block;
+            }
+            &__image {
+                display: block;
+            }
+            &__info {
+                justify-content: start;
+                text-align: start;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .testimonials-item__thumb {
+        max-height: 300px;
+        overflow: hidden;
+    }
+}
+
+
+/* Base style for the slides */
+.testimonials {
+    @media (min-width: 1201px) {
+        .swiper-slide {
+             flex: 0 0 calc(25% - 12px);
+        }
+        .swiper-slide-next {
+            flex: 0 0 calc(50% - 12px); /* Double the normal width */
+        }
+    }
+}
+
+/* ================================= Testimonials section css End =============================== */

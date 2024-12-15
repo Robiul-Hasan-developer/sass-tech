@@ -232,31 +232,71 @@ $(".throwable-element").throwable({
 // ========================= throwable Js End ===================
 
 
+// ========================= ShowCase Slider Js start ===================
+var brandSlider = new Swiper('.show-case-slider', {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  autoplay: true,
+  speed: 1500,
+  grabCursor: true,
+  loop: true,
+  spaceBetween: 24,
+  slidesPerView: 4,
+  centeredSlides: true, 
+  breakpoints: {
+    300: {
+        slidesPerView: 1,
+    },
+    576: {
+        slidesPerView: 2,
+    },
+    768: {
+        slidesPerView: 2,
+    },
+    1200: {
+        slidesPerView: 3,
+    },
+    1201: {
+        slidesPerView: 4,
+    },
+  }
+});
+// ========================= ShowCase Slider Js End ===================
 
 
-// ================================= Position aware Button Animation Js Start =============================
-// (function() {
-//   const buttons = document.querySelectorAll(".btn-posnawr");
+// ========================= Testimonials Slider Js start ===================
+var testimonialsSlider = new Swiper('.testimonials-slider', {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  speed: 1500,
+  grabCursor: true,
+  loop: true,
+  spaceBetween: 24,  
+  slidesPerView: 3,
+  autoplay: false,
+  breakpoints: {
+    200: {
+        slidesPerView: 1,
+    },
+    576: {
+        slidesPerView: 2,
+    },
+    768: {
+        slidesPerView: 2,
+    },
+    1200: {
+        slidesPerView: 3,
+    },
+  }
+});
+// ========================= Testimonials Slider Js End ===================
 
-//   buttons.forEach(button => {
-//     ["mouseenter", "mouseout"].forEach(evt => {
-//       button.addEventListener(evt, e => {
-//         let parentOffset = button.getBoundingClientRect(),
-//             relX = e.pageX - parentOffset.left,
-//             relY = e.pageY - parentOffset.top;
-
-//         const animationBg = button.getElementsByTagName(".animation-bg");
-
-//         animationBg[0].style.top = relY + "px";
-//         animationBg[0].style.left = relX + "px";
-//       });
-//     });
-//   });
-// })();
-// ================================= Position aware Button Animation Js End =============================
 
 
-  
   // ========================= Testimonial Four Slider Js Start ==============
   // $('.testimonial-four-slider').slick({
   //   slidesToShow: 2,
@@ -284,30 +324,6 @@ $(".throwable-element").throwable({
   // });
   // ========================= Testimonial Four Slider Js End ===================
   
-   // ========================= Counter Up Js End ===================
-  //  const counterUp = window.counterUp.default;
-
-  //  const callback = (entries) => {
-  //    entries.forEach((entry) => {
-  //      const el = entry.target;
-  //      if (entry.isIntersecting && !el.classList.contains('is-visible')) {
-  //        counterUp(el, {
-  //          duration: 2000,
-  //          delay: 16,
-  //        });
-  //        el.classList.add('is-visible');
-  //      }
-  //    });
-  //  };
- 
-  //  const IO = new IntersectionObserver(callback, { threshold: 1 });
- 
-  //  // Counter
-  //  const counter = document.querySelector('.counter');
-  //  if (counter) {
-  //    IO.observe(counter);
-  //  }
-   // ========================= Counter Up Js End ===================
   
   // ========================== Add Attribute For Bg Image Js Start ====================
     // $(".background-img").css('background', function () {
@@ -317,18 +333,18 @@ $(".throwable-element").throwable({
   // ========================== Add Attribute For Bg Image Js End =====================
 
   // ================== Password Show Hide Js Start ==========
-  $(".toggle-password").on('click', function() {
-    $(this).toggleClass("active");
-    var input = $($(this).attr("id"));
-    if (input.attr("type") == "password") {
-      input.attr("type", "text");
-      $(this).removeClass('ph-bold ph-eye-closed');
-      $(this).addClass('ph-bold ph-eye');
-    } else {
-      input.attr("type", "password");
-        $(this).addClass('ph-bold ph-eye-closed');
-    }
-  });
+  // $(".toggle-password").on('click', function() {
+  //   $(this).toggleClass("active");
+  //   var input = $($(this).attr("id"));
+  //   if (input.attr("type") == "password") {
+  //     input.attr("type", "text");
+  //     $(this).removeClass('ph-bold ph-eye-closed');
+  //     $(this).addClass('ph-bold ph-eye');
+  //   } else {
+  //     input.attr("type", "password");
+  //       $(this).addClass('ph-bold ph-eye-closed');
+  //   }
+  // });
   // ========================= Password Show Hide Js End ===========================
 
   });

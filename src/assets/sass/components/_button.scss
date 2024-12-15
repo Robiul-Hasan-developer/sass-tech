@@ -102,7 +102,6 @@
     }
     &-two {
         &:hover, &:active {
-            // color: var(--main-two-600) !important;
             &.button--stroke {
                 &::after {
                     border-color: transparent;
@@ -112,6 +111,21 @@
         .button__flair {
             &::before {
                 background-color: var(--main-600);
+            }
+        }
+    }
+    &-three {
+        &:hover, &:active {
+            color: var(--main-two-600) !important;
+            &.button--stroke {
+                &::after {
+                    border-color: transparent;
+                }
+            }
+        }
+        .button__flair {
+            &::before {
+                background-color: #fff;
             }
         }
     }

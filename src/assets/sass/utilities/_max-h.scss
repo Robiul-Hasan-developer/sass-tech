@@ -1,7 +1,10 @@
 /* Max Height Css Class Start */
 .tw-max-h {
-    &-screen {
-      height: 100vh;
-    }
+  &-screen {
+    height: 100vh;
+  }
+  &-410-px {
+    max-height: 410px;
+  }
 }
 /* Max Height Css Class End */

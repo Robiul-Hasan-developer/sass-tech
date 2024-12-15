@@ -1,4 +1,10 @@
 /* Hover Scale Css start */
+.tw-scale {
+    &-04 {
+        transform: scale(0.4);
+    }
+}
+
 .hover-scale {
     &-09 {
         &:hover {

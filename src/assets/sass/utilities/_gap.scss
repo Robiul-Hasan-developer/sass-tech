@@ -12,5 +12,11 @@
   &-42-px {
     gap: clamp(1.5rem, 0.0938rem + 4.5vw, 2.625rem);
   }
+  &-100-px {
+    gap: clamp(1.5rem, -24.8393rem + 28.0952vw, 6.25rem);
+  }
+  &-126-px {
+    gap: clamp(1.5rem, -24.8393rem + 28.0952vw, 7.875rem);
+  }
 }
 /* Gap Css end */

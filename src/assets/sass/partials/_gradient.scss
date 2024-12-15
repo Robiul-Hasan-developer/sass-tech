@@ -4,4 +4,18 @@
         background: linear-gradient(180deg, rgba(19, 81, 216, 0.07) 0%, rgba(245, 245, 248, 0.32) 100%);
     }
 }
+
+
+.gradient-overlay {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #000000 89.89%);
+        inset-inline-start: 0;
+        inset-block-start: 0;
+    }
+}
 /* Gradient bg end */
