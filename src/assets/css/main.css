@@ -5,12 +5,14 @@
 /* Font Family*/
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Vidaloka&display=swap");
 /* ========================= Variable Css Start ======================== */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   /* Font Family Variable */
     --heading-font: "Satoshi", sans-serif;
     --body-font: "Satoshi", sans-serif;
   /* Font Size Variable Start */
-    --heading-one: clamp(2.125rem, -0.0733rem + 4.5vw, 4.4375rem);
+    --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.4375rem);
     --heading-two: clamp(1.875rem, 0.7133rem + 2.8846vw, 3.75rem);
     --heading-three: clamp(1.75rem, 0.3353rem + 2.1661vw, 3rem);
     --heading-four: clamp(1.5rem, 0.5569rem + 1.444vw, 1.875rem);
@@ -26,6 +28,10 @@
     --main-two-s: 63%;
     --main-two-l: 15%;
     --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
+    --yellow-h: 40;
+    --yellow-s: 100%;
+    --yellow-l: 54%;
+    --yellow: var(--yellow-h) var(--yellow-s) var(--yellow-l);
   /* White Color */
     --white: 0 0% 100%;
     --black: 249 63% 15%;
@@ -264,6 +270,16 @@
 }
 
 /* input File End */
+/* Placeholder Start */
+.placeholder-neutral-600::placeholder {
+    color: var(--neutral-600) !important;
+}
+
+.placeholder-18-px::placeholder {
+    font-size: 18px !important;
+}
+
+/* Placeholder End */
 /* Autofill Css */
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active,
 textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, textarea:-webkit-autofill:active {
@@ -425,6 +441,10 @@ input[type=number] {
 }
 
 /* Switch Css End */
+.form-select-arrow-end {
+    background-position: right 0rem center;
+}
+
 /* ================================= Form Css End =========================== */
 /* ================================= Tab Css Start =========================== */
 .common-tab .nav-link.active {
@@ -434,6 +454,19 @@ input[type=number] {
 
 .common-tab .nav-link:hover {
     color: var(--main-two-600);
+}
+
+.active-purple .nav-link.active {
+    background-color: hsl(var(--purple));
+    color: hsl(var(--white)) !important;
+}
+
+.active-purple .nav-link.active .ai-icon {
+    display: none;
+}
+
+.active-purple .nav-link.active:hover {
+    opacity: 0.9;
 }
 
 /* ================================= Tab Css End =========================== */
@@ -598,9 +631,9 @@ input:focus, input:focus-visible {
 /* ================================= Typography Css End =========================== */
 /* Bg Image Css Start */
 .bg-img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
     width: 100%;
     height: 100%;
 }
@@ -867,6 +900,10 @@ input:focus, input:focus-visible {
     background-color: hsl(var(--white)/0.7);
 }
 
+.bg-white-06 {
+    background-color: hsl(var(--white)/0.06);
+}
+
 .hover-bg-white:hover {
     background-color: hsl(var(--white)) !important;
 }
@@ -917,6 +954,10 @@ input:focus, input:focus-visible {
 
 .bg-paste-light {
     background-color: #3af0622b;
+}
+
+.bg-yellow {
+    background-color: hsl(var(--yellow));
 }
 
 .section-bg-one {
@@ -1300,6 +1341,10 @@ input:focus, input:focus-visible {
     border-style: dashed !important;
 }
 
+.border-transparent {
+    border-color: transparent !important;
+}
+
 /* Colors class start */
 .text-main-50 {
     color: var(--main-50);
@@ -1469,6 +1514,10 @@ input:focus, input:focus-visible {
     background-color: #3af062;
 }
 
+.text-yellow {
+    color: hsl(var(--yellow)) !important;
+}
+
 /* Colors class End */
 /* Hover color class start */
 .hover-text-main-50:hover {
@@ -1628,6 +1677,17 @@ input:focus, input:focus-visible {
     max-width: 1400px;
 }
 
+@media (min-width: 992px) {
+    .position-lg-absolute {
+        position: absolute;
+    }
+}
+
+@media (max-width: 991px) {
+    .overflow-x-max-lg-auto {
+        overflow-x: auto;
+    }
+}
 /* ================================= Classes Css End =========================== */
 /* Font Size Class Start */
 .text-inherit {
@@ -3007,12 +3067,20 @@ input:focus, input:focus-visible {
     height: 100vh;
 }
 
+.tw-max-h-260-px {
+    max-height: 260px;
+}
+
 .tw-max-h-410-px {
     max-height: 410px;
 }
 
 /* Max Height Css Class End */
 /* Max width Css Class Start */
+.max-w-1290-px {
+    max-width: 1290px;
+}
+
 .max-w-1400-px {
     max-width: 1400px;
 }
@@ -3089,6 +3157,10 @@ input:focus, input:focus-visible {
 
 .max-w-532-px {
     max-width: 532px;
+}
+
+.max-w-570-px {
+    max-width: 570px;
 }
 
 @media (min-width: 991px) {
@@ -3865,6 +3937,10 @@ input:focus, input:focus-visible {
     padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
 }
 
+.tw-px-88-px {
+    padding-inline: clamp(1.5rem, -1rem + 8vw, 5.5rem);
+}
+
 .tw-py-76-px {
     padding-block: clamp(2.5rem, -1rem + 8vw, 5.25rem);
 }
@@ -3891,6 +3967,12 @@ input:focus, input:focus-visible {
 
 .tw-ps-98-px {
     padding-inline-start: 98px;
+}
+
+@media (min-width: 992px) {
+    .tw-lg-ps--12 {
+        padding-inline-start: 48px;
+    }
 }
 
 .py-120 {
@@ -4195,6 +4277,12 @@ input:focus, input:focus-visible {
     border-radius: 50px;
 }
 
+@media (max-width: 992px) {
+    .scroll-sm::-webkit-scrollbar-thumb {
+        background: #e4e4e4;
+    }
+}
+
 .scroll-sm::-webkit-scrollbar-thumb:hover {
     background: #c1c1c1 !important;
 }
@@ -4226,6 +4314,10 @@ input:focus, input:focus-visible {
 
 .common-shadow-five {
     box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hover-common-shadow-four:hover {
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }
 
 /* Box shadow End */
@@ -4447,6 +4539,10 @@ input:focus, input:focus-visible {
     width: 84px;
 }
 
+.tw-w-140-px {
+    width: 140px;
+}
+
 .tw-w-180-px {
     width: 180px;
 }
@@ -4456,6 +4552,11 @@ input:focus, input:focus-visible {
         width: 100%;
     }
 }
+
+.max-w-54-percent {
+    max-width: 50%;
+}
+
 /* width Css Class End */
 /* Z index css start */
 .tw-z-99 {
@@ -4493,6 +4594,11 @@ input:focus, input:focus-visible {
 }
 
 /* Aspect ratio css end */
+.grid-col-5 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
 /* ================================= preload Css Start =========================== */
 .preloader {
     background-color: hsl(var(--white));
@@ -4553,12 +4659,6 @@ input:focus, input:focus-visible {
     backdrop-filter: blur(24px);
     animation: slideDown 0.35s ease-out;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (max-width: 991px) {
-    .header.fixed-header {
-        inset-block-start: -1px;
-    }
 }
 
 @keyframes slideDown {
@@ -4625,6 +4725,10 @@ input:focus, input:focus-visible {
     color: var(--neutral-400);
     transition: 0.2s linear;
     font-size: 12px;
+}
+
+.has-submenu--arrow-end > a::before {
+    color: hsl(var(--white));
 }
 
 /* Submenu Start */
@@ -5257,4 +5361,64 @@ svg.radial-progress text {
     }
 }
 /* ================================= Testimonials section css End =============================== */
+:root {
+    --urbanist: "Urbanist", serif;
+    --dm-serif: "DM Serif Display", serif;
+    --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.375rem);
+    --heading-two: clamp(1.875rem, 0.7133rem + 2.8846vw, 3.125rem);
+    --heading-three: clamp(1.75rem, 0.3353rem + 2.1661vw, 1.875rem);
+    --heading-four: clamp(1.5rem, 0.5569rem + 1.444vw, 1.875rem);
+    --heading-five: clamp(1.125rem, 1.2rem + 0.722vw, 1.5rem);
+    --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
+    --purple-h: 255;
+    --purple-s: 77%;
+    --purple-l: 57%;
+    --purple: var(--purple-h) var(--purple-s) var(--purple-l);
+    --heading-color: #150E3D;
+}
+
+.home-two h1, .home-two .h1, .home-two h2, .home-two .h2, .home-two h3, .home-two .h3, .home-two h4, .home-two .h4, .home-two h5, .home-two .h5, .home-two h6, .home-two .h6 {
+    color: var(--heading-color);
+}
+
+.home-two h1 {
+    font-family: var(--urbanist);
+}
+
+.home-two .font-dm-serif {
+    font-family: var(--dm-serif);
+}
+
+.home-two .text-heading {
+    color: var(--heading-color);
+}
+
+/* Banner Two Start */
+@media (min-width: 992px) {
+    .banner-two {
+        padding-block-end: 180px;
+    }
+}
+
+.banner-two__inner {
+    padding-block-start: 152px;
+    padding-block-end: 152px;
+}
+
+@media (max-width: 767px) {
+    .banner-two__inner {
+        padding-block-start: 100px;
+        padding-block-end: 100px;
+    }
+}
+
+@media (min-width: 992px) {
+    .banner-two-thumb {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 54%;
+    }
+}
+/* Banner Two End */
 /*# sourceMappingURL=main.css.map */

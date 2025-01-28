@@ -98,16 +98,17 @@ mmm.add("(max-width: 991px)", () => {
   mtl.to('.side-overlay', {
     opacity: 1,
     visibility: 'visible',
-    duration: .3, 
+    duration: .25, 
   });
   
   mtl.to('.mobile-menu', {
     x: 0,
+    duration: .25,
   });
   
   mtl.from('.nav-menu__item', {
     opacity: 0,
-    duration: .3,
+    duration: .25,
     y: -60,
     stagger: .12,
   });
@@ -115,7 +116,7 @@ mmm.add("(max-width: 991px)", () => {
   mtl.from('.close-button', {
     opacity: 0,
     scale: 0,
-    duration: .2,
+    duration: .1,
   });
 
   toggleMobileMenu.addEventListener('click', function () {
@@ -266,63 +267,71 @@ buttonElements.forEach((buttonElement) => {
 // **************************** Position Aware button hover js End ****************************
 
 // **************************** Banner js start ****************************
-gsap.from(".flower", {
-  scale: 0,
-  x: 50,
-  y: 50,
-  ease: "circ.inOut",
-  ease: "elastic.inOut(1,0.3)",
-  duration: 3,
-  stagger: 0.12,
-  scrollTrigger: {
-    trigger: ".banner",
-    start: "top 90%",
-    toggleActions: "restart none restart none",
-  }
-});
+if($('.flower').length) {
+  gsap.from(".flower", {
+    scale: 0,
+    x: 50,
+    y: 50,
+    ease: "circ.inOut",
+    ease: "elastic.inOut(1,0.3)",
+    duration: 3,
+    stagger: 0.12,
+    scrollTrigger: {
+      trigger: ".banner",
+      start: "top 90%",
+      toggleActions: "restart none restart none",
+    }
+  });
+}
 // **************************** Banner js End ****************************
 
 // **************************** Ball Bounce js start ****************************
-gsap.from(".ball", {
-    y: -140,
-    ease: "bounce.out", 
-    duration: 1.8,
-    stagger: 0.1,
-    scrollTrigger: {
-      trigger: "#roadmap-section",
-      start: "top 90%",
-      toggleActions: "restart none restart none",
-    }
-});
+if($('.flower').length) { 
+  gsap.from(".ball", {
+      y: -140,
+      ease: "bounce.out", 
+      duration: 1.8,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: "#roadmap-section",
+        start: "top 90%",
+        toggleActions: "restart none restart none",
+      }
+  });
+}
 // **************************** Ball Bounce js End ****************************
 
 // **************************** Choose Us js start ****************************
-gsap.from(".box", {
-    scale: .4,
-    rotate: '90deg',
-    ease: "bounce.out", 
-    duration: 2,
-    stagger: 0.12,
-    scrollTrigger: {
-      trigger: "#box-wrapper",
-      start: "top 90%",
-      toggleActions: "restart none restart none",
-    }
-});
+if($('.flower').length) {  
+  gsap.from(".box", {
+      scale: .4,
+      rotate: '90deg',
+      ease: "bounce.out", 
+      duration: 2,
+      stagger: 0.12,
+      scrollTrigger: {
+        trigger: "#box-wrapper",
+        start: "top 90%",
+        toggleActions: "restart none restart none",
+      }
+  });
+}
 // **************************** Choose Us js End ****************************
 
 // **************************** Blog js start ****************************
-gsap.to(".line", {
-    ease: "bounce.out",
-    width: '100%',
-    duration: 2,
-    stagger: 0.12,
-    scrollTrigger: {
-      trigger: ".blog",
-      start: "top 90%",
-      toggleActions: "restart none restart none",
-    }
-});
+if($('.flower').length) {   
+  gsap.to(".line", {
+      ease: "bounce.out",
+      width: '100%',
+      duration: 2,
+      stagger: 0.12,
+      scrollTrigger: {
+        trigger: ".blog",
+        start: "top 90%",
+        toggleActions: "restart none restart none",
+      }
+  });
+}
 // **************************** Blog js End ****************************
 
 

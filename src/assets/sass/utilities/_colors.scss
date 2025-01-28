@@ -43,5 +43,8 @@
     &-paste {
       background-color: #3af062;
     }
+    &-yellow {
+      color: hsl(var(--yellow)) !important;
+    }
 }
 /* Colors class End */

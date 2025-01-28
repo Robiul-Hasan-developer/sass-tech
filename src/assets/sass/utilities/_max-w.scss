@@ -1,5 +1,8 @@
 /* Max width Css Class Start */
 .max-w {
+    &-1290-px {
+        max-width: 1290px;
+    }
     &-1400-px {
         max-width: 1400px;
     }
@@ -60,6 +63,9 @@
     }
     &-532-px {
         max-width: 532px;
+    }
+    &-570-px {
+        max-width: 570px;
     }
     &-514-px {
         @media (min-width: 991px) {

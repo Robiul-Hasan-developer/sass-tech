@@ -9,6 +9,9 @@
         background: #e4e4e4;
         background: hsl(var(--white));
         border-radius: 50px;
+        @media (max-width: 992px) {
+            background: #e4e4e4;
+        }
     }
     &::-webkit-scrollbar-thumb:hover {
         background: #c1c1c1 !important

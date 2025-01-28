@@ -19,6 +19,9 @@
   &-84-px {
     width: 84px;
   }
+  &-140-px {
+    width: 140px;
+  }
   &-180-px {
     width: 180px;
   }
@@ -28,5 +31,9 @@
   @media (max-width: 991px) {
     width: 100%;
   }
+}
+
+.max-w-54-percent {
+  max-width: 50%;
 }
 /* width Css Class End */

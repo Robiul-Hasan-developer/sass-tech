@@ -10,4 +10,19 @@
         }
     }
 }
+
+.active-purple {
+    .nav-link {
+        &.active {
+            background-color: hsl(var(--purple));
+            color: hsl(var(--white)) !important;
+            .ai-icon {
+                display: none;
+            }
+            &:hover {
+                opacity: .9;
+            }
+        }
+    }
+}
 /* ================================= Tab Css End =========================== */

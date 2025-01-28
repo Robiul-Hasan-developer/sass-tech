@@ -23,6 +23,21 @@
 }
 /* input File End */
 
+/* Placeholder Start */
+.placeholder-neutral {
+    &-600::placeholder {
+        color: var(--neutral-600) !important;
+    }
+}
+.placeholder {
+    &-18-px::placeholder {
+        font-size: 18px !important;
+    }
+}
+/* Placeholder End */
+
+
+
 /* Autofill Css */
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active, 
 textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, textarea:-webkit-autofill:active {
@@ -169,4 +184,9 @@ input[type=number]{
     }
 }
 /* Switch Css End */
+
+
+.form-select-arrow-end {
+    background-position: right 0rem center;
+}
 /* ================================= Form Css End =========================== */

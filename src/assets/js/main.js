@@ -296,6 +296,24 @@ var testimonialsSlider = new Swiper('.testimonials-slider', {
 // ========================= Testimonials Slider Js End ===================
 
 
+// ========================== Set Text In Custom dropdown Js Start =================================
+$('.selectable-text-list li').each(function () {
+  var thisItem = $(this); 
+
+  thisItem.on('click', function () {
+    const listText = thisItem.text(); 
+    var item = thisItem.parent().parent().find('.selected-text').text(listText); 
+  }); 
+}); 
+// ========================== Set Text In Custom dropdown Js End =================================
+  
+// ========================== Add Attribute For Bg Image Js Start ====================
+$(".background-img").css('background', function () {
+  var bg = ('url(' + $(this).data("background-image") + ')');
+  return bg;
+});
+// ========================== Add Attribute For Bg Image Js End =====================
+
 
   // ========================= Testimonial Four Slider Js Start ==============
   // $('.testimonial-four-slider').slick({
@@ -323,14 +341,7 @@ var testimonialsSlider = new Swiper('.testimonials-slider', {
   //   ]
   // });
   // ========================= Testimonial Four Slider Js End ===================
-  
-  
-  // ========================== Add Attribute For Bg Image Js Start ====================
-    // $(".background-img").css('background', function () {
-    //   var bg = ('url(' + $(this).data("background-image") + ')');
-    //   return bg;
-    // });
-  // ========================== Add Attribute For Bg Image Js End =====================
+
 
   // ================== Password Show Hide Js Start ==========
   // $(".toggle-password").on('click', function() {

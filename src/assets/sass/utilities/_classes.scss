@@ -9,4 +9,16 @@
 .container {
     max-width: 1400px;
 }
+
+.position-lg-absolute {
+    @media (min-width: 992px) {
+        position: absolute;
+    }
+}
+
+.overflow-x-max-lg-auto {
+    @media (max-width: 991px) {
+        overflow-x: auto;
+    }
+}
 /* ================================= Classes Css End =========================== */

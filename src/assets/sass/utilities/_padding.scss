@@ -57,6 +57,9 @@
     &-56-px {
       padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
     }
+    &-88-px {
+      padding-inline: clamp(1.5rem, -1rem + 8vw, 5.5rem);
+    }
   }
   &-py {
     &-76-px {
@@ -83,6 +86,14 @@
     }
     &-98-px {
       padding-inline-start: 98px;
+    }
+  }
+}
+
+.tw-lg-ps- {
+  &-12 {
+    @media (min-width: 992px) {
+      padding-inline-start: 48px;
     }
   }
 }
