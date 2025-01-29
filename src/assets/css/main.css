@@ -462,7 +462,7 @@ input[type=number] {
 }
 
 .active-purple .nav-link.active .ai-icon {
-    display: none;
+    display: none !important;
 }
 
 .active-purple .nav-link.active:hover {
@@ -1688,6 +1688,11 @@ input:focus, input:focus-visible {
         overflow-x: auto;
     }
 }
+
+.transition-timing-linear {
+    transition-timing-function: linear;
+}
+
 /* ================================= Classes Css End =========================== */
 /* Font Size Class Start */
 .text-inherit {
@@ -2911,6 +2916,10 @@ input:focus, input:focus-visible {
     margin-inline-end: auto;
 }
 
+.tw-ms-128-px {
+    margin-inline-start: 128px;
+}
+
 .tw-ms-148-px {
     margin-inline-start: 148px;
 }
@@ -2977,6 +2986,10 @@ input:focus, input:focus-visible {
 
 .tw--mt-28-px {
     margin-block-start: -28px;
+}
+
+.tw--mt-170-px {
+    margin-block-start: -170px;
 }
 
 .my-120 {
@@ -3075,6 +3088,27 @@ input:focus, input:focus-visible {
     max-height: 410px;
 }
 
+.tw-max-h-588-px {
+    max-height: 588px;
+}
+
+@media (max-width: 575px) {
+    .tw-max-h-588-px {
+        max-height: 488px;
+    }
+}
+
+@media (max-width: 424px) {
+    .tw-max-h-588-px {
+        max-height: 388px;
+    }
+}
+
+@media (max-width: 380px) {
+    .tw-max-h-588-px {
+        max-height: 300px;
+    }
+}
 /* Max Height Css Class End */
 /* Max width Css Class Start */
 .max-w-1290-px {
@@ -3969,6 +4003,10 @@ input:focus, input:focus-visible {
     padding-inline-start: 98px;
 }
 
+.tw-pe-100-px {
+    padding-inline-end: 100px;
+}
+
 @media (min-width: 992px) {
     .tw-lg-ps--12 {
         padding-inline-start: 48px;
@@ -4316,6 +4354,10 @@ input:focus, input:focus-visible {
     box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.05);
 }
 
+.common-shadow-six {
+    box-shadow: 0px 4px 30px 0px #364F8314;
+}
+
 .hover-common-shadow-four:hover {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }
@@ -4525,6 +4567,10 @@ input:focus, input:focus-visible {
 
 .min-w-max {
     min-width: max-content;
+}
+
+.tw-w-1-px {
+    width: 1px;
 }
 
 .tw-w-300-px {
@@ -5034,6 +5080,24 @@ svg.radial-progress text {
 
     100% {
         transform: rotateZ(24deg);
+    }
+}
+
+.left-right-animation {
+    animation: 2.6s leftRightAnimation linear infinite;
+}
+
+@keyframes leftRightAnimation {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-24px);
+    }
+
+    100% {
+        transform: translateX(0px);
     }
 }
 

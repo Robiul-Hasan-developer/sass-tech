@@ -315,32 +315,44 @@ $(".background-img").css('background', function () {
 // ========================== Add Attribute For Bg Image Js End =====================
 
 
-  // ========================= Testimonial Four Slider Js Start ==============
-  // $('.testimonial-four-slider').slick({
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  //   speed: 1500,
-  //   dots: true,
-  //   pauseOnHover: true,
-  //   arrows: false,
-  //   draggable: true,
-  //   speed: 900,
-  //   infinite: true,
-  //   prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
-  //   nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         arrows: false,
-  //       }
-  //     }
-  //   ]
-  // });
-  // ========================= Testimonial Four Slider Js End ===================
+// ========================== About Two Js Start =====================
+var aboutTwoThumbsSliderOne = new Swiper(".about-two-thumbs-slider-one", {
+	slidesPerView: 2,
+  grabCursor: true,
+	loop: true,
+	centeredSlides: true,
+	direction: "vertical",
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true
+	},
+	speed: 6000,
+  autoplay: {
+		delay: 0,
+		enabled: true,
+	}
+});
+
+var aboutTwoThumbsSliderTwo = new Swiper(".about-two-thumbs-slider-two", {
+	slidesPerView: 2,
+  grabCursor: true,
+	loop: true,
+	centeredSlides: true,
+	direction: "vertical",
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true
+	},
+	speed: 6000,
+  autoplay: {
+		delay: 0,
+		enabled: true,
+    reverseDirection: true,
+    disableOnInteraction: false,
+	}
+});
+// ========================== About Two Js End =====================
+
 
 
   // ================== Password Show Hide Js Start ==========

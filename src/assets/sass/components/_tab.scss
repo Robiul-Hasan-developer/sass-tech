@@ -17,7 +17,7 @@
             background-color: hsl(var(--purple));
             color: hsl(var(--white)) !important;
             .ai-icon {
-                display: none;
+                display: none !important;
             }
             &:hover {
                 opacity: .9;

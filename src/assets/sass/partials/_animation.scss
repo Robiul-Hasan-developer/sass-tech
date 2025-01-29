@@ -15,6 +15,23 @@
     }
 }
 
+
+.left-right-animation {
+    animation: 2.6s leftRightAnimation linear infinite;
+}
+
+@keyframes leftRightAnimation {
+    0% {
+        transform: translateX(0px)
+    }
+    50% {
+        transform: translateX(-24px)
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+
 .scalable-animation {
   &::after {
       content: "";

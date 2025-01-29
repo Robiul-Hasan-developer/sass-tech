@@ -50,6 +50,9 @@
     margin-inline-end: auto;
   }
   &-ms {
+    &-128-px {
+      margin-inline-start: 128px;
+    }
     &-148-px {
       margin-inline-start: 148px;
     }
@@ -117,6 +120,9 @@
     }
     &-28-px {
       margin-block-start: -28px;
+    }
+    &-170-px {
+      margin-block-start: -170px;
     }
   }
 }
