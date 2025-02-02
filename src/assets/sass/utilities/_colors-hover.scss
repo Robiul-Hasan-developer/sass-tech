@@ -26,5 +26,10 @@
             color: hsl(var(--body-color)) !important;
         }
     }
+    &-yellow {
+        &:hover {
+            color: hsl(var(--yellow)) !important;
+        }
+    }
 }
 /* Hover color class end */

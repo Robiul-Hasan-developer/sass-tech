@@ -1,5 +1,8 @@
 /* Max width Css Class Start */
 .max-w {
+    &-1140-px {
+        max-width: 1140px;
+    }
     &-1290-px {
         max-width: 1290px;
     }
@@ -9,8 +12,14 @@
     &-1440-px {
         max-width: 1440px;
     }
+    &-1524-px {
+        max-width: 1524px;
+    }
     &-118-px {
         max-width: 118px;
+    }
+    &-144-px {
+        max-width: 144px;
     }
     &-150-px {
         max-width: 150px;
@@ -31,6 +40,9 @@
     &-228-px {
         max-width: 228px;
     }
+    &-278-px {
+        max-width: 278px;
+    }
     &-288-px {
         @media (min-width: 991px) {
             max-width: 288px;
@@ -49,6 +61,9 @@
     }
     &-432-px {
         max-width: 432px;
+    }
+    &-444-px {
+        max-width: 444px;
     }
     &-480-px {
         max-width: 480px;

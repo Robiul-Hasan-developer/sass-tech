@@ -211,24 +211,24 @@ AOS.init();
 
 
 // ========================= throwable Js Start ===================
-$(".throwable-element").throwable({
-  drag: true, // Enable dragging
-  gravity: {
-      x: 0,
-      y: 0 // No gravity effect
-  },
-  impulse: {
-      f: 52, // Force of impulse
-      p: {
-          x: 0,
-          y: 0 // Direction of impulse
-      }
-  },
-  autostart: true, // Automatically start
-  bounce: 0.8, // Reduced bounce effect
-  damping: 100, // Damping to slow down motion
-  containment: ".throwable-wrapper" // Restrict movement to the wrapper's boundaries
-});
+// $(".throwable-element").throwable({
+//   drag: true, // Enable dragging
+//   gravity: {
+//       x: 0,
+//       y: 0 // No gravity effect
+//   },
+//   impulse: {
+//       f: 52, // Force of impulse
+//       p: {
+//           x: 0,
+//           y: 0 // Direction of impulse
+//       }
+//   },
+//   autostart: true, // Automatically start
+//   bounce: 0.8, // Reduced bounce effect
+//   damping: 100, // Damping to slow down motion
+//   containment: ".throwable-wrapper" // Restrict movement to the wrapper's boundaries
+// });
 // ========================= throwable Js End ===================
 
 
@@ -307,14 +307,6 @@ $('.selectable-text-list li').each(function () {
 }); 
 // ========================== Set Text In Custom dropdown Js End =================================
   
-// ========================== Add Attribute For Bg Image Js Start ====================
-$(".background-img").css('background', function () {
-  var bg = ('url(' + $(this).data("background-image") + ')');
-  return bg;
-});
-// ========================== Add Attribute For Bg Image Js End =====================
-
-
 // ========================== About Two Js Start =====================
 var aboutTwoThumbsSliderOne = new Swiper(".about-two-thumbs-slider-one", {
 	slidesPerView: 2,
@@ -353,6 +345,53 @@ var aboutTwoThumbsSliderTwo = new Swiper(".about-two-thumbs-slider-two", {
 });
 // ========================== About Two Js End =====================
 
+// ========================== hosting plan slider Js start =====================
+var hostingPlanSlider = new Swiper('.hosting-plan-slider', {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  autoplay: true,
+  speed: 1500,
+  grabCursor: true,
+  loop: true,
+  slidesPerView: 4,
+  navigation: {
+    nextEl: ".swiper-hosting-button-next",
+    prevEl: ".swiper-hosting-button-prev",
+  },
+  pagination: {
+    el: ".swiper-hosting-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    300: {
+        slidesPerView: 1,
+    },
+    576: {
+        slidesPerView: 2,
+    },
+    768: {
+        slidesPerView: 2,
+    },
+    992: {
+        slidesPerView: 3,
+    },
+    1199: {
+        slidesPerView: 4,
+    },
+  }
+});
+// ========================== hosting plan slider Js End =====================
+
+
+
+// ========================== Add Attribute For Bg Image Js Start ====================
+$(".background-img").css('background', function () {
+  var bg = ('url(' + $(this).data("background-image") + ')');
+  return bg;
+});
+// ========================== Add Attribute For Bg Image Js End =====================
 
 
   // ================== Password Show Hide Js Start ==========
@@ -370,15 +409,17 @@ var aboutTwoThumbsSliderTwo = new Swiper(".about-two-thumbs-slider-two", {
   // });
   // ========================= Password Show Hide Js End ===========================
 
+
+
   });
   // ==========================================
   //      End Document Ready function
   // ==========================================
 
   // ========================= Preloader Js Start =====================
-    $(window).on("load", function(){
-      $('.preloader').fadeOut(); 
-    })
+    // $(window).on("load", function(){
+    //   $('.preloader').fadeOut(); 
+    // })
     // ========================= Preloader Js End=====================
 
     // ========================= Header Sticky Js Start ==============

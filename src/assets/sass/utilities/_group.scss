@@ -8,8 +8,14 @@
             &-main-600 {
                 color: var(--main-600) !important;
             }
-             &-main-two-600 {
+            &-main-two-600 {
                 color: var(--main-two-600) !important;
+            }
+            &-yellow {
+                color: hsl(var(--yellow)) !important;
+            }
+            &-heading {
+                color: var(--heading-color) !important;
             }
         }
         .group-hover-bg {

@@ -411,27 +411,27 @@ input[type=number] {
     box-shadow: none !important;
     margin: 0;
     position: relative;
-    background-color: var(--gray-100);
+    background-color: var(--neutral-200);
     border: 0;
     background-image: none !important;
-    width: 30px;
-    height: 18px;
+    width: 70px;
+    height: 32px;
 }
 
 .form-switch .form-check-input:checked {
-    background-color: var(--primary-600);
+    background-color: #23CD89;
 }
 
 .form-switch .form-check-input:checked::before {
-    inset-inline-start: calc(100% - 15px);
+    inset-inline-start: calc(100% - 31px);
     transition: 0.2s linear;
 }
 
 .form-switch .form-check-input::before {
     position: absolute;
     content: "";
-    width: 12px;
-    height: 12px;
+    width: 28px;
+    height: 28px;
     background: #fff;
     border-radius: 50%;
     top: 50%;
@@ -497,6 +497,11 @@ input[type=number] {
 }
 
 /* ======================= Common Table Css End ======================= */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
 /* ================================= Typography Css Start =========================== */
 * {
     margin: 0;
@@ -958,6 +963,10 @@ input:focus, input:focus-visible {
 
 .bg-yellow {
     background-color: hsl(var(--yellow));
+}
+
+.bg-purple {
+    background-color: hsl(var(--purple));
 }
 
 .section-bg-one {
@@ -1657,6 +1666,10 @@ input:focus, input:focus-visible {
     color: hsl(var(--body-color)) !important;
 }
 
+.hover-text-yellow:hover {
+    color: hsl(var(--yellow)) !important;
+}
+
 /* Hover color class end */
 .cursor-pointer {
     cursor: pointer;
@@ -1691,6 +1704,10 @@ input:focus, input:focus-visible {
 
 .transition-timing-linear {
     transition-timing-function: linear;
+}
+
+.opacity-05 {
+    opacity: 0.05;
 }
 
 /* ================================= Classes Css End =========================== */
@@ -1938,12 +1955,12 @@ input:focus, input:focus-visible {
     height: 4.25rem;
 }
 
-.tw-h-84-px {
-    height: 84px;
+.tw-h-px {
+    height: 1px;
 }
 
-.tw-h-114-px {
-    height: 114px;
+.tw-h-84-px {
+    height: 84px;
 }
 
 .tw-h-150-px {
@@ -1968,6 +1985,10 @@ input:focus, input:focus-visible {
 
 .tw-min-h-400-px {
     min-height: 400px;
+}
+
+.tw-min-h-144-px {
+    min-height: 144px;
 }
 
 /* Height Css Class End */
@@ -2100,6 +2121,14 @@ input:focus, input:focus-visible {
 
 .group:hover .group-hover-text-main-two-600 {
     color: var(--main-two-600) !important;
+}
+
+.group:hover .group-hover-text-yellow {
+    color: hsl(var(--yellow)) !important;
+}
+
+.group:hover .group-hover-text-heading {
+    color: var(--heading-color) !important;
 }
 
 .group:hover .group-hover-bg-white {
@@ -2924,6 +2953,10 @@ input:focus, input:focus-visible {
     margin-inline-start: 148px;
 }
 
+.tw-ms-80-px {
+    margin-inline-start: 80px;
+}
+
 .tw-mt-160-px {
     margin-block-start: 160px;
 }
@@ -3111,6 +3144,10 @@ input:focus, input:focus-visible {
 }
 /* Max Height Css Class End */
 /* Max width Css Class Start */
+.max-w-1140-px {
+    max-width: 1140px;
+}
+
 .max-w-1290-px {
     max-width: 1290px;
 }
@@ -3123,8 +3160,16 @@ input:focus, input:focus-visible {
     max-width: 1440px;
 }
 
+.max-w-1524-px {
+    max-width: 1524px;
+}
+
 .max-w-118-px {
     max-width: 118px;
+}
+
+.max-w-144-px {
+    max-width: 144px;
 }
 
 .max-w-150-px {
@@ -3151,6 +3196,10 @@ input:focus, input:focus-visible {
     max-width: 228px;
 }
 
+.max-w-278-px {
+    max-width: 278px;
+}
+
 @media (min-width: 991px) {
     .max-w-288-px {
         max-width: 288px;
@@ -3173,6 +3222,10 @@ input:focus, input:focus-visible {
 
 .max-w-432-px {
     max-width: 432px;
+}
+
+.max-w-444-px {
+    max-width: 444px;
 }
 
 .max-w-480-px {
@@ -3955,6 +4008,14 @@ input:focus, input:focus-visible {
     padding-block-end: var(--size-17);
 }
 
+.tw-pt-90-px {
+    padding-block-start: clamp(2.5rem, -1rem + 8vw, 5.625rem);
+}
+
+.tw-pt-224-px {
+    padding-block-start: 224px;
+}
+
 .tw-px-36-px {
     padding-inline: clamp(1rem, -1rem + 8vw, 2.25rem);
 }
@@ -3989,6 +4050,10 @@ input:focus, input:focus-visible {
 
 .tw-pb-136-px {
     padding-block-end: 136px;
+}
+
+.tw-ps-48-px {
+    padding-inline-start: clamp(1.5rem, -1rem + 8vw, 3rem);
 }
 
 .tw-ps-56-px {
@@ -4358,6 +4423,18 @@ input:focus, input:focus-visible {
     box-shadow: 0px 4px 30px 0px #364F8314;
 }
 
+.common-shadow-seven {
+    box-shadow: 0px 4px 32px 0px #0000000A;
+}
+
+.common-shadow-eight {
+    box-shadow: 0px 4px 32px 10px #0000000D;
+}
+
+.common-shadow-nine {
+    box-shadow: 0px 4px 21px 0px #00000017;
+}
+
 .hover-common-shadow-four:hover {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }
@@ -4567,6 +4644,10 @@ input:focus, input:focus-visible {
 
 .min-w-max {
     min-width: max-content;
+}
+
+.min-w-144-px {
+    min-width: 144px;
 }
 
 .tw-w-1-px {
@@ -5101,6 +5182,34 @@ svg.radial-progress text {
     }
 }
 
+.scale-animation {
+    animation: 4s scaleAnimation linear infinite;
+}
+
+@keyframes scaleAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes leftRightAnimation {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-24px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 .scalable-animation::after {
     content: "";
     position: absolute;
@@ -5485,4 +5594,31 @@ svg.radial-progress text {
     }
 }
 /* Banner Two End */
+/* =========================== Hosting plan section start =============================== */
+.hosting-plan-slider {
+    height: 100%;
+    height: 450px;
+}
+
+.hosting-plan-slider .swiper-slide {
+    border-inline-end: 1px solid var(--neutral-100);
+}
+
+.hosting-plan-slider .swiper-slide:last-child {
+    border-inline-end: 0;
+}
+
+.hosting-plan-item .hosting-plan-btn {
+    transition: 0s !important;
+}
+
+.hosting-plan-item .button__label {
+    transition: 0s !important;
+}
+
+.hosting-plan-item:hover .hosting-plan-btn:hover {
+    color: #fff !important;
+}
+
+/* =========================== Hosting plan section End =============================== */
 /*# sourceMappingURL=main.css.map */

@@ -32,6 +32,33 @@
     }
 }
 
+
+.scale-animation {
+    animation: 4s scaleAnimation linear infinite;
+}
+
+@keyframes scaleAnimation {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+}
+
+
+@keyframes leftRightAnimation {
+    0% {
+        transform: translateX(0px)
+    }
+    50% {
+        transform: translateX(-24px)
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+
 .scalable-animation {
   &::after {
       content: "";

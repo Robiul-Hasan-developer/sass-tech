@@ -42,6 +42,14 @@
 }
 
 .tw {
+  &-pt {
+    &-90-px {
+      padding-block-start: clamp(2.5rem, -1rem + 8vw, 5.625rem);
+    }
+    &-224-px {
+      padding-block-start: 224px;
+    }
+  }
   &-px {
     &-36-px {
       padding-inline: clamp(1rem, -1rem + 8vw, 2.25rem);
@@ -78,6 +86,9 @@
     }
   }
   &-ps {
+    &-48-px {
+      padding-inline-start: clamp(1.5rem, -1rem + 8vw, 3rem);
+    }
     &-56-px {
       padding-inline-start: clamp(1.5rem, -1rem + 8vw, 3.5rem);
     }

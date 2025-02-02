@@ -5,8 +5,13 @@
   }
 }
 
-.min-w-max {
-  min-width: max-content;
+.min-w {
+  &-max {
+    min-width: max-content;
+  }
+  &-144-px {
+    min-width: 144px;
+  }
 }
 
 .tw-w {
