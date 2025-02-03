@@ -57,6 +57,15 @@
         .group-hover-item-scale-1 {
             transform: scale(1);
         }
+        .group-hover-item-d-block {
+            display: block !important;
+        }
+        .group-hover-item-d-none {
+            display: none !important;
+        }
+        .group-hover-item-text-invert {
+            filter: invert(1);
+        }
     }
 }
 /* ======================== Group Css End =============================== */

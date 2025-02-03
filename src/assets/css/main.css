@@ -1710,6 +1710,10 @@ input:focus, input:focus-visible {
     opacity: 0.05;
 }
 
+.opacity-1 {
+    opacity: 0.1;
+}
+
 /* ================================= Classes Css End =========================== */
 /* Font Size Class Start */
 .text-inherit {
@@ -2169,6 +2173,18 @@ input:focus, input:focus-visible {
 
 .group-item:hover .group-hover-item-scale-1 {
     transform: scale(1);
+}
+
+.group-item:hover .group-hover-item-d-block {
+    display: block !important;
+}
+
+.group-item:hover .group-hover-item-d-none {
+    display: none !important;
+}
+
+.group-item:hover .group-hover-item-text-invert {
+    filter: invert(1);
 }
 
 /* ======================== Group Css End =============================== */
@@ -3164,6 +3180,10 @@ input:focus, input:focus-visible {
     max-width: 1524px;
 }
 
+.max-w-1552-px {
+    max-width: 1552px;
+}
+
 .max-w-118-px {
     max-width: 118px;
 }
@@ -3194,6 +3214,10 @@ input:focus, input:focus-visible {
 
 .max-w-228-px {
     max-width: 228px;
+}
+
+.max-w-250-px {
+    max-width: 250px;
 }
 
 .max-w-278-px {
@@ -4452,6 +4476,10 @@ input:focus, input:focus-visible {
     transition-duration: 150ms;
 }
 
+.tw-transition-0 {
+    transition: 0s;
+}
+
 /* transition Css Class End */
 .tw-duration-75 {
     transition-duration: 75ms;
@@ -5621,4 +5649,24 @@ svg.radial-progress text {
 }
 
 /* =========================== Hosting plan section End =============================== */
+/* ============================ Services section css start ============================ */
+.square-bg-shape::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: hsl(var(--yellow));
+    inset-inline-start: 0px;
+    inset-block-start: 0px;
+    z-index: -1;
+    transition: 0.2s linear;
+}
+
+.square-bg-shape:hover::before {
+    inset-inline-start: 6px;
+    inset-block-start: 6px;
+}
+
+/* ============================ Services section css end ============================ */
 /*# sourceMappingURL=main.css.map */

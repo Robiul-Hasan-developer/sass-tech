@@ -385,13 +385,45 @@ var hostingPlanSlider = new Swiper('.hosting-plan-slider', {
 // ========================== hosting plan slider Js End =====================
 
 
-
 // ========================== Add Attribute For Bg Image Js Start ====================
 $(".background-img").css('background', function () {
   var bg = ('url(' + $(this).data("background-image") + ')');
   return bg;
 });
 // ========================== Add Attribute For Bg Image Js End =====================
+
+// ========================= ShowCase Slider Js start ===================
+var brandSlider = new Swiper('.service-slider', {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  autoplay: false,
+  speed: 1500,
+  grabCursor: true,
+  loop: true,
+  spaceBetween: 24,
+  slidesPerView: 4,
+  breakpoints: {
+    300: {
+        slidesPerView: 1,
+    },
+    576: {
+        slidesPerView: 2,
+    },
+    768: {
+        slidesPerView: 2,
+    },
+    992: {
+        slidesPerView: 3,
+    },
+    1300: {
+        slidesPerView: 4,
+    },
+  }
+});
+// ========================= ShowCase Slider Js End ===================
+
 
 
   // ================== Password Show Hide Js Start ==========
