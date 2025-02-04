@@ -120,6 +120,47 @@
     display: none;
 }
 
+.accordion.style-two .accordion-item {
+    border-bottom: 1px solid var(--neutral-100) !important;
+    border-radius: 0 !important;
+}
+
+.accordion.style-two .accordion-item:has(.accordion-collapse.show), .accordion.style-two .accordion-item:has(.accordion-button[aria-expanded=true]) {
+    border-left: 0 !important;
+    background: #fff !important;
+    box-shadow: 0 20px 20px 0 #03041C14;
+    border-radius: 0 0 20px 20px !important;
+}
+
+.accordion.style-two .accordion-button {
+    padding-inline-end: 32px !important;
+}
+
+.accordion.style-two .accordion-button::before {
+    position: absolute;
+    content: "\e3d4";
+    font-family: "Phosphor";
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--neutral-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    inset-inline-end: 0;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    color: var(--neutral-500);
+}
+
+.accordion.style-two .accordion-button[aria-expanded=true]::before {
+    background-color: var(--main-600) !important;
+    color: #fff !important;
+    border-color: var(--neutral-900) !important;
+    content: "\e32a";
+}
+
 /* ================================= Accordion Css End =========================== */
 /* ========================== Button Css Start =============== */
 .button__label {
@@ -500,6 +541,15 @@ input[type=number] {
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
+}
+
+.pagination-style-two .swiper-pagination-bullet {
+    background: var(--main-600);
+    opacity: 1;
+}
+
+.pagination-style-two .swiper-pagination-bullet-active {
+    background: #fff !important;
 }
 
 /* ================================= Typography Css Start =========================== */
@@ -1354,6 +1404,10 @@ input:focus, input:focus-visible {
     border-color: transparent !important;
 }
 
+.border-white-01 {
+    border-color: hsl(var(--white)/0.12) !important;
+}
+
 /* Colors class start */
 .text-main-50 {
     color: var(--main-50);
@@ -2137,6 +2191,7 @@ input:focus, input:focus-visible {
 
 .group:hover .group-hover-bg-white {
     background-color: hsl(var(--white)) !important;
+    background: hsl(var(--white)) !important;
 }
 
 .group:hover .group-hover-bg-main-600 {
@@ -2973,6 +3028,10 @@ input:focus, input:focus-visible {
     margin-inline-start: 80px;
 }
 
+.tw-mt-105-px {
+    margin-block-start: 105px;
+}
+
 .tw-mt-160-px {
     margin-block-start: 160px;
 }
@@ -3240,6 +3299,10 @@ input:focus, input:focus-visible {
     max-width: 330px;
 }
 
+.max-w-350-px {
+    max-width: 350px;
+}
+
 .max-w-400-px {
     max-width: 400px;
 }
@@ -3282,6 +3345,10 @@ input:focus, input:focus-visible {
 
 .max-w-602-px {
     max-width: 602px;
+}
+
+.max-w-620-px {
+    max-width: 620px;
 }
 
 .max-w-672-px {
@@ -4302,6 +4369,11 @@ input:focus, input:focus-visible {
     border-radius: 50px;
 }
 
+.rounded-top-45-px {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+}
+
 /* Border Radius Css End */
 /* Rotate Css Start */
 .tw-hover-rotate-360:hover {
@@ -4457,6 +4529,10 @@ input:focus, input:focus-visible {
 
 .common-shadow-nine {
     box-shadow: 0px 4px 21px 0px #00000017;
+}
+
+.common-shadow-ten {
+    box-shadow: 0px 4px 18px 0px #0000000D;
 }
 
 .hover-common-shadow-four:hover {
@@ -5594,7 +5670,28 @@ svg.radial-progress text {
     color: var(--heading-color);
 }
 
+.home-two .home-two-header {
+    position: absolute;
+}
+
+.home-two .home-two-header.fixed-header {
+    position: fixed;
+    margin-block-start: 0;
+}
+
+.home-two .has-submenu > a::before {
+    color: var(--heading-color);
+}
+
+.home-two .btn-main {
+    background: linear-gradient(270deg, #2B85D6 0.5%, #254BE5 49%, #195AFB 98.5%) !important;
+}
+
 /* Banner Two Start */
+.banner-two {
+    padding-block-start: 148px;
+}
+
 @media (min-width: 992px) {
     .banner-two {
         padding-block-end: 180px;

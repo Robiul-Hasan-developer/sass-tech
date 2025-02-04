@@ -21,6 +21,7 @@
         .group-hover-bg {
             &-white {
                 background-color: hsl(var(--white)) !important;
+                background: hsl(var(--white)) !important;
             }
             &-main-600 {
                 background-color: var(--main-600) !important;

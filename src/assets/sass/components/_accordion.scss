@@ -15,4 +15,48 @@
 .accordion-button::after {
     display: none;
 }
+
+
+.accordion {
+    &.style-two {
+        .accordion-item {
+            border-bottom: 1px solid var(--neutral-100) !important;
+            border-radius: 0 !important;
+        }
+        
+        .accordion-item:has(.accordion-collapse.show), .accordion-item:has(.accordion-button[aria-expanded="true"]) {
+            border-left: 0 !important;
+            background: #fff !important;
+            box-shadow: 0 20px 20px 0 #03041C14;
+            border-radius: 0 0 20px 20px !important;
+        }
+
+        .accordion-button {
+            padding-inline-end: 32px !important;
+            &::before {
+                position: absolute;
+                content: "\E3D4";
+                font-family: "Phosphor";
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                border: 1px solid var(--neutral-100);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                inset-inline-end: 0;
+                inset-block-start: 50%;
+                transform: translateY(-50%);
+                color: var(--neutral-500);
+            }
+            &[aria-expanded="true"]::before {
+                background-color: var(--main-600) !important;
+                color: #fff !important;
+                border-color: var(--neutral-900) !important;
+                content: "\E32A";
+            }
+        }
+    }
+}
 /* ================================= Accordion Css End =========================== */

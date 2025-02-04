@@ -393,17 +393,20 @@ $(".background-img").css('background', function () {
 // ========================== Add Attribute For Bg Image Js End =====================
 
 // ========================= ShowCase Slider Js start ===================
-var brandSlider = new Swiper('.service-slider', {
+var serviceSlider = new Swiper('.service-slider', {
   autoplay: {
     delay: 2000,
     disableOnInteraction: false
   },
-  autoplay: false,
   speed: 1500,
   grabCursor: true,
   loop: true,
   spaceBetween: 24,
   slidesPerView: 4,
+  pagination: {
+    el: ".service-slider-pagination",
+    clickable: true,
+  },
   breakpoints: {
     300: {
         slidesPerView: 1,
