@@ -162,7 +162,7 @@ if ($('.splitTextStyleOne').length > 0) {
 
     tl.from(itemSplitted.lines, { 
       duration: .6, 
-      delay: 0.7, 
+      delay: 0.3, 
       opacity: 0, 
       rotationX: -80, 
       force3D: true, 

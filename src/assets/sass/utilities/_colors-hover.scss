@@ -31,5 +31,10 @@
             color: hsl(var(--yellow)) !important;
         }
     }
+    &-spring-green {
+        &:hover {
+            color: hsl(var(--spring-green)) !important;
+        }
+    }
 }
 /* Hover color class end */

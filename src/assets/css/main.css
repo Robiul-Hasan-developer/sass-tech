@@ -7,6 +7,8 @@
 /* ========================= Variable Css Start ======================== */
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   /* Font Family Variable */
     --heading-font: "Satoshi", sans-serif;
@@ -32,6 +34,10 @@
     --yellow-s: 100%;
     --yellow-l: 54%;
     --yellow: var(--yellow-h) var(--yellow-s) var(--yellow-l);
+    --spring-green-h: 144;
+    --spring-green-s: 80%;
+    --spring-green-l: 55%;
+    --spring-green: var(--spring-green-h) var(--spring-green-s) var(--spring-green-l);
   /* White Color */
     --white: 0 0% 100%;
     --black: 249 63% 15%;
@@ -1019,6 +1025,10 @@ input:focus, input:focus-visible {
     background-color: hsl(var(--purple));
 }
 
+.bg-spring-green {
+    background-color: hsl(var(--spring-green));
+}
+
 .section-bg-one {
     background-color: #f5f5f8;
 }
@@ -1581,6 +1591,16 @@ input:focus, input:focus-visible {
     color: hsl(var(--yellow)) !important;
 }
 
+.text-spring-green {
+    color: hsl(var(--spring-green)) !important;
+}
+
+.text-gradient-teal {
+    background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* Colors class End */
 /* Hover color class start */
 .hover-text-main-50:hover {
@@ -1722,6 +1742,10 @@ input:focus, input:focus-visible {
 
 .hover-text-yellow:hover {
     color: hsl(var(--yellow)) !important;
+}
+
+.hover-text-spring-green:hover {
+    color: hsl(var(--spring-green)) !important;
 }
 
 /* Hover color class end */
@@ -2019,6 +2043,10 @@ input:focus, input:focus-visible {
 
 .tw-h-84-px {
     height: 84px;
+}
+
+.tw-h-114-px {
+    height: 114px;
 }
 
 .tw-h-150-px {
@@ -3355,6 +3383,11 @@ input:focus, input:focus-visible {
     max-width: 672px;
 }
 
+@media (min-width: 992px) {
+    .max-w-58-percent {
+        max-width: 58%;
+    }
+}
 /* Max width Css Class End */
 /* Overlay Start */
 .overlay {
@@ -4500,7 +4533,7 @@ input:focus, input:focus-visible {
 }
 
 .common-shadow-two {
-    box-shadow: 0 30px 50px 0px rgba(18, 17, 22, 0.08);
+    box-shadow: 0 30px 50px 0px #12111614;
 }
 
 .common-shadow-three {
@@ -4533,6 +4566,10 @@ input:focus, input:focus-visible {
 
 .common-shadow-ten {
     box-shadow: 0px 4px 18px 0px #0000000D;
+}
+
+.common-shadow-eleven {
+    box-shadow: 0 30px 50px 0px #0106141F;
 }
 
 .hover-common-shadow-four:hover {
@@ -5186,6 +5223,22 @@ input:focus, input:focus-visible {
     background: linear-gradient(180deg, rgba(19, 81, 216, 0.07) 0%, rgba(245, 245, 248, 0.32) 100%);
 }
 
+.gradient-bg-two {
+    background: linear-gradient(131.31deg, #0B163F 12.26%, #0D1C5D 48.46%, #301996 91.93%);
+}
+
+.gradient-bg-three {
+    background: linear-gradient(131.31deg, #0B163F 12.26%, #0D1C5D 48.46%, #301996 91.93%);
+}
+
+.gradient-bg-four {
+    background: linear-gradient(180deg, rgba(245, 245, 248, 0) 0%, rgba(240, 240, 250, 0.37) 38.09%, rgba(236, 236, 251, 0.67) 100%);
+}
+
+.gradient-bg-five {
+    background: linear-gradient(69.92deg, #003D3D 28.63%, #00664E 87.07%, #008C63 112.98%);
+}
+
 .gradient-overlay {
     position: relative;
 }
@@ -5283,6 +5336,24 @@ svg.radial-progress text {
 
     100% {
         transform: translateX(0px);
+    }
+}
+
+.left-right-scale-animation {
+    animation: leftRightScaleAnimation 15s infinite ease-in-out;
+}
+
+@keyframes leftRightScaleAnimation {
+    0% {
+        transform: translateX(0px) translateY(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-104px) translateY(-50%) scale(0.8);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(-50%) scale(1);
     }
 }
 
@@ -5766,4 +5837,73 @@ svg.radial-progress text {
 }
 
 /* ============================ Services section css end ============================ */
+:root {
+    --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.4375rem);
+    --heading-two: clamp(2rem, 0.3353rem + 2.1661vw, 3.5rem);
+    --heading-three: clamp(1.875rem, 0.7133rem + 2.8846vw, 3.125rem);
+    --heading-four: clamp(1.5rem, 0.5569rem + 1.444vw, 1.875rem);
+    --heading-five: clamp(1.125rem, 1.2rem + 0.722vw, 1.5rem);
+    --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
+    --heading-color: #000000;
+}
+
+.home-three h1, .home-three .h1, .home-three h2, .home-three .h2, .home-three h3, .home-three .h3, .home-three h4, .home-three .h4, .home-three h5, .home-three .h5, .home-three h6, .home-three .h6 {
+    color: var(--heading-color);
+}
+
+.home-three .font-dm-serif {
+    font-family: var(--dm-serif);
+}
+
+.home-three .text-heading {
+    color: var(--heading-color);
+}
+
+.home-three .btn-main {
+    background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+}
+
+.home-three .btn-main-two {
+    background-color: hsl(var(--spring-green)) !important;
+    color: var(--heading-color) !important;
+}
+
+.home-three .btn-main-two:hover, .home-three .btn-main-two:hover span {
+    color: hsl(var(--white)) !important;
+}
+
+.home-three .hover-style-two .button__flair::before {
+    background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+}
+
+.home-three .hover-style-one .button__flair::before {
+    background-color: hsl(var(--spring-green)) !important;
+}
+
+/* Banner Two Start */
+.banner-three {
+    padding-block-start: 284px;
+    padding-block-end: 178px;
+}
+
+@media (max-width: 991px) {
+    .banner-three {
+        padding-block-start: 240px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-three {
+        padding-block-start: 200px;
+        padding-block-end: 120px;
+    }
+}
+
+@media (max-width: 575px) {
+    .banner-three {
+        padding-block-start: 200px;
+        padding-block-end: 100px;
+    }
+}
+/* Banner Two End */
 /*# sourceMappingURL=main.css.map */

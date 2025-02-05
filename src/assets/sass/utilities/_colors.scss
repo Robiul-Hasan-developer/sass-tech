@@ -46,5 +46,14 @@
     &-yellow {
       color: hsl(var(--yellow)) !important;
     }
+    &-spring-green {
+      color: hsl(var(--spring-green)) !important;
+    }
+}
+
+.text-gradient-teal {
+  background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* Colors class End */

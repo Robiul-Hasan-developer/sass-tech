@@ -21,17 +21,33 @@
 }
 
 @keyframes leftRightAnimation {
-    0% {
-        transform: translateX(0px)
-    }
-    50% {
-        transform: translateX(-24px)
-    }
-    100% {
-        transform: translateX(0px)
-    }
+  0% {
+      transform: translateX(0px)
+  }
+  50% {
+      transform: translateX(-24px)
+  }
+  100% {
+      transform: translateX(0px)
+  }
 }
 
+
+.left-right-scale-animation {
+  animation: leftRightScaleAnimation 15s infinite ease-in-out;
+}
+
+@keyframes leftRightScaleAnimation {
+  0% {
+    transform: translateX(0px) translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-104px) translateY(-50%) scale(0.8);
+  }
+  100% {
+    transform: translateX(0px) translateY(-50%) scale(1);
+  }
+}
 
 .scale-animation {
     animation: 4s scaleAnimation linear infinite;
