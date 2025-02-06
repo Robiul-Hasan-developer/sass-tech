@@ -16,6 +16,17 @@
     &-five {
         background: linear-gradient(69.92deg, #003D3D 28.63%, #00664E 87.07%, #008C63 112.98%);
     }
+    &-six {
+        background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+    }
+}
+
+.hover-gradient-bg {
+    &-five {
+        &:hover {
+            background: linear-gradient(90deg, #06766E 0%, #20BA8B 100%);
+        }
+    }
 }
 
 

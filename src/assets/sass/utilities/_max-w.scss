@@ -60,7 +60,9 @@
         }
     }
     &-330-px {
-        max-width: 330px;
+        @media (min-width: 992px) {
+            max-width: 330px;
+        }
     }
     &-350-px {
         max-width: 350px;

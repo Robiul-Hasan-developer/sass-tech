@@ -2,6 +2,8 @@
 .banner-three {
     padding-block-start: 284px;
     padding-block-end: 178px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     @media (max-width: 991px) {
         padding-block-start: 240px;
     }

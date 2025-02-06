@@ -25,4 +25,14 @@
         }
     }
 }
+
+
+.gradient-bg .nav-link.active, .show>.nav-link {
+    background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+}
+.nav-link.active {
+    .active-white {
+        filter: brightness(0) invert(1);        
+    }
+}
 /* ================================= Tab Css End =========================== */

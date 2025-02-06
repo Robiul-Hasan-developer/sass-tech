@@ -99,6 +99,11 @@
     &-76-px {
       margin-inline-start: -76px;
     }
+    &-110-px {
+      @media (min-width: 992px) {
+        margin-inline-start: -110px;
+      }
+    }
   }
   &--me {
     &-8-px {

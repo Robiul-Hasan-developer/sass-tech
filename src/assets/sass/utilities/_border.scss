@@ -43,4 +43,12 @@
   &-white-01 {
     border-color: hsl(var(--white)/0.12) !important;
   }
+  &-spring-green {
+    border-color: hsl(var(--spring-green)) !important;
+  }
+  &-dashed {
+    border-style: dashed !important;
+  }
 }
+
+

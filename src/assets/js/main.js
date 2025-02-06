@@ -429,6 +429,40 @@ var serviceSlider = new Swiper('.service-slider', {
 
 
 
+
+// ================================= Brand slider Start =========================
+var brandThreeSlider = new Swiper('.brand-three-slider', {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  autoplay: true,
+  speed: 1500,
+  grabCursor: true,
+  loop: true,
+  slidesPerView: 7,
+  breakpoints: {
+      300: {
+          slidesPerView: 2,
+      },
+      575: {
+          slidesPerView: 3,
+      },
+      768: {
+          slidesPerView: 4,
+      },
+      992: {
+          slidesPerView: 5,
+      },
+      1200: {
+          slidesPerView: 6,
+      },
+      1400: {
+          slidesPerView: 7,
+      },
+  }
+});
+// ================================= Brand slider End =========================
   // ================== Password Show Hide Js Start ==========
   // $(".toggle-password").on('click', function() {
   //   $(this).toggleClass("active");

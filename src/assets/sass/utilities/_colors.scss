@@ -56,4 +56,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.text-stroke-yellow {
+  -webkit-text-fill-color: hsl(var(--yellow)) !important;
+}
+
 /* Colors class End */

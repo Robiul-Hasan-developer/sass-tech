@@ -46,6 +46,16 @@
         }
     }
 
-
+    .header {
+        &.fixed-header {
+            position: fixed !important;
+            margin-block-start: 0;
+            background-color: #0f6555;
+            .header-three__inner {
+                box-shadow: none !important;
+                background-color: transparent;
+            }
+        }
+    }
     
 }

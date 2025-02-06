@@ -448,6 +448,35 @@ input[type=number] {
     opacity: 1;
 }
 
+.common-check-two .form-check-input {
+    border-color: #20BA8B !important;
+    position: relative;
+}
+
+.common-check-two .form-check-input::before {
+    position: absolute;
+    content: "\e182";
+    font-family: "Phosphor";
+    font-weight: 900;
+    color: hsl(var(--white));
+    font-size: 12px;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.common-check-two .form-check-input:checked {
+    background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%) !important;
+}
+
+.common-check-two .form-check-input:checked::before {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* Custom Checkbox & Radio Css End */
 /* Switch Css Start */
 .form-switch {
@@ -514,6 +543,14 @@ input[type=number] {
 
 .active-purple .nav-link.active:hover {
     opacity: 0.9;
+}
+
+.gradient-bg .nav-link.active, .show > .nav-link {
+    background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+}
+
+.nav-link.active .active-white {
+    filter: brightness(0) invert(1);
 }
 
 /* ================================= Tab Css End =========================== */
@@ -1029,6 +1066,10 @@ input:focus, input:focus-visible {
     background-color: hsl(var(--spring-green));
 }
 
+.bg-goldenrod {
+    background-color: #D19D3D17;
+}
+
 .section-bg-one {
     background-color: #f5f5f8;
 }
@@ -1418,6 +1459,14 @@ input:focus, input:focus-visible {
     border-color: hsl(var(--white)/0.12) !important;
 }
 
+.border-spring-green {
+    border-color: hsl(var(--spring-green)) !important;
+}
+
+.border-dashed {
+    border-style: dashed !important;
+}
+
 /* Colors class start */
 .text-main-50 {
     color: var(--main-50);
@@ -1599,6 +1648,10 @@ input:focus, input:focus-visible {
     background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.text-stroke-yellow {
+    -webkit-text-fill-color: hsl(var(--yellow)) !important;
 }
 
 /* Colors class End */
@@ -2267,7 +2320,7 @@ input:focus, input:focus-visible {
 }
 
 .group-item:hover .group-hover-item-text-invert {
-    filter: invert(1);
+    filter: brightness(0) invert(1);
 }
 
 /* ======================== Group Css End =============================== */
@@ -3092,6 +3145,12 @@ input:focus, input:focus-visible {
     margin-inline-start: -76px;
 }
 
+@media (min-width: 992px) {
+    .tw--ms-110-px {
+        margin-inline-start: -110px;
+    }
+}
+
 .tw--me-8-px {
     margin-inline-end: -8px;
 }
@@ -3323,8 +3382,10 @@ input:focus, input:focus-visible {
     }
 }
 
-.max-w-330-px {
-    max-width: 330px;
+@media (min-width: 992px) {
+    .max-w-330-px {
+        max-width: 330px;
+    }
 }
 
 .max-w-350-px {
@@ -4172,6 +4233,10 @@ input:focus, input:focus-visible {
     padding-block-end: 84px;
 }
 
+.tw-pb-94-px {
+    padding-block-end: 94px;
+}
+
 .tw-pb-136-px {
     padding-block-end: 136px;
 }
@@ -4570,6 +4635,10 @@ input:focus, input:focus-visible {
 
 .common-shadow-eleven {
     box-shadow: 0 30px 50px 0px #0106141F;
+}
+
+.common-shadow-twelve {
+    box-shadow: 0 10px 30px 0px #3955781A;
 }
 
 .hover-common-shadow-four:hover {
@@ -5239,6 +5308,14 @@ input:focus, input:focus-visible {
     background: linear-gradient(69.92deg, #003D3D 28.63%, #00664E 87.07%, #008C63 112.98%);
 }
 
+.gradient-bg-six {
+    background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+}
+
+.hover-gradient-bg-five:hover {
+    background: linear-gradient(90deg, #06766E 0%, #20BA8B 100%);
+}
+
 .gradient-overlay {
     position: relative;
 }
@@ -5880,10 +5957,23 @@ svg.radial-progress text {
     background-color: hsl(var(--spring-green)) !important;
 }
 
+.home-three .header.fixed-header {
+    position: fixed !important;
+    margin-block-start: 0;
+    background-color: #0f6555;
+}
+
+.home-three .header.fixed-header .header-three__inner {
+    box-shadow: none !important;
+    background-color: transparent;
+}
+
 /* Banner Two Start */
 .banner-three {
     padding-block-start: 284px;
     padding-block-end: 178px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 @media (max-width: 991px) {
@@ -5906,4 +5996,11 @@ svg.radial-progress text {
     }
 }
 /* Banner Two End */
+.transform-rotate--14-deg {
+    transform: rotate(-14deg);
+}
+
+.transform-rotate-8-deg {
+    transform: rotate(8deg);
+}
 /*# sourceMappingURL=main.css.map */

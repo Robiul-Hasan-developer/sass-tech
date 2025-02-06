@@ -65,7 +65,7 @@
             display: none !important;
         }
         .group-hover-item-text-invert {
-            filter: invert(1);
+            filter: brightness(0) invert(1);
         }
     }
 }
