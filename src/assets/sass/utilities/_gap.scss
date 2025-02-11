@@ -12,6 +12,9 @@
   &-42-px {
     gap: clamp(1.5rem, 0.0938rem + 4.5vw, 2.625rem);
   }
+  &-74-px {
+    gap: clamp(1.5rem, -24.8393rem + 28.0952vw, 4.625rem);
+  }
   &-100-px {
     gap: clamp(1.5rem, -24.8393rem + 28.0952vw, 6.25rem);
   }

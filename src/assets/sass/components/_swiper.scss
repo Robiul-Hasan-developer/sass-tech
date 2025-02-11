@@ -12,3 +12,14 @@
         }
     }
 }
+
+.pagination-style-three {
+    .swiper-pagination-bullet {
+        @extend .gradient-bg-six; 
+        opacity: 1;
+        &-active {
+            background: #fff !important;
+            box-shadow: 0px 4px 8px 0px #00000047 !important;
+        }
+    }
+}

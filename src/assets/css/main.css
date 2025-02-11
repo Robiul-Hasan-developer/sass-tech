@@ -595,6 +595,15 @@ input[type=number] {
     background: #fff !important;
 }
 
+.pagination-style-three .swiper-pagination-bullet {
+    opacity: 1;
+}
+
+.pagination-style-three .swiper-pagination-bullet-active {
+    background: #fff !important;
+    box-shadow: 0px 4px 8px 0px #00000047 !important;
+}
+
 /* ================================= Typography Css Start =========================== */
 * {
     margin: 0;
@@ -734,6 +743,10 @@ input:focus, input:focus-visible {
     background-position: center center !important;
     width: 100%;
     height: 100%;
+}
+
+.bg-position-top-center {
+    background-position: top center !important;
 }
 
 /* Bg Image Css End */
@@ -1851,6 +1864,10 @@ input:focus, input:focus-visible {
     font-size: inherit;
 }
 
+.text-30-px {
+    font-size: clamp(1rem, 0.5569rem + 1.444vw, 1.875rem);
+}
+
 .tw-text-xs {
     font-size: 0.75rem;
 }
@@ -2238,6 +2255,10 @@ input:focus, input:focus-visible {
 
 .tw-gap-42-px {
     gap: clamp(1.5rem, 0.0938rem + 4.5vw, 2.625rem);
+}
+
+.tw-gap-74-px {
+    gap: clamp(1.5rem, -24.8393rem + 28.0952vw, 4.625rem);
 }
 
 .tw-gap-100-px {
@@ -3328,6 +3349,10 @@ input:focus, input:focus-visible {
 
 .max-w-1552-px {
     max-width: 1552px;
+}
+
+.max-w-1570-px {
+    max-width: 1570px;
 }
 
 .max-w-118-px {
@@ -4925,6 +4950,10 @@ input:focus, input:focus-visible {
     line-height: 1.04;
 }
 
+.tw-leading-145 {
+    line-height: 1.45;
+}
+
 /* Aspect ratio css start */
 .aspect-1 {
     aspect-ratio: 1;
@@ -5308,7 +5337,7 @@ input:focus, input:focus-visible {
     background: linear-gradient(69.92deg, #003D3D 28.63%, #00664E 87.07%, #008C63 112.98%);
 }
 
-.gradient-bg-six {
+.gradient-bg-six, .pagination-style-three .swiper-pagination-bullet {
     background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
 }
 
@@ -5922,6 +5951,7 @@ svg.radial-progress text {
     --heading-five: clamp(1.125rem, 1.2rem + 0.722vw, 1.5rem);
     --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
     --heading-color: #000000;
+    --bg-main-green: #06766E;
 }
 
 .home-three h1, .home-three .h1, .home-three h2, .home-three .h2, .home-three h3, .home-three .h3, .home-three h4, .home-three .h4, .home-three h5, .home-three .h5, .home-three h6, .home-three .h6 {
@@ -5934,6 +5964,10 @@ svg.radial-progress text {
 
 .home-three .text-heading {
     color: var(--heading-color);
+}
+
+.home-three .bg-main-three {
+    background-color: var(--bg-main-green);
 }
 
 .home-three .btn-main {

@@ -427,9 +427,6 @@ var serviceSlider = new Swiper('.service-slider', {
 });
 // ========================= ShowCase Slider Js End ===================
 
-
-
-
 // ================================= Brand slider Start =========================
 var brandThreeSlider = new Swiper('.brand-three-slider', {
   autoplay: {
@@ -463,6 +460,61 @@ var brandThreeSlider = new Swiper('.brand-three-slider', {
   }
 });
 // ================================= Brand slider End =========================
+
+// ========================= Plan Execute slider Js start ===================
+var planExecuteSlider = new Swiper('.plan-execute-slider', {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  speed: 1500,
+  grabCursor: true,
+  loop: true,
+  spaceBetween: 24,
+  slidesPerView: 4,
+  pagination: {
+    el: ".plan-execute-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    300: {
+        slidesPerView: 1,
+    },
+    576: {
+        slidesPerView: 2,
+    },
+    768: {
+        slidesPerView: 2,
+    },
+    992: {
+        slidesPerView: 3,
+    },
+    1300: {
+        slidesPerView: 4,
+    },
+  }
+});
+// ========================= Plan Execute slider Js End ===================
+
+// ========================= Testimonials Three slider Js start ===================
+var planExecuteSlider = new Swiper('.testimonials-three-slider', {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  autoplay: false,
+  speed: 1500,
+  grabCursor: true,
+  loop: true,
+  spaceBetween: 24,
+  slidesPerView: 1,
+  pagination: {
+    el: ".plan-execute-pagination",
+    clickable: true,
+  },
+});
+// ========================= Testimonials Three slider Js End ===================
+
   // ================== Password Show Hide Js Start ==========
   // $(".toggle-password").on('click', function() {
   //   $(this).toggleClass("active");

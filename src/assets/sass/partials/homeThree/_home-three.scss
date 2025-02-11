@@ -12,6 +12,7 @@
     --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem); // Min: 16px - Max-20px
 
     --heading-color: #000000;
+    --bg-main-green: #06766E;
 }
 
 .home-three {
@@ -23,6 +24,9 @@
     }   
     .text-heading {
         color: var(--heading-color);
+    }
+    .bg-main-three {
+        background-color: var(--bg-main-green);
     }
     .btn-main {
         background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
