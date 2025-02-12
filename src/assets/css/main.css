@@ -1087,6 +1087,25 @@ input:focus, input:focus-visible {
     background-color: #f5f5f8;
 }
 
+.bg-pink-more-light {
+    background-color: #FBF6EE;
+}
+
+.bg-pink-more-light-half {
+    position: relative;
+}
+
+.bg-pink-more-light-half::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-end: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #FBF6EE;
+    z-index: -1;
+}
+
 /* hover bg class end */
 .border-main-50 {
     border-color: var(--main-50) !important;
@@ -3142,6 +3161,10 @@ input:focus, input:focus-visible {
     margin-block-start: 194px;
 }
 
+.tw-me-84-px {
+    margin-inline-end: 84px;
+}
+
 .tw-me-90-px {
     margin-inline-end: 90px;
 }
@@ -3206,6 +3229,10 @@ input:focus, input:focus-visible {
 
 .tw--mt-170-px {
     margin-block-start: -170px;
+}
+
+.tw--mb-40-px {
+    margin-block-end: -40px;
 }
 
 .my-120 {
@@ -4220,6 +4247,10 @@ input:focus, input:focus-visible {
 
 .tw-pt-90-px {
     padding-block-start: clamp(2.5rem, -1rem + 8vw, 5.625rem);
+}
+
+.tw-pt-100-px {
+    padding-block-start: 100px;
 }
 
 .tw-pt-224-px {
@@ -5272,8 +5303,8 @@ input:focus, input:focus-visible {
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background-color: hsl(var(--white));
     mix-blend-mode: difference;
 }
@@ -5339,6 +5370,15 @@ input:focus, input:focus-visible {
 
 .gradient-bg-six, .pagination-style-three .swiper-pagination-bullet {
     background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+}
+
+.gradient-bg-80-percent::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(180deg, rgba(231, 249, 247, 0) 0%, rgba(240, 244, 250, 0.614257) 65.67%, rgba(240, 244, 250, 0.79) 100%);
+    z-index: -1;
 }
 
 .hover-gradient-bg-five:hover {
@@ -5700,6 +5740,77 @@ svg.radial-progress text {
         transform: rotate(0deg);
     }
 }
+
+.animation-scalation {
+    animation: scalation 8s linear infinite;
+}
+
+.animation-upDown {
+    animation: animationUpDown 8s linear infinite;
+}
+
+.animation-rotate-scale {
+    animation: scaleRotate 4.5s ease-in-out infinite;
+}
+
+@keyframes scaleRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(180deg);
+    }
+
+    75% {
+        transform: scale(1.2) rotate(360deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes scalation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animationUpDown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-60px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animation-delay-1 {
+    animation-delay: 1s;
+}
+
+.animation-delay-2 {
+    animation-delay: 2s;
+}
+
 /* ======================== Animation Css End ==================================== */
 /* about Css Start */
 .throwable-element {
@@ -6002,6 +6113,10 @@ svg.radial-progress text {
     background-color: transparent;
 }
 
+.home-three .bg-green-deep {
+    background-color: #013E3E;
+}
+
 /* Banner Two Start */
 .banner-three {
     padding-block-start: 284px;
@@ -6037,4 +6152,57 @@ svg.radial-progress text {
 .transform-rotate-8-deg {
     transform: rotate(8deg);
 }
+
+/* ============================= Distraction section start ======================================== */
+.distraction__inner {
+    padding-block: 64px;
+}
+
+@media (max-width: 575px) {
+    .distraction__inner {
+        padding-block: 120px;
+    }
+}
+
+.distraction-icon {
+    max-width: 12%;
+}
+
+.distraction-icon.seven {
+    inset-inline-start: 50%;
+    inset-block-start: 64%;
+    transform: translate(-50%, -50%);
+}
+
+.distraction-icon.six {
+    inset-block-end: 6px;
+    inset-inline-start: 8%;
+}
+
+.distraction-icon.five {
+    inset-inline-start: 22%;
+    inset-block-end: 26%;
+}
+
+.distraction-icon.four {
+    inset-inline-end: 20%;
+    inset-block-end: 10%;
+}
+
+.distraction-icon.three {
+    inset-inline-end: 13%;
+    inset-block-start: 44%;
+}
+
+.distraction-icon.two {
+    inset-inline-end: 2%;
+    inset-block-start: 23%;
+}
+
+.distraction-icon.one {
+    inset-inline-start: 10%;
+    inset-block-start: 24%;
+}
+
+/* ============================= Distraction section End ======================================== */
 /*# sourceMappingURL=main.css.map */

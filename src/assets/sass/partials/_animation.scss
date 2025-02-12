@@ -261,4 +261,72 @@
       transform: rotate(0deg);
     }
   }
-  /* ======================== Animation Css End ==================================== */
+
+
+
+
+.animation-scalation {
+  animation: scalation 8s linear infinite;
+}
+
+.animation-upDown {
+  animation: animationUpDown 8s linear infinite;
+}
+
+.animation-rotate-scale {
+  animation: scaleRotate 4.5s ease-in-out infinite;
+}
+
+@keyframes scaleRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes scalation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+      transform: scale(0.5);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes animationUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(-60px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+.animation-delay {
+  &-1 {
+    animation-delay: 1s;
+  }
+  &-2 {
+    animation-delay: 2s;
+  }
+}
+
+
+/* ======================== Animation Css End ==================================== */
