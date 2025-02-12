@@ -1087,6 +1087,10 @@ input:focus, input:focus-visible {
     background-color: #f5f5f8;
 }
 
+.section-bg-two {
+    background-color: #F3F8F8;
+}
+
 .bg-pink-more-light {
     background-color: #FBF6EE;
 }
@@ -1104,6 +1108,32 @@ input:focus, input:focus-visible {
     height: 40%;
     background-color: #FBF6EE;
     z-index: -1;
+}
+
+.bg-neutral-light {
+    background-color: #EFF1F4;
+}
+
+.bg-neutral-light-half {
+    position: relative;
+}
+
+.bg-neutral-light-half::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-end: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #EFF1F4;
+    z-index: -1;
+}
+
+.bg-neutral-light-half.style-two::before {
+    background-color: #f3f8f8;
+    inset-block-end: auto;
+    inset-block-start: 0;
+    height: 60%;
 }
 
 /* hover bg class end */
@@ -2142,8 +2172,16 @@ input:focus, input:focus-visible {
     height: 150px;
 }
 
+.tw-h-108-px {
+    height: 108px;
+}
+
 .tw-h-180-px {
     height: 180px;
+}
+
+.tw-h-280-px {
+    height: 280px;
 }
 
 .tw-h-300-px {
@@ -3149,6 +3187,10 @@ input:focus, input:focus-visible {
     margin-inline-start: 80px;
 }
 
+.tw-mt-70-px {
+    margin-block-start: 70px;
+}
+
 .tw-mt-105-px {
     margin-block-start: 105px;
 }
@@ -3390,6 +3432,10 @@ input:focus, input:focus-visible {
     max-width: 144px;
 }
 
+.max-w-85-px {
+    max-width: 85px;
+}
+
 .max-w-150-px {
     max-width: 150px;
 }
@@ -3494,6 +3540,10 @@ input:focus, input:focus-visible {
 
 .max-w-672-px {
     max-width: 672px;
+}
+
+.max-w-730-px {
+    max-width: 730px;
 }
 
 @media (min-width: 992px) {
@@ -4261,6 +4311,10 @@ input:focus, input:focus-visible {
     padding-inline: clamp(1rem, -1rem + 8vw, 2.25rem);
 }
 
+.tw-px-54-px {
+    padding-inline: clamp(1rem, -6.1013rem + 9.4763vw, 3.375rem);
+}
+
 .tw-px-90-px {
     padding-inline: clamp(1.5rem, -1rem + 8vw, 5.625rem);
 }
@@ -4283,6 +4337,10 @@ input:focus, input:focus-visible {
 
 .tw-py-84-px {
     padding-block: clamp(2.5rem, -1rem + 8vw, 5.25rem);
+}
+
+.tw-py-90-px {
+    padding-block: clamp(2.5rem, -1rem + 8vw, 5.625rem);
 }
 
 .tw-pb-84-px {
@@ -4697,6 +4755,10 @@ input:focus, input:focus-visible {
     box-shadow: 0 10px 30px 0px #3955781A;
 }
 
+.common-shadow-thirteen {
+    box-shadow: 0px 12px 23px 0px #3D3E4114;
+}
+
 .hover-common-shadow-four:hover {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }
@@ -4996,6 +5058,17 @@ input:focus, input:focus-visible {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
+/* grid css start */
+.grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 575px) {
+    .xs-grid-cols-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* grid css end */
 /* ================================= preload Css Start =========================== */
 .preloader {
     background-color: hsl(var(--white));
@@ -5047,7 +5120,7 @@ input:focus, input:focus-visible {
 }
 
 .header.fixed-header {
-    position: sticky;
+    position: sticky !important;
     inset-inline-start: 0;
     inset-block-start: 0;
     inset-inline-end: 0;
@@ -5056,6 +5129,11 @@ input:focus, input:focus-visible {
     backdrop-filter: blur(24px);
     animation: slideDown 0.35s ease-out;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+    background-color: hsl(var(--white));
+}
+
+.header.position-absolute.fixed-header {
+    position: fixed !important;
 }
 
 @keyframes slideDown {
@@ -5153,6 +5231,14 @@ input:focus, input:focus-visible {
 
 /* Submenu End */
 /* Header Menu and Submenu Css End */
+.header-inner-page a.nav-menu__link {
+    color: var(--heading-color) !important;
+}
+
+.nav-menu__item.activePage > a {
+    color: var(--main-600) !important;
+}
+
 /* ================================= Header Css End =========================== */
 /* Mobile Menu Sidebar Start */
 .mobile-menu.active {
@@ -5971,6 +6057,10 @@ svg.radial-progress text {
     color: var(--heading-color);
 }
 
+.home-two .selected-text::before {
+    color: hsl(var(--white)) !important;
+}
+
 .home-two .btn-main {
     background: linear-gradient(270deg, #2B85D6 0.5%, #254BE5 49%, #195AFB 98.5%) !important;
 }
@@ -6205,4 +6295,11 @@ svg.radial-progress text {
 }
 
 /* ============================= Distraction section End ======================================== */
+/* ==================== Breadcrumb Start Here ==================== */
+.breadcrumb {
+    padding-block-start: 270px;
+    padding-block-end: 170px;
+}
+
+/* ==================== Breadcrumb End Here ==================== */
 /*# sourceMappingURL=main.css.map */

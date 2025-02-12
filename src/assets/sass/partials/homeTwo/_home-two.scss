@@ -45,6 +45,10 @@
         color: var(--heading-color);
     }
 
+    .selected-text::before {
+        color: hsl(var(--white)) !important;
+    }
+
     .btn-main {
         background: linear-gradient(270deg, #2B85D6 0.5%, #254BE5 49%, #195AFB 98.5%) !important;
     }

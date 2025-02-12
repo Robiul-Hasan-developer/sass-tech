@@ -4,7 +4,7 @@
         padding: 10px 0;
     }
     &.fixed-header {
-        position: sticky;
+        position: sticky !important;
         inset-inline-start: 0;
         inset-block-start: 0;
         inset-inline-end: 0;
@@ -13,9 +13,10 @@
         backdrop-filter: blur(24px);
         animation: slideDown 0.35s ease-out;    
         box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
-        @include md-screen {
-            // inset-block-start: -1px;
-        }
+        background-color: hsl(var(--white));
+    }
+    &.position-absolute.fixed-header {
+        position: fixed !important;
     }
 }
 @keyframes slideDown {
@@ -124,4 +125,11 @@
 }
 /* Submenu End */
 /* Header Menu and Submenu Css End */
+
+.header-inner-page a.nav-menu__link {
+    color: var(--heading-color)!important;
+}
+.nav-menu__item.activePage > a {
+    color: var(--main-600) !important;
+}
 /* ================================= Header Css End =========================== */
