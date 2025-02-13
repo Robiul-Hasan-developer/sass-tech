@@ -334,20 +334,6 @@ if($('.flower').length) {
 }
 // **************************** Blog js End ****************************
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  if (typeof Draggable !== "undefined") {
-      gsap.utils.toArray(".drag-rotate-element").forEach(item => {
-          Draggable.create(item, {
-              type: "x,y",
-              bounds: ".position-relative",
-              inertia: true
-          });
-      });
-  } else {
-      console.error("GSAP Draggable plugin is not loaded.");
-  }
-});
 /* **************************************************************************** 
                           Custom GSAP js start 
 ****************************************************************************  */
