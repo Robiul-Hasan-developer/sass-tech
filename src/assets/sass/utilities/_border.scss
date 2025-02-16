@@ -18,6 +18,13 @@
     }
   }
 
+
+  .hover-border-white {
+    &:hover {
+      border-color: hsl(var(--white)) !important;
+    }
+  }
+
 // focus border
 @each $color, $shades in $colors {
     @each $shade, $value in $shades {

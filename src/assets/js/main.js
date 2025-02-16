@@ -515,6 +515,37 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
 });
 // ========================= Testimonials Three slider Js End ===================
 
+
+// ========================= Throwable Js Start ===================
+  if($('.drag-rotate-element').length) {
+    $(".drag-rotate-element").throwable({
+      containment: "parent", // Restrict movement inside .myContainer
+      bounce: true, // Enables bouncing effect
+      damping: 0.1, // Controls how much the element slows down
+      collisionDetection: false, // Detects collision with other elements
+      areaDetection: 3000, // Expands detection area for better interaction
+
+        drag: true,
+        gravity: {
+          x: 0,
+          y: 0
+        },
+        impulse: {
+          f: 52,
+          p: {
+            x: 0,
+            y: 0
+          }
+        },
+        autostart: false,
+        bounce: 0.5,
+        damping: 100
+    });
+  }
+// ========================= Throwable Js End ===================
+
+
+
   // ================== Password Show Hide Js Start ==========
   // $(".toggle-password").on('click', function() {
   //   $(this).toggleClass("active");

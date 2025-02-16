@@ -40,12 +40,20 @@
   &-thirteen {
       box-shadow: 0px 12px 23px 0px #3D3E4114;
   }
+  &-fourteen {
+      box-shadow: 0px 10px 60px 0px #8D8D8D1A;
+  }
 }
 
 .hover-common-shadow {
   &-four {
     &:hover {
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
+    }
+  }
+  &-fourteen {
+    &:hover {
+      box-shadow: 0px 10px 60px 0px #8D8D8D1A;
     }
   }
 }

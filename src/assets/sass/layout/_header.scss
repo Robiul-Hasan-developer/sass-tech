@@ -17,6 +17,7 @@
     }
     &.position-absolute.fixed-header {
         position: fixed !important;
+        margin-top: 0 !important;
     }
 }
 @keyframes slideDown {

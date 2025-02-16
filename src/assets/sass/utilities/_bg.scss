@@ -18,6 +18,10 @@
   }
 }
 
+.bg-hover-crm:hover {
+  background-color: #072032 !important;
+}
+
 .bg-white {
   &-08 {
     background-color: hsl(var(--white)/.08);
@@ -87,6 +91,12 @@
   }
   &-goldenrod {
     background-color: #D19D3D17;
+  }
+  &-orange {
+    background-color: #FF601C;
+  }
+  &-orange {
+    background-color: #FF601C;
   }
 }
 

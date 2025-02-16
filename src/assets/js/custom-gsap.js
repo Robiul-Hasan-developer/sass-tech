@@ -286,7 +286,7 @@ if($('.flower').length) {
 // **************************** Banner js End ****************************
 
 // **************************** Ball Bounce js start ****************************
-if($('.flower').length) { 
+if($('.ball').length) { 
   gsap.from(".ball", {
       y: -140,
       ease: "bounce.out", 
@@ -302,7 +302,7 @@ if($('.flower').length) {
 // **************************** Ball Bounce js End ****************************
 
 // **************************** Choose Us js start ****************************
-if($('.flower').length) {  
+if($('.box').length) {  
   gsap.from(".box", {
       scale: .4,
       rotate: '90deg',
@@ -319,7 +319,7 @@ if($('.flower').length) {
 // **************************** Choose Us js End ****************************
 
 // **************************** Blog js start ****************************
-if($('.flower').length) {   
+if($('.line').length) {   
   gsap.to(".line", {
       ease: "bounce.out",
       width: '100%',
@@ -333,6 +333,22 @@ if($('.flower').length) {
   });
 }
 // **************************** Blog js End ****************************
+
+// **************************** Drag Rotate Element js start ****************************
+if($('.drag-rotate-element').length) { 
+  gsap.from(".drag-rotate-element", {
+      y: 100,
+      ease: "bounce.out", 
+      duration: 1.8,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ".drag-rotate-element-section",
+        start: "top 90%",
+        toggleActions: "restart none restart none",
+      }
+  });
+}
+// **************************** Drag Rotate Element js End ****************************
 
 /* **************************************************************************** 
                           Custom GSAP js start 
