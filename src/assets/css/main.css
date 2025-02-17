@@ -38,6 +38,10 @@
     --spring-green-s: 80%;
     --spring-green-l: 55%;
     --spring-green: var(--spring-green-h) var(--spring-green-s) var(--spring-green-l);
+    --app-landing-h: 184;
+    --app-landing-s: 84%;
+    --app-landing-l: 30%;
+    --app-landing: var(--app-landing-h) var(--app-landing-s) var(--app-landing-l);
   /* White Color */
     --white: 0 0% 100%;
     --black: 249 63% 15%;
@@ -1003,6 +1007,14 @@ input:focus, input:focus-visible {
     background-color: #072032 !important;
 }
 
+.bg-app-landing {
+    background-color: hsl(var(--app-landing));
+}
+
+.bg-hover-app-landing:hover {
+    background-color: hsl(var(--app-landing)) !important;
+}
+
 .bg-white-08 {
     background-color: hsl(var(--white)/0.08);
 }
@@ -1539,6 +1551,10 @@ input:focus, input:focus-visible {
 
 .border-spring-green {
     border-color: hsl(var(--spring-green)) !important;
+}
+
+.border-app-landing {
+    border-color: hsl(var(--app-landing)) !important;
 }
 
 .border-dashed {
@@ -2182,6 +2198,10 @@ input:focus, input:focus-visible {
 
 .tw-h-84-px {
     height: 84px;
+}
+
+.tw-h-92-px {
+    height: 92px;
 }
 
 .tw-h-114-px {
@@ -3389,6 +3409,10 @@ input:focus, input:focus-visible {
     max-height: 260px;
 }
 
+.tw-max-h-295-px {
+    max-height: 295px;
+}
+
 .tw-max-h-410-px {
     max-height: 410px;
 }
@@ -3510,6 +3534,10 @@ input:focus, input:focus-visible {
     max-width: 350px;
 }
 
+.max-w-295-px {
+    max-width: 295px;
+}
+
 .max-w-400-px {
     max-width: 400px;
 }
@@ -3564,6 +3592,10 @@ input:focus, input:focus-visible {
 
 .max-w-730-px {
     max-width: 730px;
+}
+
+.max-w-830-px {
+    max-width: 830px;
 }
 
 @media (min-width: 992px) {
@@ -4783,6 +4815,10 @@ input:focus, input:focus-visible {
     box-shadow: 0px 10px 60px 0px #8D8D8D1A;
 }
 
+.common-shadow-fifteen {
+    box-shadow: 0px 4px 25px 0px #00000014;
+}
+
 .hover-common-shadow-four:hover {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }
@@ -5020,6 +5056,10 @@ input:focus, input:focus-visible {
 
 .tw-w-84-px {
     width: 84px;
+}
+
+.tw-w-92-px {
+    width: 92px;
 }
 
 .tw-w-140-px {
@@ -5924,6 +5964,33 @@ svg.radial-progress text {
 
 .animation-delay-2 {
     animation-delay: 2s;
+}
+
+.list-social li {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: 0.2s ease-in-out;
+}
+
+.list-social li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.list-social li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.list-social li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.list-social li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.group-item:hover .list-social li {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* ======================== Animation Css End ==================================== */

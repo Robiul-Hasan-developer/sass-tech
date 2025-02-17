@@ -117,6 +117,11 @@ $font-sizes: (
   --spring-green-l: 55%;
   --spring-green: var(--spring-green-h) var(--spring-green-s) var(--spring-green-l);
 
+  --app-landing-h: 184;
+  --app-landing-s: 84%;
+  --app-landing-l: 30%;
+  --app-landing: var(--app-landing-h) var(--app-landing-s) var(--app-landing-l);
+
   /* White Color */
   --white: 0 0% 100%;
   --black: 249 63% 15%;

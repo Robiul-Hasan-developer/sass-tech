@@ -22,6 +22,16 @@
   background-color: #072032 !important;
 }
 
+.bg-app-landing {
+  background-color: hsl(var(--app-landing));
+}
+
+.bg-hover-app-landing {
+  &:hover {
+    background-color: hsl(var(--app-landing)) !important;
+  }
+}
+
 .bg-white {
   &-08 {
     background-color: hsl(var(--white)/.08);
