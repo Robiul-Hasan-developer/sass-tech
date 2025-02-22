@@ -46,6 +46,9 @@
   &-fifteen {
       box-shadow: 0px 4px 25px 0px #00000014;
   }
+  &-sixteen {
+      box-shadow: 0px 13px 19px -2px #2021240A;
+  }
 }
 
 .hover-common-shadow {
@@ -57,6 +60,11 @@
   &-fourteen {
     &:hover {
       box-shadow: 0px 10px 60px 0px #8D8D8D1A;
+    }
+  }
+  &-sixteen {
+    &:hover {
+      box-shadow: 0px 14px 31px -2px #2021241A;
     }
   }
 }

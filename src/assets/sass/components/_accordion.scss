@@ -59,4 +59,10 @@
         }
     }
 }
+
+
+.accordion.arrow-bg-orange .accordion-button[aria-expanded=true]::before {
+    background-color: #FF601C !important;
+    border-color: #FF601C !important;
+}
 /* ================================= Accordion Css End =========================== */

@@ -171,6 +171,11 @@
     content: "\e32a";
 }
 
+.accordion.arrow-bg-orange .accordion-button[aria-expanded=true]::before {
+    background-color: #FF601C !important;
+    border-color: #FF601C !important;
+}
+
 /* ================================= Accordion Css End =========================== */
 /* ========================== Button Css Start =============== */
 .button__label {
@@ -2220,6 +2225,10 @@ input:focus, input:focus-visible {
     height: 180px;
 }
 
+.tw-h-260-px {
+    height: 260px;
+}
+
 .tw-h-280-px {
     height: 280px;
 }
@@ -2364,6 +2373,10 @@ input:focus, input:focus-visible {
 
 .tw-gap-126-px {
     gap: clamp(1.5rem, -24.8393rem + 28.0952vw, 7.875rem);
+}
+
+.tw-gap-148-px {
+    gap: clamp(2rem, -24.8393rem + 28.0952vw, 9.25rem);
 }
 
 /* Gap Css end */
@@ -3488,6 +3501,10 @@ input:focus, input:focus-visible {
     max-width: 154px;
 }
 
+.max-w-172-px {
+    max-width: 172px;
+}
+
 .max-w-194-px {
     max-width: 194px;
 }
@@ -3592,6 +3609,10 @@ input:focus, input:focus-visible {
 
 .max-w-730-px {
     max-width: 730px;
+}
+
+.max-w-780-px {
+    max-width: 780px;
 }
 
 .max-w-830-px {
@@ -4819,12 +4840,20 @@ input:focus, input:focus-visible {
     box-shadow: 0px 4px 25px 0px #00000014;
 }
 
+.common-shadow-sixteen {
+    box-shadow: 0px 13px 19px -2px #2021240A;
+}
+
 .hover-common-shadow-four:hover {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }
 
 .hover-common-shadow-fourteen:hover {
     box-shadow: 0px 10px 60px 0px #8D8D8D1A;
+}
+
+.hover-common-shadow-sixteen:hover {
+    box-shadow: 0px 14px 31px -2px #2021241A;
 }
 
 /* Box shadow End */
@@ -6398,4 +6427,20 @@ svg.radial-progress text {
 }
 
 /* ==================== Breadcrumb End Here ==================== */
+.col-border-wrapper > div {
+    border-inline-end: 1px solid var(--neutral-200);
+    border-block-end: 1px solid var(--neutral-200);
+}
+
+@media (min-width: 1200px) {
+    .col-border-wrapper > div:nth-child(4n+4) {
+        border-inline-end: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-border-wrapper > div:nth-child(8n+5), .col-border-wrapper > div:nth-child(8n+6), .col-border-wrapper > div:nth-child(8n+7), .col-border-wrapper > div:nth-child(8n+8) {
+        border-block-end: 0;
+    }
+}
 /*# sourceMappingURL=main.css.map */
