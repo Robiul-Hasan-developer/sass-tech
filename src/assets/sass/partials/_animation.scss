@@ -328,6 +328,31 @@
   }
 }
 
+.animation-rotate-right {
+  animation: rotateRight 30s linear infinite;
+}
+.animation-rotate-left {
+  animation: rotateLeft 30s linear infinite;
+}
+
+@keyframes rotateRight {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateLeft {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
 
 .list-social li {
   opacity: 0;

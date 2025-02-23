@@ -44,7 +44,7 @@
     --app-landing: var(--app-landing-h) var(--app-landing-s) var(--app-landing-l);
   /* White Color */
     --white: 0 0% 100%;
-    --black: 249 63% 15%;
+    --black: #150E3D;
     --body: 0 0% 43%;
     --heading-color: var(--black);
     --translate-x-50: translateX(-50%);
@@ -652,7 +652,7 @@ h5, .h5,
 h6, .h6 {
     margin: 0;
     font-family: var(--heading-font);
-    color: hsl(var(--heading-color));
+    color: var(--black);
     line-height: 1.2;
     font-weight: 700;
 }
@@ -5995,6 +5995,34 @@ svg.radial-progress text {
     animation-delay: 2s;
 }
 
+.animation-rotate-right {
+    animation: rotateRight 30s linear infinite;
+}
+
+.animation-rotate-left {
+    animation: rotateLeft 30s linear infinite;
+}
+
+@keyframes rotateRight {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateLeft {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
 .list-social li {
     opacity: 0;
     transform: translateX(20px);
@@ -6442,5 +6470,17 @@ svg.radial-progress text {
     .col-border-wrapper > div:nth-child(8n+5), .col-border-wrapper > div:nth-child(8n+6), .col-border-wrapper > div:nth-child(8n+7), .col-border-wrapper > div:nth-child(8n+8) {
         border-block-end: 0;
     }
+}
+
+:root {
+    --black: #072032;
+}
+
+.heading-black .text-heading {
+    color: var(--black);
+}
+
+.heading-black h1, .heading-black .h1, .heading-black h2, .heading-black .h2, .heading-black h3, .heading-black .h3, .heading-black h4, .heading-black .h4, .heading-black h5, .heading-black .h5, .heading-black h6, .heading-black .h6 {
+    color: var(--black);
 }
 /*# sourceMappingURL=main.css.map */
