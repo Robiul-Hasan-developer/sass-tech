@@ -545,23 +545,13 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
 // ========================= Throwable Js End ===================
 
 
-
-  // ================== Password Show Hide Js Start ==========
-  // $(".toggle-password").on('click', function() {
-  //   $(this).toggleClass("active");
-  //   var input = $($(this).attr("id"));
-  //   if (input.attr("type") == "password") {
-  //     input.attr("type", "text");
-  //     $(this).removeClass('ph-bold ph-eye-closed');
-  //     $(this).addClass('ph-bold ph-eye');
-  //   } else {
-  //     input.attr("type", "password");
-  //       $(this).addClass('ph-bold ph-eye-closed');
-  //   }
-  // });
-  // ========================= Password Show Hide Js End ===========================
-
-
+// ========================= magnific Popup Js Start =====================
+$('.play-button').magnificPopup({
+  type:'iframe',
+  removalDelay: 300,
+  mainClass: 'mfp-fade',
+});
+// ========================= magnific Popup Js End =====================
 
   });
   // ==========================================
@@ -569,9 +559,9 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   // ==========================================
 
   // ========================= Preloader Js Start =====================
-    // $(window).on("load", function(){
-    //   $('.preloader').fadeOut(); 
-    // })
+    $(window).on("load", function(){
+      $('.preloader').fadeOut(); 
+    })
     // ========================= Preloader Js End=====================
 
     // ========================= Header Sticky Js Start ==============

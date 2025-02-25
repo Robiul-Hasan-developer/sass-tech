@@ -171,6 +171,25 @@
     content: "\e32a";
 }
 
+.accordion.style-two-three .accordion-item {
+    border: 1px solid var(--neutral-200) !important;
+    border-radius: 14px !important;
+    background-color: var(--neutral-100) !important;
+    margin-bottom: 16px !important;
+}
+
+.accordion.style-two-three .accordion-item:has(.accordion-collapse.show), .accordion.style-two-three .accordion-item:has(.accordion-button[aria-expanded=true]) {
+    background: var(--neutral-100) !important;
+    box-shadow: none;
+    border-radius: 14px !important;
+    border-block-start: 5px solid var(--main-600) !important;
+}
+
+.accordion.style-two-three .accordion-button::before {
+    border: 1px solid var(--neutral-600);
+    font-weight: 900;
+}
+
 .accordion.arrow-bg-orange .accordion-button[aria-expanded=true]::before {
     background-color: #FF601C !important;
     border-color: #FF601C !important;
@@ -663,7 +682,7 @@ body {
 p {
     font-weight: 400;
     margin: 0;
-    line-height: 1.6;
+    line-height: 2;
 }
 
 span {
@@ -1060,6 +1079,10 @@ input:focus, input:focus-visible {
 
 .bg-white-06 {
     background-color: hsl(var(--white)/0.06);
+}
+
+.bg-white-01 {
+    background-color: #ffffff0a;
 }
 
 .hover-bg-white:hover {
@@ -2227,6 +2250,10 @@ input:focus, input:focus-visible {
     height: 1px;
 }
 
+.tw-h-75-px {
+    height: 75px;
+}
+
 .tw-h-84-px {
     height: 84px;
 }
@@ -2383,6 +2410,10 @@ input:focus, input:focus-visible {
 
 .tw-gap-26-px {
     gap: clamp(1rem, 0.0938rem + 4.5vw, 1.625rem);
+}
+
+.tw-gap-56-px {
+    gap: clamp(1.5rem, -4.48rem + 7.98vw, 3.5rem);
 }
 
 .tw-gap-42-px {
@@ -3270,6 +3301,10 @@ input:focus, input:focus-visible {
     margin-block-start: 70px;
 }
 
+.tw-mt-80-px {
+    margin-block-start: 80px;
+}
+
 .tw-mt-105-px {
     margin-block-start: 105px;
 }
@@ -3292,6 +3327,10 @@ input:focus, input:focus-visible {
 
 .tw-mb-148-px {
     margin-block-end: 148px;
+}
+
+.tw-mb-80-px {
+    margin-block-end: 80px;
 }
 
 .tw--m-24-px {
@@ -3537,6 +3576,18 @@ input:focus, input:focus-visible {
 
 .max-w-194-px {
     max-width: 194px;
+}
+
+.max-w-444-px {
+    max-width: 444px;
+}
+
+.max-w-548-px {
+    max-width: 548px;
+}
+
+.max-w-724-px {
+    max-width: 724px;
 }
 
 .max-w-200-px {
@@ -4398,6 +4449,10 @@ input:focus, input:focus-visible {
     padding-block-end: var(--size-17);
 }
 
+.tw-p-54-px {
+    padding: clamp(1rem, -6.1013rem + 9.4763vw, 3.375rem) !important;
+}
+
 .tw-pt-90-px {
     padding-block-start: clamp(2.5rem, -1rem + 8vw, 5.625rem);
 }
@@ -4452,6 +4507,10 @@ input:focus, input:focus-visible {
 
 .tw-py-90-px {
     padding-block: clamp(2.5rem, -1rem + 8vw, 5.625rem);
+}
+
+.tw-pb-80-px {
+    padding-block-end: 80px;
 }
 
 .tw-pb-84-px {
@@ -5139,8 +5198,16 @@ input:focus, input:focus-visible {
     width: max-content;
 }
 
+.tw-w-75-px {
+    width: 75px;
+}
+
 .tw-w-84-px {
     width: 84px;
+}
+
+.tw-w-92-px {
+    width: 92px;
 }
 
 .tw-w-92-px {
@@ -6642,4 +6709,72 @@ svg.radial-progress text {
 .heading-black h6, .heading-black .h6 {
     font-size: var(--heading-six);
 }
+
+/* Play Animation css start */
+.bg-inherit-animation::before {
+    position: absolute;
+    content: "";
+    width: inherit;
+    height: inherit;
+    background: inherit;
+    border-radius: 50%;
+    inset-inline-start: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-animation: animate 2.3s ease-out infinite;
+    animation: animate 2.3s ease-out infinite;
+}
+
+.bg-light-animation::after {
+    position: absolute;
+    content: "";
+    width: inherit;
+    height: inherit;
+    background: inherit;
+    border-radius: inherit;
+    inset-inline-start: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.bg-light-animation::before {
+    position: absolute;
+    content: "";
+    width: inherit;
+    height: inherit;
+    background: hsl(var(--white)/0.7);
+    border-radius: 50%;
+    inset-inline-start: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-animation: animate 2.3s ease-out infinite;
+    animation: animate 2.3s ease-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    30% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+        opacity: 1;
+    }
+
+    60% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0.9;
+    }
+
+    100% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+/* Play Animation css end */
 /*# sourceMappingURL=main.css.map */
