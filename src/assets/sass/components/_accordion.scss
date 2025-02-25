@@ -65,4 +65,19 @@
     background-color: #FF601C !important;
     border-color: #FF601C !important;
 }
+
+
+.position-sm-in-box {
+    @media (min-width: 576px) {
+        position: absolute !important;
+        top: 50%;
+        transform: translateY(-50%);
+        inset-inline-end: 0;
+        margin-inline-end: 12px;
+    }
+    @media (max-width: 575px) {
+        width: 100%;
+        margin-top: 24px;
+    }
+}
 /* ================================= Accordion Css End =========================== */

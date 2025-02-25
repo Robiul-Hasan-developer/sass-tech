@@ -35,4 +35,16 @@
         filter: brightness(0) invert(1);        
     }
 }
+
+.active-bg-white-border-primary {
+    .nav-link:focus, .nav-link:hover {
+        color: var(--black);
+    }
+    .nav-link.active, .show>.nav-link {
+        background-color: #fff;
+        color: var(--black);
+        border-inline-start: 3px solid var(--main-500) !important;
+    }
+}
+
 /* ================================= Tab Css End =========================== */

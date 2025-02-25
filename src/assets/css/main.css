@@ -176,6 +176,22 @@
     border-color: #FF601C !important;
 }
 
+@media (min-width: 576px) {
+    .position-sm-in-box {
+        position: absolute !important;
+        top: 50%;
+        transform: translateY(-50%);
+        inset-inline-end: 0;
+        margin-inline-end: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .position-sm-in-box {
+        width: 100%;
+        margin-top: 24px;
+    }
+}
 /* ================================= Accordion Css End =========================== */
 /* ========================== Button Css Start =============== */
 .button__label {
@@ -560,6 +576,16 @@ input[type=number] {
 
 .nav-link.active .active-white {
     filter: brightness(0) invert(1);
+}
+
+.active-bg-white-border-primary .nav-link:focus, .active-bg-white-border-primary .nav-link:hover {
+    color: var(--black);
+}
+
+.active-bg-white-border-primary .nav-link.active, .active-bg-white-border-primary .show > .nav-link {
+    background-color: #fff;
+    color: var(--black);
+    border-inline-start: 3px solid var(--main-500) !important;
 }
 
 /* ================================= Tab Css End =========================== */
@@ -3481,6 +3507,10 @@ input:focus, input:focus-visible {
     max-width: 1570px;
 }
 
+.max-w-1800-px {
+    max-width: 1800px;
+}
+
 .max-w-118-px {
     max-width: 118px;
 }
@@ -4376,6 +4406,14 @@ input:focus, input:focus-visible {
     padding-block-start: 100px;
 }
 
+.tw-pt-134-px {
+    padding-block-start: 134px;
+}
+
+.tw-pt-180-px {
+    padding-block-start: 180px;
+}
+
 .tw-pt-224-px {
     padding-block-start: 224px;
 }
@@ -4428,6 +4466,10 @@ input:focus, input:focus-visible {
     padding-block-end: 136px;
 }
 
+.tw-pb-200-px {
+    padding-block-end: clamp(8.75rem, -1rem + 16vw, 12.5rem);
+}
+
 .tw-ps-48-px {
     padding-inline-start: clamp(1.5rem, -1rem + 8vw, 3rem);
 }
@@ -4446,6 +4488,12 @@ input:focus, input:focus-visible {
 
 .tw-pe-100-px {
     padding-inline-end: 100px;
+}
+
+@media (min-width: 576px) {
+    .tw-pe-200-px {
+        padding-inline-end: 200px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -4844,6 +4892,14 @@ input:focus, input:focus-visible {
     box-shadow: 0px 13px 19px -2px #2021240A;
 }
 
+.common-shadow-seventeen {
+    box-shadow: 0px 7px 29px 0px #0000000F;
+}
+
+.common-shadow-eighteen {
+    box-shadow: 0px 4px 8px 0px #0000000D;
+}
+
 .hover-common-shadow-four:hover {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }
@@ -5142,6 +5198,10 @@ input:focus, input:focus-visible {
 
 .tw-leading-145 {
     line-height: 1.45;
+}
+
+.tw-leading-212 {
+    line-height: 2.125;
 }
 
 /* Aspect ratio css start */
@@ -5995,6 +6055,10 @@ svg.radial-progress text {
     animation-delay: 2s;
 }
 
+.animation-delay-3 {
+    animation-delay: 3s;
+}
+
 .animation-rotate-right {
     animation: rotateRight 30s linear infinite;
 }
@@ -6472,8 +6536,79 @@ svg.radial-progress text {
     }
 }
 
+.positioned-image {
+    max-width: 10%;
+    z-index: -1;
+}
+
+.positioned-image.one {
+    inset-block-start: 64px;
+    inset-inline-start: 0;
+}
+
+.positioned-image.two {
+    inset-inline-start: 26%;
+    inset-block-start: 12px;
+}
+
+.positioned-image.three {
+    inset-inline-start: 48%;
+    inset-block-start: 24px;
+}
+
+.positioned-image.four {
+    inset-inline-end: 26%;
+    inset-block-start: 0;
+}
+
+.positioned-image.five {
+    inset-inline-end: 9%;
+    inset-block-start: 64px;
+}
+
+.positioned-image.six {
+    inset-block-start: 42%;
+    inset-inline-end: 0;
+}
+
+.positioned-image.seven {
+    inset-block-end: 16%;
+    inset-inline-end: 105px;
+}
+
+.positioned-image.eight {
+    inset-inline-end: 23%;
+    inset-block-end: 35px;
+}
+
+.positioned-image.nine {
+    inset-inline-end: 46%;
+    inset-block-end: 0;
+}
+
+.positioned-image.ten {
+    inset-inline-start: 25%;
+    inset-block-end: 64px;
+}
+
+.positioned-image.eleven {
+    inset-inline-start: 68px;
+    inset-block-end: 20%;
+}
+
+.positioned-image.twelve {
+    inset-block-start: 38%;
+    inset-inline-start: 10%;
+}
+
 :root {
     --black: #072032;
+    --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.375rem);
+    --heading-two: clamp(1.875rem, 0.7133rem + 2.8846vw, 3.125rem);
+    --heading-three: clamp(1.75rem, 0.3353rem + 2.1661vw, 1.875rem);
+    --heading-four: clamp(1.5rem, 0.5569rem + 1.444vw, 1.875rem);
+    --heading-five: clamp(1.125rem, 1.2rem + 0.722vw, 1.5rem);
+    --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
 }
 
 .heading-black .text-heading {
@@ -6482,5 +6617,29 @@ svg.radial-progress text {
 
 .heading-black h1, .heading-black .h1, .heading-black h2, .heading-black .h2, .heading-black h3, .heading-black .h3, .heading-black h4, .heading-black .h4, .heading-black h5, .heading-black .h5, .heading-black h6, .heading-black .h6 {
     color: var(--black);
+}
+
+.heading-black h1, .heading-black .h1 {
+    font-size: var(--heading-one);
+}
+
+.heading-black h2, .heading-black .h2 {
+    font-size: var(--heading-two);
+}
+
+.heading-black h3, .heading-black .h3 {
+    font-size: var(--heading-three);
+}
+
+.heading-black h4, .heading-black .h4 {
+    font-size: var(--heading-four);
+}
+
+.heading-black h5, .heading-black .h5 {
+    font-size: var(--heading-five);
+}
+
+.heading-black h6, .heading-black .h6 {
+    font-size: var(--heading-six);
 }
 /*# sourceMappingURL=main.css.map */
