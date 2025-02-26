@@ -515,43 +515,108 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
 });
 // ========================= Testimonials Three slider Js End ===================
 
+  // ========================= magnific Popup Js Start =====================
+  $('.play-button').magnificPopup({
+    type:'iframe',
+    removalDelay: 300,
+    mainClass: 'mfp-fade',
+  });
+  // ========================= magnific Popup Js End =====================
 
-// ========================= Throwable Js Start ===================
-  if($('.drag-rotate-element').length) {
-    $(".drag-rotate-element").throwable({
-      containment: "parent", // Restrict movement inside .myContainer
-      bounce: true, // Enables bouncing effect
-      damping: 0.1, // Controls how much the element slows down
-      collisionDetection: false, // Detects collision with other elements
-      areaDetection: 3000, // Expands detection area for better interaction
+  // ========================= List gird View Js Start =====================
+  let listViewBtn = document.querySelector('.list-view-btn');
+  let gridViewBtn = document.querySelector('.grid-view-btn');
 
-        drag: true,
-        gravity: {
-          x: 0,
-          y: 0
-        },
-        impulse: {
-          f: 52,
-          p: {
-            x: 0,
-            y: 0
-          }
-        },
-        autostart: false,
-        bounce: 0.5,
-        damping: 100
+  if(listViewBtn && gridViewBtn) {
+    listViewBtn.addEventListener('click', function () {
+      body.classList.remove('grid-view');
+      this.classList.remove('text-heading');
+      gridViewBtn.classList.remove('text-main-600');
+      this.classList.add('text-main-600');
+    });
+  
+    gridViewBtn.addEventListener('click', function () {
+      body.classList.add('grid-view');
+      this.classList.remove('text-heading');
+      listViewBtn.classList.remove('text-main-600');
+      this.classList.add('text-main-600');
     });
   }
-// ========================= Throwable Js End ===================
+  // ========================= List gird View Js End =====================
+
+  // ========================= Range Slider Js Start =====================
+  const rangeInput = document.querySelectorAll(".range-input input"),
+  priceInput = document.querySelectorAll(".price-input input"),
+  range = document.querySelector(".slider .progress");
+  let priceGap = 1000;
+
+  priceInput.forEach((input) => {
+    input.addEventListener("input", (e) => {
+      let minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+
+      if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+        if (e.target.className === "input-min") {
+          rangeInput[0].value = minPrice;
+          range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+        } else {
+          rangeInput[1].value = maxPrice;
+          range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+        }
+      }
+    });
+  });
+
+  rangeInput.forEach((input) => {
+    input.addEventListener("input", (e) => {
+      let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+
+      if (maxVal - minVal < priceGap) {
+        if (e.target.className === "range-min") {
+          rangeInput[0].value = maxVal - priceGap;
+        } else {
+          rangeInput[1].value = minVal + priceGap;
+        }
+      } else {
+        priceInput[0].value = minVal;
+        priceInput[1].value = maxVal;
+        range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+        range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+      }
+    });
+  });
+  // ========================= Range Slider Js End =====================
 
 
-// ========================= magnific Popup Js Start =====================
-$('.play-button').magnificPopup({
-  type:'iframe',
-  removalDelay: 300,
-  mainClass: 'mfp-fade',
-});
-// ========================= magnific Popup Js End =====================
+  // ========================= Throwable Js Start ===================
+    if($('.drag-rotate-element').length) {
+      $(".drag-rotate-element").throwable({
+        containment: "parent", // Restrict movement inside .myContainer
+        bounce: true, // Enables bouncing effect
+        damping: 0.1, // Controls how much the element slows down
+        collisionDetection: false, // Detects collision with other elements
+        areaDetection: 3000, // Expands detection area for better interaction
+
+          drag: true,
+          gravity: {
+            x: 0,
+            y: 0
+          },
+          impulse: {
+            f: 52,
+            p: {
+              x: 0,
+              y: 0
+            }
+          },
+          autostart: false,
+          bounce: 0.5,
+          damping: 100
+      });
+    }
+  // ========================= Throwable Js End ===================
+
 
   });
   // ==========================================
