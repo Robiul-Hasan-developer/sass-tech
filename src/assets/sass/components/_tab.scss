@@ -47,4 +47,13 @@
     }
 }
 
+
+.style-border {
+    .nav-link.active, .show>.nav-link {
+        background-color: transparent !important;
+        color: var(--black);
+        border-color: var(--neutral-300) !important;
+    }
+}
+
 /* ================================= Tab Css End =========================== */

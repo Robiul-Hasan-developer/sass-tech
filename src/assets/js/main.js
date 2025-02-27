@@ -588,6 +588,80 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   });
   // ========================= Range Slider Js End =====================
 
+  
+  // ========================= Shop Details Slider Js Start =====================
+  var shopSmallThumbs = new Swiper(".shop-small-thumbs", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var shopThumbs = new Swiper(".shop-thumbs", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: shopSmallThumbs,
+    },
+  });
+  // ========================= Shop Details Slider Js End =====================
+
+  
+  // ========================= Color Picker Js Start =====================
+  let colorPickers = document.querySelectorAll('.color-picker');
+
+  colorPickers.forEach(colorPicker => {
+    colorPicker.addEventListener('click', function () {
+      document.querySelectorAll('.color-picker__color').forEach(color => {
+        color.style.transform = 'scale(1)';
+      });
+  
+      this.querySelector('.color-picker__color').style.transform = 'scale(2)';
+    });
+  });
+  // ========================= Color Picker Js End =====================
+
+  // ========================= Size Picker Js Start =====================
+  let sizeBtns = document.querySelectorAll('.size-btn');
+
+  sizeBtns.forEach(sizeBtn => {
+    sizeBtn.addEventListener('click', function () {
+      sizeBtns.forEach(btn => btn.classList.remove('bg-main-600', 'text-white', 'border-main-600'));
+      this.classList.add('bg-main-600', 'text-white', 'border-main-600');
+    });
+  });
+  
+  // ========================= Size Picker Js End =====================
+
+  
+  // ========================= Increment & Decrement Js Start =====================
+  let decrementBtns = document.querySelectorAll('.decrement-btn');
+  let incrementBtns = document.querySelectorAll('.increment-btn');
+  
+  incrementBtns.forEach(incrementBtn => {
+    incrementBtn.addEventListener('click', function () {
+      let input = this.parentElement.querySelector('.input-value');
+      let count = parseInt(input.value);
+      input.value = count + 1;
+    });
+  });
+  
+  decrementBtns.forEach(decrementBtn => {
+    decrementBtn.addEventListener('click', function () {
+      let input = this.parentElement.querySelector('.input-value');
+      let count = parseInt(input.value);
+      if (count > 0) {
+        input.value = count - 1;
+      }
+    });
+  });
+  
+  // ========================= Increment & Decrement Js End =====================
+
 
   // ========================= Throwable Js Start ===================
     if($('.drag-rotate-element').length) {

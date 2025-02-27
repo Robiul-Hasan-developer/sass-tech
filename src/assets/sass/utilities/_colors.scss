@@ -3,7 +3,7 @@
 @each $color, $shades in $colors {
     @each $shade, $value in $shades {
       .text-#{$color}-#{$shade} {
-        color: var(--#{$color}-#{$shade});
+        color: var(--#{$color}-#{$shade}) !important;
       }
     }
   }
@@ -49,6 +49,24 @@
     &-spring-green {
       color: hsl(var(--spring-green)) !important;
     }
+}
+
+.product-bg {
+  &-1 {
+    background-color: #C4C4C4;
+  }
+  &-2 {
+    background-color: #0B5FB5;
+  }
+  &-3 {
+    background-color: #00A651;
+  }
+  &-4 {
+    background-color: #FEE496;
+  }
+  &-5 {
+    background-color: #BC25BF;
+  }
 }
 
 .text-gradient-teal {

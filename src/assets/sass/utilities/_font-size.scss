@@ -4,7 +4,10 @@
       font-size: inherit;
   }
   &-30-px {
-      font-size: clamp(1rem, 0.5569rem + 1.444vw, 1.875rem);;
+      font-size: clamp(1rem, 0.5569rem + 1.444vw, 1.875rem);
+  }
+  &-44-px {
+      font-size: clamp(1.5rem, 0.5569rem + 1.444vw, 2.75rem) !important;
   }
 }
 

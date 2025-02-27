@@ -607,6 +607,12 @@ input[type=number] {
     border-inline-start: 3px solid var(--main-500) !important;
 }
 
+.style-border .nav-link.active, .style-border .show > .nav-link {
+    background-color: transparent !important;
+    color: var(--black);
+    border-color: var(--neutral-300) !important;
+}
+
 /* ================================= Tab Css End =========================== */
 /* ======================= Common Table Css Start ======================= */
 .table > :not(caption) > * > * {
@@ -635,6 +641,7 @@ input[type=number] {
 }
 
 /* ======================= Common Table Css End ======================= */
+/* Swiper Css start */
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -658,6 +665,11 @@ input[type=number] {
     box-shadow: 0px 4px 8px 0px #00000047 !important;
 }
 
+.shop-small-thumbs .swiper-slide.swiper-slide-thumb-active > div {
+    border-color: var(--main-600) !important;
+}
+
+/* Swiper Css end */
 /* ================================= Typography Css Start =========================== */
 * {
     margin: 0;
@@ -1617,127 +1629,127 @@ input:focus, input:focus-visible {
 
 /* Colors class start */
 .text-main-50 {
-    color: var(--main-50);
+    color: var(--main-50) !important;
 }
 
 .text-main-100 {
-    color: var(--main-100);
+    color: var(--main-100) !important;
 }
 
 .text-main-200 {
-    color: var(--main-200);
+    color: var(--main-200) !important;
 }
 
 .text-main-300 {
-    color: var(--main-300);
+    color: var(--main-300) !important;
 }
 
 .text-main-400 {
-    color: var(--main-400);
+    color: var(--main-400) !important;
 }
 
 .text-main-500 {
-    color: var(--main-500);
+    color: var(--main-500) !important;
 }
 
 .text-main-600 {
-    color: var(--main-600);
+    color: var(--main-600) !important;
 }
 
 .text-main-700 {
-    color: var(--main-700);
+    color: var(--main-700) !important;
 }
 
 .text-main-800 {
-    color: var(--main-800);
+    color: var(--main-800) !important;
 }
 
 .text-main-900 {
-    color: var(--main-900);
+    color: var(--main-900) !important;
 }
 
 .text-main-two-50 {
-    color: var(--main-two-50);
+    color: var(--main-two-50) !important;
 }
 
 .text-main-two-100 {
-    color: var(--main-two-100);
+    color: var(--main-two-100) !important;
 }
 
 .text-main-two-200 {
-    color: var(--main-two-200);
+    color: var(--main-two-200) !important;
 }
 
 .text-main-two-300 {
-    color: var(--main-two-300);
+    color: var(--main-two-300) !important;
 }
 
 .text-main-two-400 {
-    color: var(--main-two-400);
+    color: var(--main-two-400) !important;
 }
 
 .text-main-two-500 {
-    color: var(--main-two-500);
+    color: var(--main-two-500) !important;
 }
 
 .text-main-two-600 {
-    color: var(--main-two-600);
+    color: var(--main-two-600) !important;
 }
 
 .text-main-two-700 {
-    color: var(--main-two-700);
+    color: var(--main-two-700) !important;
 }
 
 .text-main-two-800 {
-    color: var(--main-two-800);
+    color: var(--main-two-800) !important;
 }
 
 .text-main-two-900 {
-    color: var(--main-two-900);
+    color: var(--main-two-900) !important;
 }
 
 .text-neutral-50 {
-    color: var(--neutral-50);
+    color: var(--neutral-50) !important;
 }
 
 .text-neutral-100 {
-    color: var(--neutral-100);
+    color: var(--neutral-100) !important;
 }
 
 .text-neutral-200 {
-    color: var(--neutral-200);
+    color: var(--neutral-200) !important;
 }
 
 .text-neutral-300 {
-    color: var(--neutral-300);
+    color: var(--neutral-300) !important;
 }
 
 .text-neutral-400 {
-    color: var(--neutral-400);
+    color: var(--neutral-400) !important;
 }
 
 .text-neutral-500 {
-    color: var(--neutral-500);
+    color: var(--neutral-500) !important;
 }
 
 .text-neutral-600 {
-    color: var(--neutral-600);
+    color: var(--neutral-600) !important;
 }
 
 .text-neutral-700 {
-    color: var(--neutral-700);
+    color: var(--neutral-700) !important;
 }
 
 .text-neutral-800 {
-    color: var(--neutral-800);
+    color: var(--neutral-800) !important;
 }
 
 .text-neutral-900 {
-    color: var(--neutral-900);
+    color: var(--neutral-900) !important;
 }
 
 .text-neutral-950 {
-    color: var(--neutral-950);
+    color: var(--neutral-950) !important;
 }
 
 .text--white {
@@ -1790,6 +1802,26 @@ input:focus, input:focus-visible {
 
 .text-spring-green {
     color: hsl(var(--spring-green)) !important;
+}
+
+.product-bg-1 {
+    background-color: #C4C4C4;
+}
+
+.product-bg-2 {
+    background-color: #0B5FB5;
+}
+
+.product-bg-3 {
+    background-color: #00A651;
+}
+
+.product-bg-4 {
+    background-color: #FEE496;
+}
+
+.product-bg-5 {
+    background-color: #BC25BF;
 }
 
 .text-gradient-teal {
@@ -2005,6 +2037,10 @@ input:focus, input:focus-visible {
 
 .text-30-px {
     font-size: clamp(1rem, 0.5569rem + 1.444vw, 1.875rem);
+}
+
+.text-44-px {
+    font-size: clamp(1.5rem, 0.5569rem + 1.444vw, 2.75rem) !important;
 }
 
 .tw-text-xs {
@@ -3586,6 +3622,10 @@ input:focus, input:focus-visible {
     max-width: 194px;
 }
 
+.max-w-420-px {
+    max-width: 420px;
+}
+
 .max-w-444-px {
     max-width: 444px;
 }
@@ -4969,6 +5009,10 @@ input:focus, input:focus-visible {
 
 .common-shadow-nineteen {
     box-shadow: 0px 4px 21px 0px #0000000D;
+}
+
+.common-shadow-twenty {
+    box-shadow: 0px 4px 12px 0px #00000014;
 }
 
 .hover-common-shadow-four:hover {
