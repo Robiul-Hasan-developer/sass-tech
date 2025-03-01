@@ -1,3 +1,5 @@
+import { toastMessage } from './toast.js';
+
 (function ($) {
   "use strict";
   
@@ -659,8 +661,35 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
       }
     });
   });
-  
   // ========================= Increment & Decrement Js End =====================
+
+
+  // ========================= Delete Item Js start ===================
+  let deleteButtons = document.querySelectorAll('.delete-button');
+
+  deleteButtons.forEach(deleteButton => {
+    deleteButton.addEventListener('click', function () {
+      this.closest('.delete-item').classList.add('d-none');
+      toastMessage("danger", "Deleted", "You deleted successfully!", 'ph-bold ph-trash');
+    });
+  });
+  // ========================= Delete Item Js End ===================
+
+  // ========================= Form Submit Js Start ===================
+  let formSubmit = document.querySelector('.form-submit');
+  let fields = document.querySelectorAll('input');
+
+  if(formSubmit && fields) {
+    formSubmit.addEventListener('submit', function (e) {
+      e.preventDefault();
+      fields.forEach(field => {
+        field.value = "";
+      });
+      toastMessage("success", "Success", "Form submitted successfully!", 'ph-fill ph-check-circle');
+    });
+  }
+  // ========================= Form Submit Js End ===================
+  
 
 
   // ========================= Throwable Js Start ===================

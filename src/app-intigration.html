@@ -40,6 +40,10 @@
 <div class="side-overlay"></div>
 <!--==================== Sidebar Overlay End ====================-->
 
+<!-- Custom Toast Message start -->
+<div id="toast-container"></div>
+<!-- Custom Toast Message End -->
+
 <!-- ==================== Scroll to Top End Here ==================== -->
 <div class="progress-wrap cursor-big">
   <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -143,6 +147,16 @@
             <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
                 <a href="shop-details.html" class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
                     Shop Details
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+                <a href="cart.html" class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Cart
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+                <a href="checkout.html" class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Checkout
                 </a>
             </li>
         </ul>
@@ -271,7 +285,7 @@
         </ul>
     </li>
     <li class="nav-menu__item has-submenu position-relative">
-        <a href="javascript:void(0)" class="nav-menu__link hover--translate-y-1 tw-pe-5 text-heading tw-py-9 fw-semibold w-100">Shop</a>
+        <a href="javascript:void(0)" class="nav-menu__link hover--translate-y-1 tw-pe-5 text-white tw-py-9 fw-semibold w-100">Shop</a>
          <ul class="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-y-auto tw-p-2 tw-mt-4 tw-duration-200 tw-z-99">
             <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
                 <a href="shop.html" class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
@@ -281,6 +295,16 @@
             <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
                 <a href="shop-details.html" class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
                     Shop Details
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+                <a href="cart.html" class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Cart
+                </a>
+            </li>
+            <li class="nav-submenu__item d-block tw-rounded tw-duration-200 position-relative">
+                <a href="checkout.html" class="nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded">
+                    Checkout
                 </a>
             </li>
         </ul>
@@ -306,7 +330,6 @@
 </ul>
 <!-- Nav menu Three End  -->
 
-                    
                 </div>
                 <!-- Menu End  -->
                 
@@ -694,7 +717,7 @@
 
         <div class="bg-green-deep tw-rounded-3xl bg-green-deep tw-pt-100-px position-relative z-1">
             <img src="assets/images/shapes/hill-shape.png" alt="Hill Shape" class="position-absolute w-100 h-100 top-0 tw-start-0 z-n1">
-            <img src="assets/images/thumbs/task-management-img.png" alt="Image" class="position-absolute tw-end-0 top-0 tw-me-5 tw-mt-5">
+            <img src="assets/images/thumbs/task-management-img.png" alt="Image" class="position-absolute tw-end-0 top-0 tw-me-5 tw-mt-5 d-lg-block d-none">
             
             <div class="tw-mb-8 text-center max-w-570-px mx-auto">
                 <div class="tw-py-3 tw-px-305 rounded-pill fw-medium text-capitalize tw-leading-none cursor-small d-inline-flex align-items-center tw-gap-2 tw-mb-405 min-w-max text-white bg-white-13" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600" >
@@ -715,7 +738,7 @@
                     </a>
                 </div>
                 <div class="d-block">
-                    <div class="d-flex align-items-center tw-gap-4 justify-content-center">
+                    <div class="d-flex align-items-center tw-gap-4 justify-content-center flex-wrap">
                         <a href="javascript:void(0)" class="cursor-big hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-rounded-2xl tw-py-6 fw-bold tw-mt-7" data-block="button">
                             <span class="button__flair"></span>
                             <div class="d-flex align-items-center tw-gap-2 z-1">
@@ -824,7 +847,7 @@
                         <a href="index.html" class="link cursor-big hover--translate-y-1 active--translate-y-scale-9 tw-mb-10">
                             <img src="assets/images/logo/logo-three.png" alt="">
                         </a>
-                        <form action="#" class="d-flex flex-md-row flex-column tw-gap-5">
+                        <form action="#" class="d-flex flex-md-row flex-column tw-gap-5 form-submit">
                             <div class="position-relative flex-grow-1">
                                 <input type="text" class="tw-h-14 tw-rounded-lg bg-white tw-ps-12 border border-transparent focus-border-main-600 text-heading focus-outline-0 w-100 cursor-big tw-pe-6" placeholder="Email Address">
                                 <span class="text-heading tw-text-lg position-absolute top-50 tw-start-0 tw--translate-y-50 tw-ms-5 d-flex">
@@ -903,7 +926,7 @@
     <script src="assets/js/jquery.throwable.js"></script>
 
     <!-- main js -->
-    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 
 </body>
 </html>

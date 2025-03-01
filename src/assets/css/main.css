@@ -670,6 +670,167 @@ input[type=number] {
 }
 
 /* Swiper Css end */
+/* Toast Message Css start  */
+:root {
+    --success-600: #16A34A;
+  /* Green */
+    --danger-600: #DC2626;
+  /* Red */
+    --warning-600: #D97706;
+  /* Amber */
+    --info-600: #0284C7;
+  /* Sky Blue */
+}
+
+#toast-container {
+    position: fixed;
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 9999;
+}
+
+.toast-message {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.25, 1.35);
+    width: 300px;
+    transform: translateX(calc(100% + 20px));
+    overflow: hidden;
+    background-color: #fff;
+    border-inline-start: 3px solid var(--success-600);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    padding-block: 12px;
+    padding-inline: 16px;
+    border-radius: 6px;
+}
+
+.toast-message.active {
+    transform: translateX(0);
+}
+
+.toast-message.active .progress__bar::before {
+    animation: progress-bar 3.5s linear forwards;
+    visibility: visible;
+    opacity: 1;
+}
+
+.toast-message:hover .progress__bar::before {
+    animation-play-state: paused;
+}
+
+.toast-message__content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.toast-message__icon {
+    font-size: 24px;
+    color: var(--success-600);
+    line-height: 1;
+}
+
+.toast-message__title {
+    margin-bottom: 0;
+    font-size: 18px !important;
+}
+
+.toast-message__close {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 16px;
+}
+
+.toast-message__text {
+    color: #42494f;
+    font-size: 14px;
+}
+
+.progress__bar {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+}
+
+.progress__bar::before {
+    content: "";
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--success-600);
+    visibility: hidden;
+    opacity: 0;
+}
+
+@keyframes progress-bar {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+.success {
+    border-color: var(--success-600);
+}
+
+.success .toast-message__icon {
+    color: var(--success-600) !important;
+}
+
+.success .progress__bar::before {
+    background-color: var(--success-600);
+}
+
+.danger {
+    border-color: var(--danger-600);
+}
+
+.danger .toast-message__icon {
+    color: var(--danger-600) !important;
+}
+
+.danger .progress__bar::before {
+    background-color: var(--danger-600);
+}
+
+.warning {
+    border-color: var(--warning-600);
+}
+
+.warning .toast-message__icon {
+    color: var(--warning-600) !important;
+}
+
+.warning .progress__bar::before {
+    background-color: var(--warning-600);
+}
+
+.info {
+    border-color: var(--info-600);
+}
+
+.info .toast-message__icon {
+    color: var(--info-600) !important;
+}
+
+.info .progress__bar::before {
+    background-color: var(--info-600);
+}
+
+/* Toast Message Css End  */
 /* ================================= Typography Css Start =========================== */
 * {
     margin: 0;
@@ -1063,6 +1224,10 @@ input:focus, input:focus-visible {
 
 .hover-bg-neutral-950:hover {
     background-color: var(--neutral-950) !important;
+}
+
+.bg-crm {
+    background-color: #072032 !important;
 }
 
 .bg-hover-crm:hover {
@@ -2334,6 +2499,10 @@ input:focus, input:focus-visible {
     min-height: 184px;
 }
 
+.tw-min-h-210-px {
+    min-height: 210px !important;
+}
+
 .tw-min-h-400-px {
     min-height: 400px;
 }
@@ -3602,6 +3771,10 @@ input:focus, input:focus-visible {
     max-width: 144px;
 }
 
+.max-w-74-px {
+    max-width: 74px;
+}
+
 .max-w-85-px {
     max-width: 85px;
 }
@@ -4095,6 +4268,14 @@ input:focus, input:focus-visible {
 
 .tw-py-17 {
     padding-block: var(--size-17);
+}
+
+.important-tw-py-5 {
+    padding-block: 20px !important;
+}
+
+.important-tw-px-9 {
+    padding-inline: 36px !important;
 }
 
 .tw-ps-05 {
@@ -4597,6 +4778,10 @@ input:focus, input:focus-visible {
     padding-inline-end: 100px;
 }
 
+.tw-pe-140-px {
+    padding-inline-end: 140px;
+}
+
 @media (min-width: 576px) {
     .tw-pe-200-px {
         padding-inline-end: 200px;
@@ -5012,7 +5197,7 @@ input:focus, input:focus-visible {
 }
 
 .common-shadow-twenty {
-    box-shadow: 0px 4px 12px 0px #00000014;
+    box-shadow: 0px 10px 15px 0px #DDDDDD26;
 }
 
 .hover-common-shadow-four:hover {

@@ -17,6 +17,13 @@
   }
 }
 
+.important-tw-py-5  {
+  padding-block: 20px !important;
+}
+.important-tw-px-9 {
+  padding-inline: 36px !important;
+}
+
 @each $property, $value in $spaces {
   .tw-ps-#{$property} {
     padding-inline-start: var(--size-#{$property});
@@ -129,6 +136,9 @@
   &-pe {
     &-100-px {
       padding-inline-end: 100px;
+    }
+    &-140-px {
+      padding-inline-end: 140px;
     }
     &-200-px {
       @media (min-width: 576px) { 
