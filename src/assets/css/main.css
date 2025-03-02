@@ -4682,6 +4682,10 @@ input:focus, input:focus-visible {
     padding: clamp(1rem, -6.1013rem + 9.4763vw, 3.375rem) !important;
 }
 
+.tw-p-60-px {
+    padding: clamp(1.5rem, -6.1013rem + 9.4763vw, 3.75rem);
+}
+
 .tw-pt-90-px {
     padding-block-start: clamp(2.5rem, -1rem + 8vw, 5.625rem);
 }
@@ -5200,6 +5204,10 @@ input:focus, input:focus-visible {
     box-shadow: 0px 10px 15px 0px #DDDDDD26;
 }
 
+.common-shadow-twentyOne {
+    box-shadow: 0px 4px 30px 0px #025A451A;
+}
+
 .hover-common-shadow-four:hover {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }
@@ -5544,44 +5552,151 @@ input:focus, input:focus-visible {
 /* grid css end */
 /* ================================= preload Css Start =========================== */
 .preloader {
-    background-color: hsl(var(--white));
-    inset-block-end: 0;
-    inset-inline-start: 0;
     position: fixed;
-    inset-inline-end: 0;
-    inset-block-start: 0;
-    z-index: 9999;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
 }
 
-.preloader .loader {
-    background: var(--main-600);
+.preloader .cssload-loading i {
+    width: 19px;
+    height: 19px;
+    display: inline-block;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    inset-inline-start: 50%;
-    margin-inline-start: -23px;
-    margin-block-start: -14px;
-    position: absolute;
-    inset-block-start: 50%;
-    animation: load 0.75s linear infinite;
+    background: #2a2b26;
 }
 
-.preloader .loader:after {
-    content: "";
-    position: absolute;
-    width: 69px;
-    height: 69px;
-    inset-block-start: 3px;
-    inset-inline-end: 0;
-    inset-inline-start: 0;
-    margin: auto;
-    background: hsl(var(--white));
-    border-radius: 50%;
+.preloader .cssload-loading i:first-child {
+    opacity: 0;
+    animation: cssload-loading-ani2 0.58s linear infinite;
+    -o-animation: cssload-loading-ani2 0.58s linear infinite;
+    -ms-animation: cssload-loading-ani2 0.58s linear infinite;
+    -webkit-animation: cssload-loading-ani2 0.58s linear infinite;
+    -moz-animation: cssload-loading-ani2 0.58s linear infinite;
+    transform: translate(-19px);
+    -o-transform: translate(-19px);
+    -ms-transform: translate(-19px);
+    -webkit-transform: translate(-19px);
+    -moz-transform: translate(-19px);
 }
 
-@keyframes load {
-    to {
-        transform: rotate(360deg);
+.preloader .cssload-loading i:nth-child(2), .preloader .cssload-loading i:nth-child(3) {
+    animation: cssload-loading-ani3 0.58s linear infinite;
+    -o-animation: cssload-loading-ani3 0.58s linear infinite;
+    -ms-animation: cssload-loading-ani3 0.58s linear infinite;
+    -webkit-animation: cssload-loading-ani3 0.58s linear infinite;
+    -moz-animation: cssload-loading-ani3 0.58s linear infinite;
+}
+
+.preloader .cssload-loading i:last-child {
+    animation: cssload-loading-ani1 0.58s linear infinite;
+    -o-animation: cssload-loading-ani1 0.58s linear infinite;
+    -ms-animation: cssload-loading-ani1 0.58s linear infinite;
+    -webkit-animation: cssload-loading-ani1 0.58s linear infinite;
+    -moz-animation: cssload-loading-ani1 0.58s linear infinite;
+}
+
+@keyframes cssload-loading-ani1 {
+    100% {
+        transform: translate(39px);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes cssload-loading-ani1 {
+    100% {
+        -o-transform: translate(39px);
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes cssload-loading-ani1 {
+    100% {
+        -ms-transform: translate(39px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes cssload-loading-ani1 {
+    100% {
+        -webkit-transform: translate(39px);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes cssload-loading-ani1 {
+    100% {
+        -moz-transform: translate(39px);
+        opacity: 0;
+    }
+}
+
+@keyframes cssload-loading-ani2 {
+    100% {
+        transform: translate(19px);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes cssload-loading-ani2 {
+    100% {
+        -o-transform: translate(19px);
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes cssload-loading-ani2 {
+    100% {
+        -ms-transform: translate(19px);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes cssload-loading-ani2 {
+    100% {
+        -webkit-transform: translate(19px);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes cssload-loading-ani2 {
+    100% {
+        -moz-transform: translate(19px);
+        opacity: 1;
+    }
+}
+
+@keyframes cssload-loading-ani3 {
+    100% {
+        transform: translate(19px);
+    }
+}
+
+@-o-keyframes cssload-loading-ani3 {
+    100% {
+        -o-transform: translate(19px);
+    }
+}
+
+@-ms-keyframes cssload-loading-ani3 {
+    100% {
+        -ms-transform: translate(19px);
+    }
+}
+
+@-webkit-keyframes cssload-loading-ani3 {
+    100% {
+        -webkit-transform: translate(19px);
+    }
+}
+
+@-moz-keyframes cssload-loading-ani3 {
+    100% {
+        -moz-transform: translate(19px);
     }
 }
 /* ================================= preload Css End ===========================  */

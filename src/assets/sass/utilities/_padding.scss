@@ -52,6 +52,9 @@
   &-p-54-px {
     padding: clamp(1rem, -6.1013rem + 9.4763vw, 3.375rem) !important;
   }
+  &-p-60-px {
+    padding: clamp(1.5rem, -6.1013rem + 9.4763vw, 3.75rem);
+  }
   &-pt {
     &-90-px {
       padding-block-start: clamp(2.5rem, -1rem + 8vw, 5.625rem);

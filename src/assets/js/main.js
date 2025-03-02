@@ -1,7 +1,5 @@
-import { toastMessage } from './toast.js';
-
 (function ($) {
-  "use strict";
+  'use strict';
   
   // ==========================================
   //      Start Document Ready function
@@ -37,7 +35,7 @@ import { toastMessage } from './toast.js';
     var height = $(document).height() - $(window).height();
     var progress = pathLength - (scroll * pathLength / height);
     progressPath.style.strokeDashoffset = progress;
-  }
+  };
   updateProgress();
   $(window).scroll(updateProgress);
   var offset = 50;
@@ -53,7 +51,7 @@ import { toastMessage } from './toast.js';
     event.preventDefault();
     jQuery('html, body').animate({scrollTop: 0}, duration);
     return false;
-  })
+  });
   // ===================== Scroll Back to Top Js End ======================
 
   
@@ -90,6 +88,74 @@ import { toastMessage } from './toast.js';
     dynamicActiveMenuClass($('ul'));
   }
 // ========================== add active class to navbar menu current page Js End =====================
+
+  // ********************* Toast Notification Js start *********************
+  function toastMessage(messageType, messageTitle, messageText, messageIcon) {
+    let toastContainer = document.querySelector('#toast-container'); 
+
+    let toast = document.createElement('div');
+    toast.className = `toast-message ${messageType}`;
+
+    toast.innerHTML = `
+        <div class="toast-message__content">
+            <span class="toast-message__icon">
+                <i class="${messageIcon}"></i>
+            </span>
+            <div class="flex-grow-1">
+                <div class="d-flex align-items-start justify-content-between mb-1">
+                    <h6 class="toast-message__title">${messageTitle}</h6>
+                    <button type="button" class="toast-message__close">
+                        <i class="ph-bold ph-x"></i>
+                    </button>
+                </div>
+                <span class="toast-message__text">${messageText}</span>
+            </div>
+        </div>
+        <div class="progress__bar"></div>
+    `;
+
+    toastContainer.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.classList.add('active');
+    }, 50);
+
+    let totalDuration = 3500;
+    let startTime = Date.now();
+    let remainingTime = totalDuration;
+    let toastTimeout = setTimeout(hideToast, remainingTime);
+
+    function hideToast() {
+        toast.classList.remove('active');
+        setTimeout(() => {
+            toast.remove();
+        }, 500);
+    }
+
+    // Remove Toast
+    let closeToast = toast.querySelector('.toast-message__close');
+    closeToast.addEventListener('click', function () {
+        toast.classList.remove('active');
+        setTimeout(() => {
+            toast.remove();
+        }, 500);
+    });
+    // Remove Toast
+
+
+    // Pause Timeout on Hover
+    toast.addEventListener('mouseenter', function () {
+        remainingTime -= Date.now() - startTime;
+        clearTimeout(toastTimeout);
+    });
+
+    // Resume Timeout on Mouse Leave
+    toast.addEventListener('mouseleave', function () {
+        startTime = Date.now();
+        toastTimeout = setTimeout(hideToast, remainingTime);
+    });
+}
+// ********************* Toast Notification Js End *********************
 
 
 // ======================== Top Features Slider Start ==========================
@@ -211,29 +277,6 @@ AOS.init();
   animateProgress(); // Run on page load
 // ========================= Animated Radial Progress Js End ===================
 
-
-// ========================= throwable Js Start ===================
-// $(".throwable-element").throwable({
-//   drag: true, // Enable dragging
-//   gravity: {
-//       x: 0,
-//       y: 0 // No gravity effect
-//   },
-//   impulse: {
-//       f: 52, // Force of impulse
-//       p: {
-//           x: 0,
-//           y: 0 // Direction of impulse
-//       }
-//   },
-//   autostart: true, // Automatically start
-//   bounce: 0.8, // Reduced bounce effect
-//   damping: 100, // Damping to slow down motion
-//   containment: ".throwable-wrapper" // Restrict movement to the wrapper's boundaries
-// });
-// ========================= throwable Js End ===================
-
-
 // ========================= ShowCase Slider Js start ===================
 var brandSlider = new Swiper('.show-case-slider', {
   autoplay: {
@@ -266,7 +309,6 @@ var brandSlider = new Swiper('.show-case-slider', {
   }
 });
 // ========================= ShowCase Slider Js End ===================
-
 
 // ========================= Testimonials Slider Js start ===================
 var testimonialsSlider = new Swiper('.testimonials-slider', {
@@ -678,19 +720,34 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   // ========================= Form Submit Js Start ===================
   let formSubmit = document.querySelector('.form-submit');
   let fields = document.querySelectorAll('input');
+  let textarea = document.querySelector('textarea');
 
   if(formSubmit && fields) {
     formSubmit.addEventListener('submit', function (e) {
       e.preventDefault();
       fields.forEach(field => {
         field.value = "";
+        textarea.value = "";
       });
       toastMessage("success", "Success", "Form submitted successfully!", 'ph-fill ph-check-circle');
     });
   }
   // ========================= Form Submit Js End ===================
   
-
+  // ================== Password Show Hide Js Start ==========
+  $(".toggle-password").on('click', function() {
+    $(this).toggleClass("active");
+    var input = $($(this).attr("id"));
+    if (input.attr("type") == "password") {
+      input.attr("type", "text");
+      $(this).removeClass('ph-bold ph-eye-slash');
+      $(this).addClass('ph-bold ph-eye');
+    } else {
+      input.attr("type", "password");
+        $(this).addClass('ph-bold ph-eye-slash');
+    }
+  });
+  // ========================= Password Show Hide Js End ===========================
 
   // ========================= Throwable Js Start ===================
     if($('.drag-rotate-element').length) {
