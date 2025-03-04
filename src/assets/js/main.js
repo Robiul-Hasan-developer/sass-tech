@@ -727,8 +727,10 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
       e.preventDefault();
       fields.forEach(field => {
         field.value = "";
-        textarea.value = "";
       });
+      if(textarea) {
+        textarea.value = "";
+      }
       toastMessage("success", "Success", "Form submitted successfully!", 'ph-fill ph-check-circle');
     });
   }

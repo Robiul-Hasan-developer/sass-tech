@@ -277,7 +277,6 @@ if($('.flower').length) {
     duration: 3,
     stagger: 0.12,
     scrollTrigger: {
-      trigger: ".banner",
       start: "top 90%",
       toggleActions: "restart none restart none",
     }
