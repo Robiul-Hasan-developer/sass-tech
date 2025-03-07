@@ -247,7 +247,10 @@ const counterUp = window.counterUp.default;
 // ========================= Counter Up Js End ===================
 
 // ========================= AOS Js Start ===================
-AOS.init();
+// AOS.init();
+  AOS.init({ 
+    once: true 
+  })
 // ========================= AOS Js End ===================
 
 

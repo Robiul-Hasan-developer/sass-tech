@@ -1346,6 +1346,10 @@ input:focus, input:focus-visible {
     background-color: #F3F8F8;
 }
 
+.section-bg-three {
+    background-color: #F0F0FC;
+}
+
 .bg-pink-more-light {
     background-color: #FBF6EE;
 }
@@ -3538,6 +3542,10 @@ input:focus, input:focus-visible {
     margin-inline-end: 90px;
 }
 
+.tw-me-12-percent {
+    margin-inline-end: 12%;
+}
+
 .tw-mb-148-px {
     margin-block-end: 148px;
 }
@@ -4740,6 +4748,10 @@ input:focus, input:focus-visible {
 
 .tw-py-90-px {
     padding-block: clamp(2.5rem, -1rem + 8vw, 5.625rem);
+}
+
+.tw-py-80-px {
+    padding-block: 80px;
 }
 
 .tw-pb-80-px {
@@ -6660,7 +6672,7 @@ svg.radial-progress text {
     }
 }
 /* ================================= Testimonials section css End =============================== */
-:root {
+.home-two:root {
     --urbanist: "Urbanist", serif;
     --dm-serif: "DM Serif Display", serif;
     --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.375rem);
@@ -6676,12 +6688,36 @@ svg.radial-progress text {
     --heading-color: #150E3D;
 }
 
+.home-two h1 {
+    font-family: var(--urbanist);
+}
+
 .home-two h1, .home-two .h1, .home-two h2, .home-two .h2, .home-two h3, .home-two .h3, .home-two h4, .home-two .h4, .home-two h5, .home-two .h5, .home-two h6, .home-two .h6 {
     color: var(--heading-color);
 }
 
-.home-two h1 {
-    font-family: var(--urbanist);
+.home-two h1, .home-two .h1 {
+    font-size: var(--heading-one);
+}
+
+.home-two h2, .home-two .h2 {
+    font-size: var(--heading-two);
+}
+
+.home-two h3, .home-two .h3 {
+    font-size: var(--heading-three);
+}
+
+.home-two h4, .home-two .h4 {
+    font-size: var(--heading-four);
+}
+
+.home-two h5, .home-two .h5 {
+    font-size: var(--heading-five);
+}
+
+.home-two h6, .home-two .h6 {
+    font-size: var(--heading-six);
 }
 
 .home-two .font-dm-serif {
@@ -6792,7 +6828,7 @@ svg.radial-progress text {
 }
 
 /* ============================ Services section css end ============================ */
-:root {
+.home-three:root {
     --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.4375rem);
     --heading-two: clamp(2rem, 0.3353rem + 2.1661vw, 3.5rem);
     --heading-three: clamp(1.875rem, 0.7133rem + 2.8846vw, 3.125rem);
@@ -6805,6 +6841,30 @@ svg.radial-progress text {
 
 .home-three h1, .home-three .h1, .home-three h2, .home-three .h2, .home-three h3, .home-three .h3, .home-three h4, .home-three .h4, .home-three h5, .home-three .h5, .home-three h6, .home-three .h6 {
     color: var(--heading-color);
+}
+
+.home-three h1, .home-three .h1 {
+    font-size: var(--heading-one);
+}
+
+.home-three h2, .home-three .h2 {
+    font-size: var(--heading-two);
+}
+
+.home-three h3, .home-three .h3 {
+    font-size: var(--heading-three);
+}
+
+.home-three h4, .home-three .h4 {
+    font-size: var(--heading-four);
+}
+
+.home-three h5, .home-three .h5 {
+    font-size: var(--heading-five);
+}
+
+.home-three h6, .home-three .h6 {
+    font-size: var(--heading-six);
 }
 
 .home-three .font-dm-serif {
@@ -7032,7 +7092,7 @@ svg.radial-progress text {
     inset-inline-start: 10%;
 }
 
-:root {
+.crm-page :root {
     --black: #072032;
     --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.375rem);
     --heading-two: clamp(1.875rem, 0.7133rem + 2.8846vw, 3.125rem);

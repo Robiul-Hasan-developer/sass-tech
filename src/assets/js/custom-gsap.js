@@ -5,6 +5,7 @@
 var tl = gsap.timeline(); 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
+
 // =================================== Custom Cursor Js Start =====================================
 var body = document.body;
 var cursor = document.querySelector('.cursor');
@@ -139,37 +140,32 @@ mmm.add("(max-width: 991px)", () => {
 
 
 // =================================== Custom Split text Js Start =====================================
-if ($('.splitTextStyleOne').length > 0) {
-  let splitTextLines = gsap.utils.toArray(".splitTextStyleOne");
+  if (document.querySelectorAll('.splitTextStyleOne').length) {
+    gsap.registerPlugin(SplitText, ScrollTrigger);
 
-  splitTextLines.forEach(splitTextLine => { 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: splitTextLine,
-        start: 'top 99%',
-        duration: .6,
-        end: 'bottom 90%',
-        scrub: false,
-        markers: false,
-        toggleActions: 'restart none none none'
-      }
+    document.querySelectorAll('.splitTextStyleOne').forEach(el => {
+        let split = new SplitText(el, { type: "lines", linesClass: "split-line" });
+
+        gsap.set(el, { perspective: 100 });
+
+        gsap.set(split.lines, { 
+            yPercent: 140, 
+            opacity: 0 
+        });
+
+        gsap.to(split.lines, {
+          duration: 1.2, // Smooth transition duration
+          yPercent: 0,
+          opacity: 1,
+          ease: "power4.out",
+          stagger: 0.2,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              invalidateOnRefresh: true
+            },
+        });
     });
-
-    const itemSplitted = new SplitText(splitTextLine, { type: "lines" });
-
-    gsap.set(splitTextLine, { perspective: 500 });
-    itemSplitted.split({ type: "lines" })
-
-    tl.from(itemSplitted.lines, { 
-      duration: .6, 
-      delay: 0.3, 
-      opacity: 0, 
-      rotationX: -80, 
-      force3D: true, 
-      transformOrigin: "top center -50",
-      stagger: 0.1 
-    });
-  });
 }
 // =================================== Custom Split text Js End =====================================
 
@@ -294,7 +290,7 @@ if($('.ball').length) {
       scrollTrigger: {
         trigger: "#roadmap-section",
         start: "top 90%",
-        toggleActions: "restart none restart none",
+        toggleActions: "play none none none",
       }
   });
 }
