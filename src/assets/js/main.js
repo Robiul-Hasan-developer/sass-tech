@@ -281,7 +281,7 @@ const counterUp = window.counterUp.default;
 // ========================= Animated Radial Progress Js End ===================
 
 // ========================= ShowCase Slider Js start ===================
-var brandSlider = new Swiper('.show-case-slider', {
+var showCaseSlider = new Swiper('.show-case-slider', {
   autoplay: {
     delay: 2000,
     disableOnInteraction: false
@@ -312,6 +312,30 @@ var brandSlider = new Swiper('.show-case-slider', {
   }
 });
 // ========================= ShowCase Slider Js End ===================
+
+
+// ========================= Accordion Tabs Image Change Js Start ===================
+  const accordionButtons = document.querySelectorAll(".accordion-button");
+  const faqImage = document.getElementById("faqImage");
+  
+  if(accordionButtons && faqImage) {
+    accordionButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const newImageSrc = this.getAttribute("data-img");
+            console.log(newImageSrc);
+            
+  
+            if (newImageSrc && faqImage.src !== newImageSrc) {
+              faqImage.style.opacity = ".3";
+              setTimeout(() => {
+                  faqImage.src = newImageSrc;
+                  faqImage.style.opacity = "1";
+              }, 300); 
+            }
+        });
+    });
+  }
+// ========================= Accordion Tabs Image Change Js End ===================
 
 // ========================= Testimonials Slider Js start ===================
 var testimonialsSlider = new Swiper('.testimonials-slider', {
@@ -755,31 +779,31 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   // ========================= Password Show Hide Js End ===========================
 
   // ========================= Throwable Js Start ===================
-    if($('.drag-rotate-element').length) {
-      $(".drag-rotate-element").throwable({
-        containment: "parent", // Restrict movement inside .myContainer
-        bounce: true, // Enables bouncing effect
-        damping: 0.1, // Controls how much the element slows down
-        collisionDetection: false, // Detects collision with other elements
-        areaDetection: 3000, // Expands detection area for better interaction
+    // if($('.drag-rotate-element').length) {
+    //   $(".drag-rotate-element").throwable({
+    //     containment: "parent", // Restrict movement inside .myContainer
+    //     bounce: true, // Enables bouncing effect
+    //     damping: 0.1, // Controls how much the element slows down
+    //     collisionDetection: false, // Detects collision with other elements
+    //     areaDetection: 3000, // Expands detection area for better interaction
 
-          drag: true,
-          gravity: {
-            x: 0,
-            y: 0
-          },
-          impulse: {
-            f: 52,
-            p: {
-              x: 0,
-              y: 0
-            }
-          },
-          autostart: false,
-          bounce: 0.5,
-          damping: 100
-      });
-    }
+    //       drag: true,
+    //       gravity: {
+    //         x: 0,
+    //         y: 0
+    //       },
+    //       impulse: {
+    //         f: 52,
+    //         p: {
+    //           x: 0,
+    //           y: 0
+    //         }
+    //       },
+    //       autostart: false,
+    //       bounce: 0.5,
+    //       damping: 100
+    //   });
+    // }
   // ========================= Throwable Js End ===================
 
 

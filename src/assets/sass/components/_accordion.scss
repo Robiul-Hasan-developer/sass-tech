@@ -7,9 +7,14 @@
     }
 }
 
-.accordion-item:has(.accordion-collapse.show), .accordion-item:has(.accordion-button[aria-expanded="true"]) {
-    border-left: 4px solid var(--main-600) !important;
-    background: #fff !important;
+.accordion-border-left {
+ .accordion-item {
+    border-left: 4px solid transparent !important;
+ }   
+ .accordion-item:has(.accordion-collapse.show), .accordion-item:has(.accordion-button[aria-expanded="true"]) {
+     border-left: 4px solid var(--main-600) !important;
+     background: #fff !important;
+ }
 }
 
 .accordion-button::after {
