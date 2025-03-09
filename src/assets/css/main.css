@@ -3716,6 +3716,10 @@ input:focus, input:focus-visible {
     max-height: 295px;
 }
 
+.tw-max-h-397-px {
+    max-height: 397px;
+}
+
 .tw-max-h-410-px {
     max-height: 410px;
 }
@@ -4743,7 +4747,7 @@ input:focus, input:focus-visible {
 }
 
 .tw-py-76-px {
-    padding-block: clamp(2.5rem, -1rem + 8vw, 5.25rem);
+    padding-block: clamp(2.5rem, -1rem + 8vw, 4.75rem);
 }
 
 .tw-py-84-px {
@@ -5538,6 +5542,10 @@ input:focus, input:focus-visible {
 
 .tw-leading-145 {
     line-height: 1.45;
+}
+
+.tw-leading-153 {
+    line-height: 1.53;
 }
 
 .tw-leading-212 {
@@ -6577,27 +6585,61 @@ svg.radial-progress text {
 
 /* about Css end */
 /* ================================= Testimonials section css start =============================== */
-.testimonials-item__info {
-    justify-content: center;
-    text-align: center;
-    padding-block-start: clamp(1.125rem, -1rem + 4vw, 2rem);
+.animate-left-right {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    transition: 0.2s linear;
+    transition-delay: 200ms;
 }
 
-.testimonials-item__desc {
-    padding-block-end: clamp(1.5rem, -1rem + 8vw, 3.5rem);
+.testimonials-item {
+    flex: 1;
+    transition: 0.2s linear;
+    max-height: 504px;
 }
 
-/* Base style for the slides */
-@media (min-width: 1201px) {
-    .testimonials .swiper-slide {
-        flex: 0 0 calc(25% - 12px);
-    }
-
-    .testimonials .swiper-slide-next {
-        flex: 0 0 calc(50% - 12px);
-    /* Double the normal width */
-    }
+.testimonials-item .hidden-content {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
 }
+
+.testimonials-item.active {
+    flex: 2.2;
+}
+
+.testimonials-item.active .current-content {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+}
+
+.testimonials-item.active .hidden-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.testimonials-item.active .animate-left-right {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.animation-delay-02 {
+    transition-delay: 200ms;
+}
+
+.animation-delay-03 {
+    transition-delay: 300ms;
+}
+
+.animation-delay-04 {
+    transition-delay: 400ms;
+}
+
 /* ================================= Testimonials section css End =============================== */
 .home-two:root {
     --urbanist: "Urbanist", serif;

@@ -5,16 +5,19 @@
 var tl = gsap.timeline(); 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 // =================================== Smooth Scroller Js Start =====================================
-const smoother = ScrollSmoother.create({
-  content: "#scrollSmoother-container",
-  smooth: 1,
-  effects: true,
-  smoothTouch: 0.1,
-  ease: 'power4.out',
-});
+// if (ScrollSmoother) {
+//   const smoother = ScrollSmoother.create({
+//     content: "#scrollSmoother-container",
+//     smooth: 1,
+//     effects: true,
+//     smoothTouch: 0.1,
+//     ease: "power4.out",
+//   });
+// }
+
 
 // ScrollSmoother.create({
 //   smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
@@ -347,17 +350,32 @@ if($('.line').length) {
 // **************************** Blog js End ****************************
 
 // **************************** Drag Rotate Element js start ****************************
-if($('.drag-rotate-element').length) { 
-  gsap.from(".drag-rotate-element", {
-      y: 100,
-      ease: "bounce.out", 
-      duration: 1.8,
-      stagger: 0.1,
+if ($('.drag-rotate-element').length) { 
+  gsap.set(".drag-rotate-element", { opacity: 0, scale: 0.5, y: 20, rotate: '-3deg' });
+
+  gsap.to(".drag-rotate-element", {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      rotate: '0deg',
+      ease: "elastic.out(1, 0.5)", 
+      duration: 2,
+      stagger: 0.15,
       scrollTrigger: {
-        trigger: ".drag-rotate-element-section",
-        start: "top 90%",
-        toggleActions: "restart none restart none",
+          trigger: ".drag-rotate-element-section",
+          start: "top 90%",
+          toggleActions: "play none none none",
       }
+  });
+
+  gsap.to(".drag-rotate-element", {
+      y: "+=10",
+      rotate: '3deg',
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+      duration: 2,
+      stagger: 0.2,
   });
 }
 // **************************** Drag Rotate Element js End ****************************

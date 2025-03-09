@@ -337,6 +337,20 @@ var showCaseSlider = new Swiper('.show-case-slider', {
   }
 // ========================= Accordion Tabs Image Change Js End ===================
 
+// ========================= Testimonials Tab Js start ===================
+let testimonialsItems = document.querySelectorAll('.testimonials-item');
+
+if (testimonialsItems.length) {
+  testimonialsItems.forEach(testimonialsItem => {
+    testimonialsItem.addEventListener('click', function () {
+      testimonialsItems.forEach(item => item.classList.remove('active'));
+
+      this.classList.add('active');
+    });
+  });
+}
+// ========================= Testimonials Tab Js End ===================
+
 // ========================= Testimonials Slider Js start ===================
 var testimonialsSlider = new Swiper('.testimonials-slider', {
   autoplay: {
@@ -347,22 +361,22 @@ var testimonialsSlider = new Swiper('.testimonials-slider', {
   grabCursor: true,
   loop: true,
   spaceBetween: 24,  
-  slidesPerView: 3,
   autoplay: false,
-  breakpoints: {
-    200: {
-        slidesPerView: 1,
-    },
-    576: {
-        slidesPerView: 2,
-    },
-    768: {
-        slidesPerView: 2,
-    },
-    1200: {
-        slidesPerView: 3,
-    },
-  }
+  // slidesPerView: 3,
+  // breakpoints: {
+  //   200: {
+  //       slidesPerView: 1,
+  //   },
+  //   576: {
+  //       slidesPerView: 2,
+  //   },
+  //   768: {
+  //       slidesPerView: 2,
+  //   },
+  //   1200: {
+  //       slidesPerView: 3,
+  //   },
+  // }
 });
 // ========================= Testimonials Slider Js End ===================
 
