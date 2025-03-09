@@ -472,9 +472,6 @@
                     </li>
                     <li class="nav-item flex-grow-1" role="presentation">
                       <button class="nav-link w-100 active-scale-094 rounded-pill tw-px-6 tw-py-305 fw-semibold text-heading hover-text-main-600 h-100 line-clamp-1" id="pills-GeneratedomainusingAI-tab" data-bs-toggle="pill" data-bs-target="#pills-GeneratedomainusingAI" type="button" role="tab" aria-controls="pills-GeneratedomainusingAI" aria-selected="false"> 
-                        <span class="ai-icon tw-me-1 d-sm-inline-block d-none">
-                            <img src="assets/images/icons/ai-generate.svg" alt="AI Generate">
-                        </span>
                         Generate domain using AI
                       </button>
                     </li>
@@ -483,11 +480,11 @@
 
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-FindNewDomain" role="tabpanel" aria-labelledby="pills-FindNewDomain-tab" tabindex="0">
-                    <div class="">
+                    <div class="select-domain-wrapper ">
                         <form action="#" class="d-flex tw-gap-6 flex-column flex-sm-row" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
                             <div class="position-relative flex-grow-1">
                                 <input type="text" class="tw-py-405 tw-px-705 tw-pe-100-px bg-neutral-100 tw-rounded-xl border-transparent placeholder-neutral-600 placeholder-18-px w-100" placeholder="Enter your desire domain name">
-                                <select class="form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705">
+                                <select class="select-domain form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705 fw-semibold">
                                     <option value=".com">.com</option>
                                     <option value=".cloud">.cloud</option>
                                     <option value=".shop">.shop</option>
@@ -502,31 +499,31 @@
                         </form>
                         <div class="overflow-x-max-lg-auto scroll-sm scroll-sm-horizontal pb-sm-0" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
                             <div class="tw-mt-6 d-grid grid-col-5 min-w-max tw-pb-1">
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end border-start">
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end border-start" data-domain=".com">
                                     <img src="assets/images/thumbs/domain-img1.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".cloud">
                                     <img src="assets/images/thumbs/domain-img2.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$14.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".shop">
                                     <img src="assets/images/thumbs/domain-img3.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".online">
                                     <img src="assets/images/thumbs/domain-img4.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".info">
                                     <img src="assets/images/thumbs/domain-img5.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
+                                </button>
                             </div>
                         </div>
 
@@ -537,11 +534,11 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-GeneratedomainusingAI" role="tabpanel" aria-labelledby="pills-GeneratedomainusingAI-tab" tabindex="0"> 
-                    <div class="">
+                    <div class="select-domain-wrapper ">
                         <form action="#" class="d-flex tw-gap-6 flex-column flex-sm-row" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
                             <div class="position-relative flex-grow-1">
                                 <input type="text" class="tw-py-405 tw-px-705 tw-pe-100-px bg-neutral-100 tw-rounded-xl border-transparent placeholder-neutral-600 placeholder-18-px w-100" placeholder="Enter your desire domain name">
-                                <select class="form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705">
+                                <select class="select-domain form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705 fw-semibold">
                                     <option value=".com">.com</option>
                                     <option value=".cloud">.cloud</option>
                                     <option value=".shop">.shop</option>
@@ -556,31 +553,31 @@
                         </form>
                         <div class="overflow-x-max-lg-auto scroll-sm scroll-sm-horizontal pb-sm-0" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
                             <div class="tw-mt-6 d-grid grid-col-5 min-w-max tw-pb-1">
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end border-start">
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end border-start" data-domain=".com">
                                     <img src="assets/images/thumbs/domain-img1.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".cloud">
                                     <img src="assets/images/thumbs/domain-img2.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$14.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".shop">
                                     <img src="assets/images/thumbs/domain-img3.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".online">
                                     <img src="assets/images/thumbs/domain-img4.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".info">
                                     <img src="assets/images/thumbs/domain-img5.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
+                                </button>
                             </div>
                         </div>
 
@@ -781,7 +778,7 @@
                         </div>
                     </div>
                     <div class="tw-mt-8 max-w-500-px" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" >
-                        <a href="register.html" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-lg-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-15 tw-rounded-md tw-py-505 fw-medium" data-block="button">
+                        <a href="pricing-plan.html" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-lg-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-15 tw-rounded-md tw-py-505 fw-medium" data-block="button">
                             <span class="button__flair"></span>
                             <span class="button__label">See Plan & Pricing</span>
                         </a>
@@ -822,22 +819,22 @@
                 <div class="hosting-plan-slider swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide h-100" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600" >
-                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item">
+                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item tw-duration-200">
                                 <div class="">
                                     <span class="">
                                         <img src="assets/images/icons/hosting-plan-icon1.png" alt="Icon" class="animate__swing">
                                     </span>
                                     <div class="tw-mt-10">
                                         <span class="tw-mb-3 d-block text-heading">
-                                            <span class="group-hover-text-white">Starts at </span>
-                                            <span class="text-purple group-hover-text-yellow fw-bold">$3.75/mo*</span> 
+                                            <span class="tw-duration-200 group-hover-text-white">Starts at </span>
+                                            <span class="text-purple tw-duration-200 group-hover-text-yellow fw-bold">$3.75/mo*</span> 
                                         </span>
-                                        <h5 class="tw-mb-3 group-hover-text-white">Web hosting</h5>
-                                        <p class="text-neutral-500 tw-text-base line-clamp-2 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
+                                        <h5 class="tw-mb-3 tw-duration-200 group-hover-text-white">Web hosting</h5>
+                                        <p class="text-neutral-500 tw-text-base line-clamp-2 tw-duration-200 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
                                     </div>
                                 </div>
                                 <div class="tw-mt-705">
-                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
+                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white tw-duration-200 group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
                                         <span class="button__flair"></span>
                                         <span class="button__label">Learn more</span>
                                     </a>
@@ -845,22 +842,22 @@
                             </div>
                         </div>
                         <div class="swiper-slide h-100" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="700" >
-                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item">
+                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item tw-duration-200">
                                 <div class="">
                                     <span class="">
                                         <img src="assets/images/icons/hosting-plan-icon2.png" alt="Icon" class="animate__swing">
                                     </span>
                                     <div class="tw-mt-10">
                                         <span class="tw-mb-3 d-block text-heading">
-                                            <span class="group-hover-text-white">Starts at </span>
-                                            <span class="text-purple group-hover-text-yellow fw-bold">$3.75/mo*</span> 
+                                            <span class="tw-duration-200 group-hover-text-white">Starts at </span>
+                                            <span class="text-purple tw-duration-200 group-hover-text-yellow fw-bold">$3.75/mo*</span> 
                                         </span>
-                                        <h5 class="tw-mb-3 group-hover-text-white">WordPress hosting</h5>
-                                        <p class="text-neutral-500 tw-text-base line-clamp-2 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
+                                        <h5 class="tw-mb-3 tw-duration-200 group-hover-text-white">WordPress hosting</h5>
+                                        <p class="text-neutral-500 tw-text-base line-clamp-2 tw-duration-200 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
                                     </div>
                                 </div>
                                 <div class="tw-mt-705">
-                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
+                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white tw-duration-200 group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
                                         <span class="button__flair"></span>
                                         <span class="button__label">Learn more</span>
                                     </a>
@@ -868,22 +865,22 @@
                             </div>
                         </div>
                         <div class="swiper-slide h-100" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" >
-                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item">
+                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item tw-duration-200">
                                 <div class="">
                                     <span class="">
                                         <img src="assets/images/icons/hosting-plan-icon3.png" alt="Icon" class="animate__swing">
                                     </span>
                                     <div class="tw-mt-10">
                                         <span class="tw-mb-3 d-block text-heading">
-                                            <span class="group-hover-text-white">Starts at </span>
-                                            <span class="text-purple group-hover-text-yellow fw-bold">$3.75/mo*</span> 
+                                            <span class="tw-duration-200 group-hover-text-white">Starts at </span>
+                                            <span class="text-purple tw-duration-200 group-hover-text-yellow fw-bold">$3.75/mo*</span> 
                                         </span>
-                                        <h5 class="tw-mb-3 group-hover-text-white">VPS hosting</h5>
-                                        <p class="text-neutral-500 tw-text-base line-clamp-2 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
+                                        <h5 class="tw-mb-3 tw-duration-200 group-hover-text-white">VPS hosting</h5>
+                                        <p class="text-neutral-500 tw-text-base line-clamp-2 tw-duration-200 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
                                     </div>
                                 </div>
                                 <div class="tw-mt-705">
-                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
+                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white tw-duration-200 group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
                                         <span class="button__flair"></span>
                                         <span class="button__label">Learn more</span>
                                     </a>
@@ -891,22 +888,22 @@
                             </div>
                         </div>
                         <div class="swiper-slide h-100" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900" >
-                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item">
+                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item tw-duration-200">
                                 <div class="">
                                     <span class="">
                                         <img src="assets/images/icons/hosting-plan-icon4.png" alt="Icon" class="animate__swing">
                                     </span>
                                     <div class="tw-mt-10">
                                         <span class="tw-mb-3 d-block text-heading">
-                                            <span class="group-hover-text-white">Starts at </span>
-                                            <span class="text-purple group-hover-text-yellow fw-bold">$3.75/mo*</span> 
+                                            <span class="tw-duration-200 group-hover-text-white">Starts at </span>
+                                            <span class="text-purple tw-duration-200 group-hover-text-yellow fw-bold">$3.75/mo*</span> 
                                         </span>
-                                        <h5 class="tw-mb-3 group-hover-text-white">Dedicated hosting</h5>
-                                        <p class="text-neutral-500 tw-text-base line-clamp-2 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
+                                        <h5 class="tw-mb-3 tw-duration-200 group-hover-text-white">Dedicated hosting</h5>
+                                        <p class="text-neutral-500 tw-text-base line-clamp-2 tw-duration-200 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
                                     </div>
                                 </div>
                                 <div class="tw-mt-705">
-                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
+                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white tw-duration-200 group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
                                         <span class="button__flair"></span>
                                         <span class="button__label">Learn more</span>
                                     </a>
@@ -914,22 +911,22 @@
                             </div>
                         </div>
                         <div class="swiper-slide h-100" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" >
-                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item">
+                            <div class="group hosting-plan-item tw-ps-48-px tw-pe-4 tw-pt-90-px tw-pb-9 hover-bg-main-600 h-100 d-flex flex-column justify-content-between animation-item tw-duration-200">
                                 <div class="">
                                     <span class="">
                                         <img src="assets/images/icons/hosting-plan-icon2.png" alt="Icon" class="animate__swing">
                                     </span>
                                     <div class="tw-mt-10">
                                         <span class="tw-mb-3 d-block text-heading">
-                                            <span class="group-hover-text-white">Starts at </span>
-                                            <span class="text-purple group-hover-text-yellow fw-bold">$3.75/mo*</span> 
+                                            <span class="tw-duration-200 group-hover-text-white">Starts at </span>
+                                            <span class="text-purple tw-duration-200 group-hover-text-yellow fw-bold">$3.75/mo*</span> 
                                         </span>
-                                        <h5 class="tw-mb-3 group-hover-text-white">WordPress hosting</h5>
-                                        <p class="text-neutral-500 tw-text-base line-clamp-2 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
+                                        <h5 class="tw-mb-3 tw-duration-200 group-hover-text-white">WordPress hosting</h5>
+                                        <p class="text-neutral-500 tw-text-base line-clamp-2 tw-duration-200 group-hover-text-white">Easy, affordable, and includes a free domain for a year. Score!</p>       
                                     </div>
                                 </div>
                                 <div class="tw-mt-705">
-                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
+                                    <a href="javascript:void(0)" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-inline-flex align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-705 tw-py-305 fw-medium tw-rounded-md text-sm group-hover-bg-white tw-duration-200 group-hover-text-main-two-600 hosting-plan-btn" data-block="button">
                                         <span class="button__flair"></span>
                                         <span class="button__label">Learn more</span>
                                     </a>
@@ -940,10 +937,10 @@
                 </div>
             </div>
     
-            <div class="swiper-hosting-button-next tw-w-14 tw-h-14 border border-neutral-200 rounded-circle text-main-600 tw-text-lg d-flex justify-content-center align-items-center hover-bg-main-600 hover-border-main-600 hover-text-white tw-transition tw-duration-300 position-absolute top-50 translate-middle-y tw-z-99 tw-start-100 tw-ms-705">
+            <div class="swiper-hosting-button-next tw-w-14 tw-h-14 border border-neutral-200 rounded-circle text-main-600 tw-text-lg d-flex justify-content-center align-items-center hover-bg-main-600 hover-border-main-600 hover-text-white tw-transition tw-duration-200 position-absolute top-50 translate-middle-y tw-z-99 tw-start-100 tw-ms-705">
                 <i class="ph-bold ph-arrow-right"></i>
             </div>
-            <div class="swiper-hosting-button-prev tw-w-14 tw-h-14 border border-neutral-200 rounded-circle text-main-600 tw-text-lg d-flex justify-content-center align-items-center hover-bg-main-600 hover-border-main-600 hover-text-white tw-transition tw-duration-300 position-absolute top-50 translate-middle-y tw-z-99 tw-end-100 tw-me-705">
+            <div class="swiper-hosting-button-prev tw-w-14 tw-h-14 border border-neutral-200 rounded-circle text-main-600 tw-text-lg d-flex justify-content-center align-items-center hover-bg-main-600 hover-border-main-600 hover-text-white tw-transition tw-duration-200 position-absolute top-50 translate-middle-y tw-z-99 tw-end-100 tw-me-705">
                 <i class="ph-bold ph-arrow-left"></i>
             </div>
 
@@ -1024,7 +1021,7 @@
 
         <div class="container">
             <div class="row gy-5">
-                <div class="col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600" >
+                <div class="col-sm-6" >
                     <div class="max-w-444-px mx-auto text-center">
                         <div class="common-shadow-eight tw-py-7 tw-px-705 tw-rounded-xl overflow-hidden">
                             <img src="assets/images/thumbs/search-domain-img2.png" alt="Thumb" class="w-100 h-100 object-fit-cover">
@@ -1035,7 +1032,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="700" >
+                <div class="col-sm-6" >
                     <div class="max-w-444-px mx-auto text-center">
                         <div class="common-shadow-eight tw-py-7 tw-px-705 tw-rounded-xl overflow-hidden">
                             <img src="assets/images/thumbs/search-domain-img1.png" alt="Thumb" class="w-100 h-100 object-fit-cover">
@@ -1051,53 +1048,53 @@
 
         <div class="container">
             <div class="pt-120">
-                <div class="row gy-4">
+                <div class="row gy-4 select-domain-wrapper">
                     <div class="col-md-5">
                         <div class="d-flex tw-gap-305 flex-wrap">
-                            <div class="common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600" >
+                            <button type="button" class="domain-item-button common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-domain=".xyz">
                                 <img src="assets/images/thumbs/search-domain-two-img1.png" alt="Logo" class="animate__wobble">
                                 <span class="d-block text-heading tw-mt-105 tw-text-sm fw-bold">$13.34/Yearly</span>
-                            </div>
-                            <div class="common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="700" >
+                            </button>
+                            <button type="button" class="domain-item-button common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-domain=".shop">
                                 <img src="assets/images/thumbs/search-domain-two-img2.png" alt="Logo" class="animate__wobble">
                                 <span class="d-block text-heading tw-mt-105 tw-text-sm fw-bold">$13.34/Yearly</span>
-                            </div>
-                            <div class="common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" >
+                            </button>
+                            <button type="button" class="domain-item-button common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-domain=".icu">
                                 <img src="assets/images/thumbs/search-domain-two-img3.png" alt="Logo" class="animate__wobble">
                                 <span class="d-block text-heading tw-mt-105 tw-text-sm fw-bold">$13.34/Yearly</span>
-                            </div>
-                            <div class="common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600" >
+                            </button>
+                            <button type="button" class="domain-item-button common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-domain=".site">
                                 <img src="assets/images/thumbs/search-domain-two-img4.png" alt="Logo" class="animate__wobble">
                                 <span class="d-block text-heading tw-mt-105 tw-text-sm fw-bold">$13.34/Yearly</span>
-                            </div>
-                            <div class="common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="700" >
+                            </button>
+                            <button type="button" class="domain-item-button common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-domain=".in">
                                 <img src="assets/images/thumbs/search-domain-two-img5.png" alt="Logo" class="animate__wobble">
                                 <span class="d-block text-heading tw-mt-105 tw-text-sm fw-bold">$13.34/Yearly</span>
-                            </div>
-                            <div class="common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" >
+                            </button>
+                            <button type="button" class="domain-item-button common-shadow-nine flex-grow-1 tw-min-h-144-px tw-rounded-lg text-center min-w-144-px d-flex flex-column align-items-center justify-content-center animation-item" data-domain=".gives">
                                 <img src="assets/images/thumbs/search-domain-two-img6.png" alt="Logo" class="animate__wobble">
                                 <span class="d-block text-heading tw-mt-105 tw-text-sm fw-bold">$13.34/Yearly</span>
-                            </div>
+                            </button>
                         </div>
                     </div>
 
-
                     <div class="col-md-7">
                         <div class="ps-lg-5">
-                            <div class=""  data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600" >
+                            <div class=""  >
                                 <span class="tw-px-6 tw-py-1 bg-purple text-white rounded-pill fw-medium tw-mb-5">Find a new domain</span>
                                 <h4 class="tw-mb-705">Web Hosting that's fast and reliable.</h4>
                                 <p class="text-neutral-500">In today's competitive business, the demand for efficient In today's competitive cost-effective IT solutions has never been more critic. business</p>
                             </div>
-                            <form action="#" class="d-flex tw-gap-6 flex-column flex-xl-row tw-mt-8" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="700" >
+                            <form action="#" class="d-flex tw-gap-6 flex-column flex-xl-row tw-mt-8" >
                                 <div class="position-relative flex-grow-1">
                                     <input type="text" class="tw-py-405 tw-px-705 tw-pe-100-px bg-neutral-100 tw-rounded-xl border-transparent placeholder-neutral-600 placeholder-18-px w-100" placeholder="Enter your desire domain name">
-                                    <select class="form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705">
-                                        <option value=".com">.com</option>
-                                        <option value=".cloud">.cloud</option>
+                                    <select class="select-domain form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705 fw-semibold">
+                                        <option value=".xyz">.xyz</option>
                                         <option value=".shop">.shop</option>
-                                        <option value=".online">.online</option>
-                                        <option value=".info">.info</option>
+                                        <option value=".icu">.icu</option>
+                                        <option value=".site">.site</option>
+                                        <option value=".in">.in</option>
+                                        <option value=".gives">.gives</option>
                                     </select>
                                 </div>
                                 <button type="button" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-15 tw-py-505 fw-semibold" data-block="button">
@@ -1156,7 +1153,7 @@
                                     </span>
                                     <h5 class="tw-mb-8">Basic plan</h5>
                                     <div class="d-flex align-items-center justify-content-between tw-gap-1 tw-mb-5">
-                                        <h2 class="mb-0">$1.99<span class="tw-text-xl">/Yearly</span> </h2>
+                                        <h2 class="mb-0">$1.99<span class="tw-text-xl">/Monthly</span> </h2>
                                         <div class="form-check form-switch mb-0">
                                             <input class="form-check-input" type="checkbox" role="switch">
                                         </div>
@@ -1236,7 +1233,7 @@
                                     </span>
                                     <h5 class="tw-mb-8">Premium plan</h5>
                                     <div class="d-flex align-items-center justify-content-between tw-gap-1 tw-mb-5">
-                                        <h2 class="mb-0">$10.99<span class="tw-text-xl">/Yearly</span> </h2>
+                                        <h2 class="mb-0">$10.99<span class="tw-text-xl">/Monthly</span> </h2>
                                         <div class="form-check form-switch mb-0">
                                             <input class="form-check-input" type="checkbox" role="switch">
                                         </div>
@@ -1316,7 +1313,7 @@
                                     </span>
                                     <h5 class="tw-mb-8">Pro plan</h5>
                                     <div class="d-flex align-items-center justify-content-between tw-gap-1 tw-mb-5">
-                                        <h2 class="mb-0">$20.99<span class="tw-text-xl">/Yearly</span> </h2>
+                                        <h2 class="mb-0">$20.99<span class="tw-text-xl">/Monthly</span> </h2>
                                         <div class="form-check form-switch mb-0">
                                             <input class="form-check-input" type="checkbox" role="switch">
                                         </div>

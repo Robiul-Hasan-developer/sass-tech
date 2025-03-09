@@ -12,9 +12,6 @@
                     </li>
                     <li class="nav-item flex-grow-1" role="presentation">
                       <button class="nav-link w-100 active-scale-094 rounded-pill tw-px-6 tw-py-305 fw-semibold text-heading hover-text-main-600 h-100 line-clamp-1" id="pills-GeneratedomainusingAI-tab" data-bs-toggle="pill" data-bs-target="#pills-GeneratedomainusingAI" type="button" role="tab" aria-controls="pills-GeneratedomainusingAI" aria-selected="false"> 
-                        <span class="ai-icon tw-me-1 d-sm-inline-block d-none">
-                            <img src="assets/images/icons/ai-generate.svg" alt="AI Generate">
-                        </span>
                         Generate domain using AI
                       </button>
                     </li>
@@ -23,11 +20,11 @@
 
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-FindNewDomain" role="tabpanel" aria-labelledby="pills-FindNewDomain-tab" tabindex="0">
-                    <div class="">
+                    <div class="select-domain-wrapper ">
                         <form action="#" class="d-flex tw-gap-6 flex-column flex-sm-row" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
                             <div class="position-relative flex-grow-1">
                                 <input type="text" class="tw-py-405 tw-px-705 tw-pe-100-px bg-neutral-100 tw-rounded-xl border-transparent placeholder-neutral-600 placeholder-18-px w-100" placeholder="Enter your desire domain name">
-                                <select class="form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705">
+                                <select class="select-domain form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705 fw-semibold">
                                     <option value=".com">.com</option>
                                     <option value=".cloud">.cloud</option>
                                     <option value=".shop">.shop</option>
@@ -42,31 +39,31 @@
                         </form>
                         <div class="overflow-x-max-lg-auto scroll-sm scroll-sm-horizontal pb-sm-0" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
                             <div class="tw-mt-6 d-grid grid-col-5 min-w-max tw-pb-1">
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end border-start">
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end border-start" data-domain=".com">
                                     <img src="assets/images/thumbs/domain-img1.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".cloud">
                                     <img src="assets/images/thumbs/domain-img2.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$14.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".shop">
                                     <img src="assets/images/thumbs/domain-img3.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".online">
                                     <img src="assets/images/thumbs/domain-img4.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".info">
                                     <img src="assets/images/thumbs/domain-img5.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
+                                </button>
                             </div>
                         </div>
 
@@ -77,11 +74,11 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-GeneratedomainusingAI" role="tabpanel" aria-labelledby="pills-GeneratedomainusingAI-tab" tabindex="0"> 
-                    <div class="">
+                    <div class="select-domain-wrapper ">
                         <form action="#" class="d-flex tw-gap-6 flex-column flex-sm-row" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
                             <div class="position-relative flex-grow-1">
                                 <input type="text" class="tw-py-405 tw-px-705 tw-pe-100-px bg-neutral-100 tw-rounded-xl border-transparent placeholder-neutral-600 placeholder-18-px w-100" placeholder="Enter your desire domain name">
-                                <select class="form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705">
+                                <select class="select-domain form-control form-select w-auto border-0 tw-py-1 tw-pe-305 shadow-none form-select-arrow-end position-absolute tw-end-0 top-50 translate-middle-y bg-transparent tw-me-705 fw-semibold">
                                     <option value=".com">.com</option>
                                     <option value=".cloud">.cloud</option>
                                     <option value=".shop">.shop</option>
@@ -96,31 +93,31 @@
                         </form>
                         <div class="overflow-x-max-lg-auto scroll-sm scroll-sm-horizontal pb-sm-0" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600">
                             <div class="tw-mt-6 d-grid grid-col-5 min-w-max tw-pb-1">
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end border-start">
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end border-start" data-domain=".com">
                                     <img src="assets/images/thumbs/domain-img1.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".cloud">
                                     <img src="assets/images/thumbs/domain-img2.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$14.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".shop">
                                     <img src="assets/images/thumbs/domain-img3.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".online">
                                     <img src="assets/images/thumbs/domain-img4.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
-                                <div class="text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end">
+                                </button>
+                                <button type="button" class="domain-item-button text-center tw-py-205 tw-px-5 border-bottom hover-common-shadow-four animation-item border-top border-neutral-200 border-end" data-domain=".info">
                                     <img src="assets/images/thumbs/domain-img5.png" alt="Domain Logo" class="animate__wobble">
                                     <span class="d-block text-neutral-600 tw-mt-105 tw-mb-1">Starting price</span>
                                     <span class="d-block text-neutral-700 tw-mt-1 tw-text-sm fw-semibold">$13.34/Yearly</span>
-                                </div>
+                                </button>
                             </div>
                         </div>
 

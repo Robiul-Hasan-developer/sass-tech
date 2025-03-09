@@ -351,36 +351,6 @@ if (testimonialsItems.length) {
 }
 // ========================= Testimonials Tab Js End ===================
 
-// ========================= Testimonials Slider Js start ===================
-var testimonialsSlider = new Swiper('.testimonials-slider', {
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false
-  },
-  speed: 1500,
-  grabCursor: true,
-  loop: true,
-  spaceBetween: 24,  
-  autoplay: false,
-  // slidesPerView: 3,
-  // breakpoints: {
-  //   200: {
-  //       slidesPerView: 1,
-  //   },
-  //   576: {
-  //       slidesPerView: 2,
-  //   },
-  //   768: {
-  //       slidesPerView: 2,
-  //   },
-  //   1200: {
-  //       slidesPerView: 3,
-  //   },
-  // }
-});
-// ========================= Testimonials Slider Js End ===================
-
-
 // ========================== Set Text In Custom dropdown Js Start =================================
 $('.selectable-text-list li').each(function () {
   var thisItem = $(this); 
@@ -391,6 +361,34 @@ $('.selectable-text-list li').each(function () {
   }); 
 }); 
 // ========================== Set Text In Custom dropdown Js End =================================
+
+
+// ========================== Domain Select Js Start =================================
+let selectDomainWrappers = document.querySelectorAll('.select-domain-wrapper'); 
+
+selectDomainWrappers.forEach(selectDomainWrapper => {
+  let selectDomain = selectDomainWrapper.querySelector('.select-domain');
+  let domainItemButtons = selectDomainWrapper.querySelectorAll('.domain-item-button'); 
+  
+  domainItemButtons.forEach(domainItemButton => {
+    domainItemButton.addEventListener('click', function () {
+      let selectedDomain = this.getAttribute("data-domain");
+      console.log(selectedDomain);
+      
+      selectDomain.value = selectedDomain;
+  
+      domainItemButtons.forEach(button => {
+        button.classList.remove('active-domain');
+      });
+      this.classList.add('active-domain');
+      // domainItemButtons.forEach(button => {
+      //   button.style.boxShadow = 'none';
+      // });
+      // this.style.boxShadow = '0px 4px 15px 0px #00000029';
+    });
+  });
+});
+// ========================== Domain Select Js End =================================
   
 // ========================== About Two Js Start =====================
 var aboutTwoThumbsSliderOne = new Swiper(".about-two-thumbs-slider-one", {

@@ -5240,6 +5240,10 @@ input:focus, input:focus-visible {
     box-shadow: 0px 14px 31px -2px #2021241A;
 }
 
+.active-domain {
+    box-shadow: 0px 4px 24px 0px #00000047 !important;
+}
+
 /* Box shadow End */
 /* transition Css Class start */
 .tw-transition {
@@ -6762,10 +6766,6 @@ svg.radial-progress text {
 
 .hosting-plan-slider .swiper-slide:last-child {
     border-inline-end: 0;
-}
-
-.hosting-plan-item .hosting-plan-btn {
-    transition: 0s !important;
 }
 
 .hosting-plan-item .button__label {
