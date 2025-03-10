@@ -327,7 +327,7 @@ if($('.box').length) {
       scrollTrigger: {
         trigger: "#box-wrapper",
         start: "top 90%",
-        toggleActions: "restart none restart none",
+        toggleActions: "play none none none",
       }
   });
 }
@@ -351,7 +351,7 @@ if($('.line').length) {
 
 // **************************** Drag Rotate Element js start ****************************
 if ($('.drag-rotate-element').length) { 
-  gsap.set(".drag-rotate-element", { opacity: 0, scale: 0.5, y: 20, rotate: '-3deg' });
+  gsap.set(".drag-rotate-element", { opacity: 0, scale: 0.5, y: 0, rotate: '-6deg' });
 
   gsap.to(".drag-rotate-element", {
       opacity: 1,
@@ -369,13 +369,13 @@ if ($('.drag-rotate-element').length) {
   });
 
   gsap.to(".drag-rotate-element", {
-      y: "+=10",
+      y: "+=0",
       rotate: '3deg',
       repeat: -1,
       yoyo: true,
-      ease: "power1.inOut",
-      duration: 2,
-      stagger: 0.2,
+      ease: "sine.inOut",
+      duration: 2.5,
+      stagger: 0.3,
   });
 }
 // **************************** Drag Rotate Element js End ****************************

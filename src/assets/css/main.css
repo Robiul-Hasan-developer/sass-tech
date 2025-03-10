@@ -5282,6 +5282,10 @@ input:focus, input:focus-visible {
     transition-duration: 300ms;
 }
 
+.tw-duration-400 {
+    transition-duration: 400ms;
+}
+
 .tw-duration-500 {
     transition-duration: 500ms;
 }
