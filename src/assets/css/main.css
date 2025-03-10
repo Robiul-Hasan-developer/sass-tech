@@ -5188,7 +5188,7 @@ input:focus, input:focus-visible {
 }
 
 .common-shadow-nine {
-    box-shadow: 0px 4px 21px 0px #00000017;
+    box-shadow: 0px 4px 21px 0px #00000012;
 }
 
 .common-shadow-ten {
@@ -5252,7 +5252,7 @@ input:focus, input:focus-visible {
 }
 
 .active-domain {
-    box-shadow: 0px 4px 24px 0px #00000047 !important;
+    box-shadow: 0px 4px 24px 0px #00000026 !important;
 }
 
 /* Box shadow End */

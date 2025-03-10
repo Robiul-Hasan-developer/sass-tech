@@ -845,35 +845,45 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   }
   // ========================= See All Feature pricing plan Js End ===================
 
+  
+  // ========================= Toggle Monthly Yearly duration pricing plan Js Start ===================
+  let pricingItemToggles = document.querySelectorAll('.pricing-item-toggle');
 
-  // ========================= Throwable Js Start ===================
-    // if($('.drag-rotate-element').length) {
-    //   $(".drag-rotate-element").throwable({
-    //     containment: "parent", // Restrict movement inside .myContainer
-    //     bounce: true, // Enables bouncing effect
-    //     damping: 0.1, // Controls how much the element slows down
-    //     collisionDetection: false, // Detects collision with other elements
-    //     areaDetection: 3000, // Expands detection area for better interaction
+  if(pricingItemToggles) {
+    pricingItemToggles.forEach(pricingItemToggle => {
+      pricingItemToggle.addEventListener('change', function () {
 
-    //       drag: true,
-    //       gravity: {
-    //         x: 0,
-    //         y: 0
-    //       },
-    //       impulse: {
-    //         f: 52,
-    //         p: {
-    //           x: 0,
-    //           y: 0
-    //         }
-    //       },
-    //       autostart: false,
-    //       bounce: 0.5,
-    //       damping: 100
-    //   });
-    // }
-  // ========================= Throwable Js End ===================
+        let pricingItem = this.closest('.pricing-item');
+        let pricingDuration = pricingItem.querySelector('.pricing-duration');
+        let currentPrice = pricingItem.querySelector('.current-price');
+        // Get the text content and remove the `$` and `.`
+        let priceValue = parseFloat(currentPrice.textContent.replace(/[^\d.-]/g, ''));
+        
+        if(pricingItemToggle.checked) {
+          if(pricingDuration.innerHTML === "/Monthly") {
+            pricingDuration.innerHTML = "/Yearly";
+            currentPrice.textContent = (priceValue * 10).toFixed(2);
+            
+          } else if(pricingDuration.innerHTML === "/Yearly") {
+            pricingDuration.innerHTML = "/Monthly";
+            currentPrice.textContent = (priceValue / 10).toFixed(2);
+          }
+        }
+        else {
+          if(pricingDuration.innerHTML === "/Monthly") {
+            pricingDuration.innerHTML = "/Yearly";
+            currentPrice.textContent = (priceValue * 10).toFixed(2);
+            
+          } else if(pricingDuration.innerHTML === "/Yearly") {
+            pricingDuration.innerHTML = "/Monthly";
+            currentPrice.textContent = (priceValue / 10).toFixed(2);
+          }
+        }
 
+      });
+    });
+  }
+  // ========================= Toggle Monthly Yearly duration pricing plan Js End ===================
 
   });
   // ==========================================
