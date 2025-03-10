@@ -816,6 +816,35 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   });
   // ========================= Active Tab Background animation Js End ===================
 
+  
+  // ========================= See All Feature pricing plan Js Start ===================
+  let seeAllBtns = document.querySelectorAll('.see-all-btn');
+
+  if(seeAllBtns) {
+    seeAllBtns.forEach(seeAllBtn => {
+      seeAllBtn.addEventListener('click', function () {
+        let pricingItem = this.closest('.pricing-item');
+        pricingItem.classList.toggle('expand');
+
+        // this.innerHTML = "Less Features";
+        if(pricingItem.classList.contains('expand')) {
+          this.innerHTML = `
+            <button type="button" class="see-all-btn d-flex align-items-center justify-content-center tw-gap-305 text-main-600 fw-bold hover-underline d-lg-flex align-items-center tw-gap-305">
+                Less features
+                <i class="ph-bold ph-caret-up"></i>
+            </button>`;
+        } else {
+          this.innerHTML = `
+            <button type="button" class="see-all-btn d-flex align-items-center justify-content-center tw-gap-305 text-main-600 fw-bold hover-underline d-lg-flex align-items-center tw-gap-305">
+                See all features
+                <i class="ph-bold ph-caret-down"></i>
+          </button>`;
+        }
+      });
+    });
+  }
+  // ========================= See All Feature pricing plan Js End ===================
+
 
   // ========================= Throwable Js Start ===================
     // if($('.drag-rotate-element').length) {

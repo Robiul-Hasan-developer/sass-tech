@@ -6812,6 +6812,18 @@ svg.radial-progress text {
 }
 
 /* ============================ Services section css end ============================ */
+/* Pricing Plan Start */
+.pricing-item .feature-list {
+    max-height: 330px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.pricing-item.expand .feature-list {
+    max-height: 1000px;
+}
+
+/* Pricing Plan End */
 .home-three:root {
     --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.4375rem);
     --heading-two: clamp(2rem, 0.3353rem + 2.1661vw, 3.5rem);
