@@ -2,40 +2,48 @@
     'pageClass': 'home-two'
 })
 
-    @@include('../partials/_top-header-two.html')
 
-    @@include('../partials/_header-two.html', {
-        headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-13',
-        logoText: 'logo.png',
-        navMenu: '_nav-menu-two.html',
-        btnClass: 'rounded-pill btn-main hover-style-one '
-    })
+<div id="smooth-wrapper">
+    <div id="smooth-content">
 
-    @@include('../partials/_banner-two.html')
+        @@include('../partials/_top-header-two.html')
+        
+        @@include('../partials/_header-two.html', {
+            headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-13',
+            logoText: 'logo.png',
+            navMenu: '_nav-menu-two.html',
+            btnClass: 'rounded-pill btn-main hover-style-one '
+        })
+        
+        @@include('../partials/_banner-two.html')
+        
+        @@include('../partials/_search-domain.html')
+        
+        @@include('../partials/_about-two.html')
+        
+        @@include('../partials/_hosting-plan.html')
+        
+        @@include('../partials/_degree-view.html')
+        
+        @@include('../partials/_search-domain-two.html')
+        
+        @@include('../partials/_pricing-plan.html')
+        
+        @@include('../partials/_service.html')
+        
+        <div class="overflow-hidden gradient-bg-four">
+            @@include('../partials/_brand-marketing.html')
+        
+            @@include('../partials/_website-owner.html')
+        </div>
+        
+        @@include('../partials/_faq-two.html')
+        
+        @@include('../partials/_footer-two.html')
+        
+  </div>
+</div>
 
-    @@include('../partials/_search-domain.html')
-
-    @@include('../partials/_about-two.html')
-    
-    @@include('../partials/_hosting-plan.html')
-
-    @@include('../partials/_degree-view.html')
-
-    @@include('../partials/_search-domain-two.html')
-    
-    @@include('../partials/_pricing-plan.html')
-
-    @@include('../partials/_service.html')
-
-    <div class="overflow-hidden gradient-bg-four">
-        @@include('../partials/_brand-marketing.html')
-    
-        @@include('../partials/_website-owner.html')
-    </div>
-    
-    @@include('../partials/_faq-two.html')
-    
-    @@include('../partials/_footer-two.html')
 
     @@include('../partials/_template-bottom.html')
 

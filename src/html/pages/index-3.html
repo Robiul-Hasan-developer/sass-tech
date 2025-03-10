@@ -2,39 +2,47 @@
     'pageClass': 'home-three crm-page'
 })
 
-    @@include('../partials/_header-three.html')
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+        
+        @@include('../partials/_header-three.html')
+        
+        @@include('../partials/_banner-three.html')
+        
+        @@include('../partials/_brand-three.html')
+        
+        @@include('../partials/_features-three.html')
+        
+        @@include('../partials/_workplace-team.html')
+        
+        @@include('../partials/_automation.html')
+        
+        @@include('../partials/_task-manager.html')
+        
+        <div class="position-relative gradient-bg-80-percent z-1">
+            @@include('../partials/_plan-execute.html')
+        
+            @@include('../partials/_testimonials-three.html')
+        </div>
+        
+        @@include('../partials/_distraction.html')
+        
+        @@include('../partials/_pricing-plan-three.html')
+        
+        @@include('../partials/_task-management.html', {
+            sectionClass: 'bg-pink-more-light-half',
+            singleBtn: 'd-block',
+            multipleBtn: 'd-none',
+        })
+         
+        @@include('../partials/_footer-three.html', {
+            sectionClass: 'bg-pink-more-light'
+        })
+        
+  </div>
+</div>
 
-    @@include('../partials/_banner-three.html')
 
-    @@include('../partials/_brand-three.html')
-
-    @@include('../partials/_features-three.html')
-
-    @@include('../partials/_workplace-team.html')
-
-    @@include('../partials/_automation.html')
-    
-    @@include('../partials/_task-manager.html')
-    
-    <div class="position-relative gradient-bg-80-percent z-1">
-        @@include('../partials/_plan-execute.html')
-    
-        @@include('../partials/_testimonials-three.html')
-    </div>
-    
-    @@include('../partials/_distraction.html')
-
-    @@include('../partials/_pricing-plan-three.html')
-
-    @@include('../partials/_task-management.html', {
-        sectionClass: 'bg-pink-more-light-half',
-        singleBtn: 'd-block',
-        multipleBtn: 'd-none',
-    })
-     
-    @@include('../partials/_footer-three.html', {
-        sectionClass: 'bg-pink-more-light'
-    })
 
     @@include('../partials/_template-bottom.html')
 

@@ -34,8 +34,27 @@
 
 .hover-gradient-bg {
     &-five {
-        &:hover {
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
             background: linear-gradient(90deg, #06766E 0%, #20BA8B 100%);
+            border-radius: inherit;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            visibility: hidden;
+            opacity: 0;
+            z-index: -1;
+            transition: .3s linear;
+            z-index: -1;
+        }
+        &:hover {
+            &::before {
+                visibility: visible;
+                opacity: 1;
+                background: linear-gradient(90deg, #06766E 0%, #20BA8B 100%);
+            }
         }
     }
 }

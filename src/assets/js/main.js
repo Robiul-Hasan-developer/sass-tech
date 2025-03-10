@@ -481,6 +481,7 @@ var serviceSlider = new Swiper('.service-slider', {
     delay: 2000,
     disableOnInteraction: false
   },
+  autoplay: false,
   speed: 1500,
   grabCursor: true,
   loop: true,
