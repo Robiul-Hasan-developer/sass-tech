@@ -790,6 +790,33 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   });
   // ========================= Password Show Hide Js End ===========================
 
+  // ========================= Active Tab Background animation Js Start ===================
+  function moveBackground(wrapper) { 
+    var $activeTab = $(wrapper).find(".active").parent("li");
+    var position = $activeTab.position();
+    var width = $activeTab.width();
+    
+    $(wrapper).find(".background").css({
+        "left": position.left + "px",
+        "width": width + "px"
+    });
+  }
+
+  // Move Background on page load for each tab group
+  $(".animate-background-wrapper").each(function() {
+      moveBackground(this);
+  });
+
+  // Move Background on tab click
+  $(".animate-background-wrapper .nav-link").on("click", function () {
+      var wrapper = $(this).closest(".animate-background-wrapper");
+      wrapper.find(".nav-link").removeClass("active");
+      $(this).addClass("active");
+      moveBackground(wrapper);
+  });
+  // ========================= Active Tab Background animation Js End ===================
+
+
   // ========================= Throwable Js Start ===================
     // if($('.drag-rotate-element').length) {
     //   $(".drag-rotate-element").throwable({
