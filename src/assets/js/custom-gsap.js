@@ -4,7 +4,6 @@
 
 var tl = gsap.timeline(); 
 gsap.registerPlugin(ScrollTrigger, SplitText);
-
 // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 // =================================== Smooth Scroller Js Start =====================================
@@ -14,6 +13,18 @@ ScrollSmoother.create({
   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
   ease: "power4.out",
 });
+
+  // if ($('#smooth-wrapper').length > 0) {
+  //   gsap.registerPlugin(ScrollSmoother);
+    
+  //   let smoother = ScrollSmoother.create({
+  //     wrapper : '#smooth-wrapper',
+  //     content : '#smooth-content',
+  //     smooth: 2,
+  //     effects: true        
+  //   })
+  // }
+
 // =================================== Smooth Scroller End Start =====================================
 
 // =================================== Custom Cursor Js Start =====================================

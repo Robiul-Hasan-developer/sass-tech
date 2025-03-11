@@ -4,7 +4,7 @@
         padding: 10px 0;
     }
     &.fixed-header {
-        position: sticky !important;
+        position: fixed !important;
         inset-inline-start: 0;
         inset-block-start: 0;
         inset-inline-end: 0;

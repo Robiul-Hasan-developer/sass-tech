@@ -3,15 +3,15 @@
 })
 
 <div id="smooth-wrapper">
+    
+    @@include('../partials/_header-two.html', {
+        headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
+        logoText: 'logo-four.png',
+        navMenu: '_nav-menu-three.html',
+        btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
+    })
+    
     <div id="smooth-content">
-        
-        @@include('../partials/_header-two.html', {
-            headerClass: 'py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-9 position-absolute header-inner-page',
-            logoText: 'logo-four.png',
-            navMenu: '_nav-menu-three.html',
-            btnClass: 'tw-rounded-xl btn-main-two hover-style-two'
-        })
-        
         @@include('../partials/_breadcrumb.html', {
             'pageTitle': 'shop Details'
         })

@@ -322,8 +322,6 @@ var showCaseSlider = new Swiper('.show-case-slider', {
     accordionButtons.forEach(button => {
         button.addEventListener("click", function () {
             const newImageSrc = this.getAttribute("data-img");
-            console.log(newImageSrc);
-            
   
             if (newImageSrc && faqImage.src !== newImageSrc) {
               faqImage.style.opacity = ".3";
@@ -886,6 +884,17 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   }
   // ========================= Toggle Monthly Yearly duration pricing plan Js End ===================
 
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("button, .accordion-button").forEach(function (btn) {
+        btn.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        });
+    });
+  });
+  
+  
   });
   // ==========================================
   //      End Document Ready function
