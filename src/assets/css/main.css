@@ -9,7 +9,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   /* Font Family Variable */
@@ -48,6 +48,7 @@
     --white: 0 0% 100%;
     --black: 249 63% 15%;
     --body: 0 0% 43%;
+    --orange: 18 100% 55%;
     --heading-color: var(--black);
     --translate-x-50: translateX(-50%);
     --translate-y-50: translateY(-50%);
@@ -197,8 +198,8 @@
 }
 
 .accordion.arrow-bg-orange .accordion-button[aria-expanded=true]::before {
-    background-color: #FF601C !important;
-    border-color: #FF601C !important;
+    background-color: hsl(var(--orange)) !important;
+    border-color: hsl(var(--orange)) !important;
 }
 
 @media (min-width: 576px) {
@@ -337,6 +338,23 @@
 
 .hover-style-three .button__flair::before {
     background-color: #fff;
+}
+
+.hover-style-five:hover, .hover-style-five:active {
+    color: var(--main-two-600) !important;
+}
+
+.hover-style-five:hover.button--stroke::after, .hover-style-five:active.button--stroke::after {
+    border-color: transparent;
+}
+
+.hover-style-five .button__flair::before {
+    background-color: hsl(var(--orange));
+}
+
+.btn-orange-outline {
+    border: 1px solid hsl(var(--orange));
+    color: hsl(var(--orange));
 }
 
 /* =========================== Button Css End =================== */
@@ -1348,11 +1366,7 @@ input:focus, input:focus-visible {
 }
 
 .bg-orange {
-    background-color: #FF601C;
-}
-
-.bg-orange {
-    background-color: #FF601C;
+    background-color: hsl(var(--orange));
 }
 
 .section-bg-one {
@@ -1988,6 +2002,10 @@ input:focus, input:focus-visible {
 
 .text-spring-green {
     color: hsl(var(--spring-green)) !important;
+}
+
+.text-orange {
+    color: hsl(var(--orange));
 }
 
 .product-bg-1 {
@@ -7025,12 +7043,12 @@ svg.radial-progress text {
 /* ============================= Distraction section End ======================================== */
 /* Home CRM css start */
 .home-crm:root {
-    --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.4375rem);
+    --heading-one: clamp(2.25rem, -0.0733rem + 5.5vw, 5.625rem);
     --heading-two: clamp(2rem, 0.3353rem + 2.1661vw, 3.5rem);
-    --heading-three: clamp(1.875rem, 0.7133rem + 2.8846vw, 3.125rem);
-    --heading-four: clamp(1.5rem, 0.5569rem + 1.444vw, 1.875rem);
-    --heading-five: clamp(1.125rem, 1.2rem + 0.722vw, 1.5rem);
-    --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
+    --heading-three: clamp(1.5rem, 0.7133rem + 2.8846vw, 1.75rem);
+    --heading-four: clamp(1.25rem, 1.2rem + 0.722vw, 1.5rem);
+    --heading-five: clamp(1.125rem, 0.769rem + 0.6813vw, 1.25rem);
+    --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.125rem);
   /* template main color */
     --main-h: 40;
     --main-s: 100%;
@@ -7042,10 +7060,13 @@ svg.radial-progress text {
     --main-two-l: 11%;
     --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
     --heading-color: #072032;
+    --font-caveat: "Caveat", cursive;
+    --font-montserrat-alternates: "Montserrat Alternates", sans-serif;
 }
 
 .home-crm h1, .home-crm .h1, .home-crm h2, .home-crm .h2, .home-crm h3, .home-crm .h3, .home-crm h4, .home-crm .h4, .home-crm h5, .home-crm .h5, .home-crm h6, .home-crm .h6 {
     color: var(--heading-color);
+    font-family: var(--font-montserrat-alternates);
 }
 
 .home-crm h1, .home-crm .h1 {
@@ -7072,12 +7093,20 @@ svg.radial-progress text {
     font-size: var(--heading-six);
 }
 
+.home-crm .font-caveat {
+    font-family: var(--font-caveat);
+}
+
 .home-crm .btn-main {
     color: var(--heading-color) !important;
 }
 
 .home-crm .btn-main:hover {
     color: #fff !important;
+}
+
+.home-crm .hover-style-two:hover {
+    color: var(--heading-color) !important;
 }
 
 .home-crm .header .header-box-inner {

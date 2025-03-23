@@ -129,5 +129,25 @@
             }
         }
     }
+    &-five {
+        &:hover, &:active {
+            color: var(--main-two-600) !important;
+            &.button--stroke {
+                &::after {
+                    border-color: transparent;
+                }
+            }
+        }
+        .button__flair {
+            &::before {
+                background-color: hsl(var(--orange));
+            }
+        }
+    }
+}
+
+.btn-orange-outline {
+    border: 1px solid hsl(var(--orange));
+    color: hsl(var(--orange));
 }
 /* =========================== Button Css End =================== */

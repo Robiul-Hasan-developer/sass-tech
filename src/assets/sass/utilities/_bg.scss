@@ -110,10 +110,7 @@
     background-color: #D19D3D17;
   }
   &-orange {
-    background-color: #FF601C;
-  }
-  &-orange {
-    background-color: #FF601C;
+    background-color: hsl(var(--orange));
   }
 }
 
