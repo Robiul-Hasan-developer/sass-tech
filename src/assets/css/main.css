@@ -9,6 +9,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   /* Font Family Variable */
     --heading-font: "Satoshi", sans-serif;
@@ -7021,6 +7023,72 @@ svg.radial-progress text {
 }
 
 /* ============================= Distraction section End ======================================== */
+/* Home CRM css start */
+.home-crm:root {
+    --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.4375rem);
+    --heading-two: clamp(2rem, 0.3353rem + 2.1661vw, 3.5rem);
+    --heading-three: clamp(1.875rem, 0.7133rem + 2.8846vw, 3.125rem);
+    --heading-four: clamp(1.5rem, 0.5569rem + 1.444vw, 1.875rem);
+    --heading-five: clamp(1.125rem, 1.2rem + 0.722vw, 1.5rem);
+    --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
+  /* template main color */
+    --main-h: 40;
+    --main-s: 100%;
+    --main-l: 54%;
+    --main: var(--main-h) var(--main-s) var(--main-l);
+  /* template main two color */
+    --main-two-h: 205;
+    --main-two-s: 75%;
+    --main-two-l: 11%;
+    --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
+    --heading-color: #072032;
+}
+
+.home-crm h1, .home-crm .h1, .home-crm h2, .home-crm .h2, .home-crm h3, .home-crm .h3, .home-crm h4, .home-crm .h4, .home-crm h5, .home-crm .h5, .home-crm h6, .home-crm .h6 {
+    color: var(--heading-color);
+}
+
+.home-crm h1, .home-crm .h1 {
+    font-size: var(--heading-one);
+}
+
+.home-crm h2, .home-crm .h2 {
+    font-size: var(--heading-two);
+}
+
+.home-crm h3, .home-crm .h3 {
+    font-size: var(--heading-three);
+}
+
+.home-crm h4, .home-crm .h4 {
+    font-size: var(--heading-four);
+}
+
+.home-crm h5, .home-crm .h5 {
+    font-size: var(--heading-five);
+}
+
+.home-crm h6, .home-crm .h6 {
+    font-size: var(--heading-six);
+}
+
+.home-crm .btn-main {
+    color: var(--heading-color) !important;
+}
+
+.home-crm .btn-main:hover {
+    color: #fff !important;
+}
+
+.home-crm .hover-style-two .button__flair::before {
+    background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+}
+
+.home-crm .header .header-box-inner {
+    border-radius: 50rem;
+}
+
+/* Home CRM css end */
 /* ==================== Breadcrumb Start Here ==================== */
 .breadcrumb {
     padding-block-start: 270px;
