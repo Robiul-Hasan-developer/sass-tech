@@ -63,11 +63,11 @@
         // }
     }
 
-    .hover-style-two {
-        .button__flair::before {
-            background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
-        }
-    }
+    // .hover-style-two {
+    //     .button__flair::before {
+    //         background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
+    //     }
+    // }
     // .hover-style-one {
     //     .button__flair::before {
     //         background-color: hsl(var(--spring-green)) !important;
@@ -77,6 +77,7 @@
     .header {
         .header-box-inner {
             border-radius: 50rem;
+            padding-inline: 24px;
         }
 
         // &.fixed-header {
@@ -90,5 +91,8 @@
         // }
     }
     
+}
+.salary-list {
+
 }
 /* Home CRM css end */

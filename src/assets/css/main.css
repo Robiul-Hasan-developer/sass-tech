@@ -46,7 +46,7 @@
     --app-landing: var(--app-landing-h) var(--app-landing-s) var(--app-landing-l);
   /* White Color */
     --white: 0 0% 100%;
-    --black: #150E3D;
+    --black: 249 63% 15%;
     --body: 0 0% 43%;
     --heading-color: var(--black);
     --translate-x-50: translateX(-50%);
@@ -7080,12 +7080,9 @@ svg.radial-progress text {
     color: #fff !important;
 }
 
-.home-crm .hover-style-two .button__flair::before {
-    background: linear-gradient(270deg, #06766E 0%, #20BA8B 100%);
-}
-
 .home-crm .header .header-box-inner {
     border-radius: 50rem;
+    padding-inline: 24px;
 }
 
 /* Home CRM css end */
