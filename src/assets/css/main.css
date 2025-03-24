@@ -3850,6 +3850,10 @@ input:focus, input:focus-visible {
     max-width: 1800px;
 }
 
+.max-w-1820-px {
+    max-width: 1820px;
+}
+
 .max-w-118-px {
     max-width: 118px;
 }
