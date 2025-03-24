@@ -6111,13 +6111,17 @@ input:focus, input:focus-visible {
     inset-inline-start: 0;
     inset-block-start: 0;
     background: linear-gradient(90deg, #ffffff, transparent);
-    z-index: 1;
+    z-index: 2;
 }
 
 .left-right-gradient::after {
     background: linear-gradient(90deg, transparent, #ffffff);
     inset-inline-start: auto;
     inset-inline-end: 0;
+}
+
+.gradient-width-200::before, .gradient-width-200::after {
+    width: 200px;
 }
 
 /* Top Features Css End */
@@ -7168,7 +7172,7 @@ svg.radial-progress text {
 }
 
 .banner-gradient-bg {
-    height: 54%;
+    height: 60%;
 }
 
 @media (max-width: 1200px) {
