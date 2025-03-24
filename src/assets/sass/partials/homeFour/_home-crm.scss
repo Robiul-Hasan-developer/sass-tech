@@ -25,6 +25,7 @@
         --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
 
         --heading-color: #072032;
+        --crm-color: #256BFE;
 
         --font-caveat: "Caveat", cursive;
         --font-montserrat-alternates: "Montserrat Alternates", sans-serif;
@@ -56,6 +57,11 @@
     .font-caveat {
         font-family: var(--font-caveat);
     }
+    .text-crm {
+        color: var(--crm-color)
+    }
+    
+    
     .btn-main {
         color: var(--heading-color) !important;
         &:hover {

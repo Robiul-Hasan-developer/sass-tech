@@ -94,13 +94,13 @@
         pointer-events: none;
         visibility: hidden;
         opacity: 0;
-        transition: .4s linear;
+        transition: .2s linear;
     }
 }
 .active-triangle-arrow {
     &.active {
         &::before {
-            margin-block-start: 0;
+            margin-block-start: -1px;
             visibility: visible;
             opacity: 1;
         }

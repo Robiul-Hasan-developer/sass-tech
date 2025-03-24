@@ -667,11 +667,11 @@ input[type=number] {
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
-    transition: 0.4s linear;
+    transition: 0.2s linear;
 }
 
 .active-triangle-arrow.active::before {
-    margin-block-start: 0;
+    margin-block-start: -1px;
     visibility: visible;
     opacity: 1;
 }
@@ -5307,6 +5307,10 @@ input:focus, input:focus-visible {
     box-shadow: 0px 4px 12px 0px #0000000F;
 }
 
+.common-shadow-twentyFour {
+    box-shadow: 0px 20px 50px 0px #20212424;
+}
+
 .hover-common-shadow-four:hover {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }
@@ -6612,7 +6616,7 @@ svg.radial-progress text {
 }
 
 .animation-delay-1 {
-    animation-delay: 1s;
+    animation-delay: 1s !important;
 }
 
 .animation-delay-2 {
@@ -6676,6 +6680,24 @@ svg.radial-progress text {
 .group-item:hover .list-social li {
     opacity: 1;
     transform: translateX(0);
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animated-upDown {
+    animation: floatAnimation 3s ease-in-out infinite;
 }
 
 /* ======================== Animation Css End ==================================== */
@@ -7108,6 +7130,7 @@ svg.radial-progress text {
     --main-two-l: 11%;
     --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
     --heading-color: #072032;
+    --crm-color: #256BFE;
     --font-caveat: "Caveat", cursive;
     --font-montserrat-alternates: "Montserrat Alternates", sans-serif;
 }
@@ -7143,6 +7166,10 @@ svg.radial-progress text {
 
 .home-crm .font-caveat {
     font-family: var(--font-caveat);
+}
+
+.home-crm .text-crm {
+    color: var(--crm-color);
 }
 
 .home-crm .btn-main {
