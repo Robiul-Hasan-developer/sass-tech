@@ -43,9 +43,6 @@
         &:hover {
             > a {
                 color: hsl(var(--heading-color));
-                @media (min-width: 992px) {
-                    color: var(--main-600);
-                }
             }
         }
     }
@@ -58,6 +55,13 @@
         }
         > a::before {
             transform: translateY(-50%) rotate(180deg) !important; 
+        }
+    }
+    &:hover {
+        > a {
+            @media (min-width: 992px) {
+                color: var(--main-600);
+            }
         }
     }
     &:hover {

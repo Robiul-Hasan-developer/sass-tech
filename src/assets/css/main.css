@@ -5858,18 +5858,18 @@ input:focus, input:focus-visible {
     color: hsl(var(--heading-color));
 }
 
-@media (min-width: 992px) {
-    .nav-menu__item:hover > a {
-        color: var(--main-600);
-    }
-}
-
 .has-submenu.active > a, .has-submenu.active > a::before {
     color: var(--main-600);
 }
 
 .has-submenu.active > a::before {
     transform: translateY(-50%) rotate(180deg) !important;
+}
+
+@media (min-width: 992px) {
+    .has-submenu:hover > a {
+        color: var(--main-600);
+    }
 }
 
 .has-submenu:hover .nav-submenu {
@@ -7167,30 +7167,30 @@ svg.radial-progress text {
     backdrop-filter: blur(20px);
 }
 
-img.position-absolute.top-0.tw-start-0.w-100.z-n1 {
+.banner-gradient-bg {
     height: 54%;
 }
 
 @media (max-width: 1200px) {
-    img.position-absolute.top-0.tw-start-0.w-100.z-n1 {
+    .banner-gradient-bg {
         height: 60%;
     }
 }
 
 @media (max-width: 992px) {
-    img.position-absolute.top-0.tw-start-0.w-100.z-n1 {
+    .banner-gradient-bg {
         height: 70%;
     }
 }
 
 @media (max-width: 768px) {
-    img.position-absolute.top-0.tw-start-0.w-100.z-n1 {
+    .banner-gradient-bg {
         height: 80%;
     }
 }
 
 @media (max-width: 576px) {
-    img.position-absolute.top-0.tw-start-0.w-100.z-n1 {
+    .banner-gradient-bg {
         height: 84%;
     }
 }
