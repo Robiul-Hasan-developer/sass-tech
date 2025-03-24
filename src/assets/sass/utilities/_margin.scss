@@ -70,6 +70,9 @@
     &-105-px {
       margin-block-start: 105px;
     }
+    &-132-px {
+      margin-block-start: clamp(3rem, -2.7414rem + 10.8731vw, 8.125rem);
+    }
     &-160-px {
       margin-block-start: 160px;
     }

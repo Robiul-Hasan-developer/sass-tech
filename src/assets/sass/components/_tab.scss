@@ -19,6 +19,14 @@
     }
 }
 
+.active-bg-blue {
+    .nav-link {
+        &.active {
+            background-color: #256BFE !important;
+        }
+    }
+}
+
 
 
 .gradient-bg .nav-link.active, .show>.nav-link {
@@ -67,6 +75,35 @@
     pointer-events: none;
     &.style-two {
         height: calc(100% - 6px);
+    }
+}
+
+.active-triangle-arrow {
+    &::before {
+        position: absolute;
+        content: "";
+        width: 12px; 
+        height: 10px;
+        background-color: inherit;
+        background-color: #256BFE;
+        inset-block-start: 100%;
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+        margin-block-start: -10px;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: .4s linear;
+    }
+}
+.active-triangle-arrow {
+    &.active {
+        &::before {
+            margin-block-start: 0;
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }
 /* ================================= Tab Css End =========================== */

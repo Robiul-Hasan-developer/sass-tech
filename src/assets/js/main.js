@@ -885,16 +885,6 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   // ========================= Toggle Monthly Yearly duration pricing plan Js End ===================
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("button, .accordion-button").forEach(function (btn) {
-        btn.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
-        });
-    });
-  });
-  
-  
   });
   // ==========================================
   //      End Document Ready function
@@ -908,7 +898,7 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
 
     // ========================= Header Sticky Js Start ==============
     $(window).on('scroll', function() {
-      if ($(window).scrollTop() >= 260) {
+      if ($(window).scrollTop() >= 100) {
         $('.header').addClass('fixed-header');
       }
       else {
