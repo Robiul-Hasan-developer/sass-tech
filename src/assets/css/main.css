@@ -2037,7 +2037,7 @@ input:focus, input:focus-visible {
 }
 
 .text-orange {
-    color: hsl(var(--orange));
+    color: hsl(var(--orange)) !important;
 }
 
 .product-bg-1 {
