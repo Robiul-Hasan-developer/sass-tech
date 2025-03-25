@@ -5344,6 +5344,10 @@ input:focus, input:focus-visible {
     box-shadow: 0px 20px 20px 0px #2021241A;
 }
 
+.common-shadow-inset-one {
+    box-shadow: -2px -2px 2px 0px #070D1D4D inset;
+}
+
 .hover-common-shadow-four:hover {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.09);
 }

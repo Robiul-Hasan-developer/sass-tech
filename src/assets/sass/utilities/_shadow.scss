@@ -78,6 +78,13 @@
   }
 }
 
+
+.common-shadow-inset {
+  &-one {
+    box-shadow: -2px -2px 2px 0px #070D1D4D inset;
+  }
+}
+
 .hover-common-shadow {
   &-four {
     &:hover {
