@@ -26,6 +26,7 @@
 
         --heading-color: #072032;
         --crm-color: #256BFE;
+        --blue-color: #1351D8;
 
         --font-caveat: "Caveat", cursive;
         --font-montserrat-alternates: "Montserrat Alternates", sans-serif;
@@ -59,6 +60,9 @@
     }
     .text-crm {
         color: var(--crm-color)
+    }
+    .text-blue {
+        color: var(--blue-color)
     }
     
     

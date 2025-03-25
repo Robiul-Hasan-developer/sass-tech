@@ -2265,6 +2265,14 @@ input:focus, input:focus-visible {
     opacity: 0.1;
 }
 
+.g-32-px, .gy-32-px {
+    --bs-gutter-y: 32px;
+}
+
+.g-32-px, .gx-32-px {
+    --bs-gutter-x: 32px;
+}
+
 /* ================================= Classes Css End =========================== */
 /* Font Size Class Start */
 .text-inherit {
@@ -2807,6 +2815,10 @@ input:focus, input:focus-visible {
 
 .tw-start-50 {
     inset-inline-start: 50%;
+}
+
+.tw-start-45 {
+    inset-inline-start: 45%;
 }
 
 .tw-start-100 {
@@ -3609,6 +3621,10 @@ input:focus, input:focus-visible {
     margin-block-start: 194px;
 }
 
+.tw-mx-48-px {
+    margin-inline: clamp(1rem, -2.7414rem + 5.8731vw, 3rem);
+}
+
 .tw-me-84-px {
     margin-inline-end: 84px;
 }
@@ -4017,6 +4033,11 @@ input:focus, input:focus-visible {
         max-width: 58%;
     }
 }
+
+.max-w-40-percent {
+    max-width: 40%;
+}
+
 /* Max width Css Class End */
 /* Overlay Start */
 .overlay {
@@ -4853,6 +4874,10 @@ input:focus, input:focus-visible {
     padding-block-end: 136px;
 }
 
+.tw-pb-180-px {
+    padding-block-end: 180px;
+}
+
 .tw-pb-200-px {
     padding-block-end: clamp(8.75rem, -1rem + 16vw, 12.5rem);
 }
@@ -5313,6 +5338,10 @@ input:focus, input:focus-visible {
 
 .common-shadow-twentyFour {
     box-shadow: 0px 20px 50px 0px #20212424;
+}
+
+.common-shadow-twentyFive {
+    box-shadow: 0px 20px 20px 0px #2021241A;
 }
 
 .hover-common-shadow-four:hover {
@@ -7135,6 +7164,7 @@ svg.radial-progress text {
     --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
     --heading-color: #072032;
     --crm-color: #256BFE;
+    --blue-color: #1351D8;
     --font-caveat: "Caveat", cursive;
     --font-montserrat-alternates: "Montserrat Alternates", sans-serif;
 }
@@ -7174,6 +7204,10 @@ svg.radial-progress text {
 
 .home-crm .text-crm {
     color: var(--crm-color);
+}
+
+.home-crm .text-blue {
+    color: var(--blue-color);
 }
 
 .home-crm .btn-main {

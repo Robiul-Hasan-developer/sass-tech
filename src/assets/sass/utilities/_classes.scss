@@ -33,6 +33,13 @@
 .opacity-1 {
     opacity: .1;
 }
+
+.g-32-px, .gy-32-px {
+    --bs-gutter-y: 32px;
+}
+.g-32-px, .gx-32-px {
+    --bs-gutter-x: 32px;
+}
 /* ================================= Classes Css End =========================== */
 
 

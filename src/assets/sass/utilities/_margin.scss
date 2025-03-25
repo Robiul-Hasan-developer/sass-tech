@@ -80,6 +80,11 @@
       margin-block-start: 194px;
     }
   }
+  &-mx {
+    &-48-px {
+      margin-inline: clamp(1rem, -2.7414rem + 5.8731vw, 3rem);
+    }
+  }
   &-me {
     &-84-px {
       margin-inline-end: 84px;
