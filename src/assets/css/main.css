@@ -7322,6 +7322,13 @@ svg.radial-progress text {
     box-shadow: 0px 4px 42px 0px #00000024;
 }
 
+.swiper-slide-active .animate-left-right {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
 /* ==================== Breadcrumb Start Here ==================== */
 .breadcrumb {
     padding-block-start: 270px;

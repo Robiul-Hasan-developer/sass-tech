@@ -212,6 +212,25 @@ var brandSlider = new Swiper('.brand-slider', {
 // ================================= Brand slider End =========================
 
 
+// ================================= Brand slider Start =========================
+var testimonialsFour = new Swiper('.testimonials-four-slider', {
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false
+  },
+  effect: "fade",
+  autoplay: true,
+  speed: 500,
+  grabCursor: true,
+  loop: true,
+  slidesPerView: 1,
+  navigation: {  // ✅ Add navigation settings
+    nextEl: "#testimonials-four-next",
+    prevEl: "#testimonials-four-prev"
+  }
+});
+// ================================= Brand slider End =========================
+
 // ========================= Counter Up Js Start ===================
 const counterUp = window.counterUp.default;
 
