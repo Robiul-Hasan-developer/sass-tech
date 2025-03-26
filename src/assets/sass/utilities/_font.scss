@@ -3,6 +3,6 @@
         font-family: var(--heading-font);
     }
     &-body {
-        font-family: var(--body-font);
+        font-family: var(--body-font) !important;
     }
 }
