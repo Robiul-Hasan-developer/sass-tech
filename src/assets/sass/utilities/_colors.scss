@@ -52,6 +52,9 @@
     &-orange {
       color: hsl(var(--orange)) !important;
     }
+    &-blue {
+      color: var(--blue-color) !important;
+    }
 }
 
 .product-bg {

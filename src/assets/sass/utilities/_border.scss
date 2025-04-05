@@ -59,6 +59,9 @@
   &-app-landing {
     border-color: hsl(var(--app-landing)) !important;
   }
+  &-blue {
+    border-color: var(--blue-color) !important;
+  }
   &-dashed {
     border-style: dashed !important;
   }

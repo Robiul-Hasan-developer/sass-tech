@@ -42,6 +42,9 @@
   &-180-px {
     width: 180px;
   }
+  &-100--40-px {
+    width: calc(100% - 40px) !important;
+  }
 }
 
 .max-md-w-100 {
