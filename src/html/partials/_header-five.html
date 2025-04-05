@@ -1,0 +1,35 @@
+<!-- ==================== Header Five Start Here ==================== -->
+<header class="header bg-white transition-all">
+    <div class="container container-two">
+        <nav class="d-flex align-items-center justify-content-between">
+            <!-- Logo Start -->
+            <div class="logo">
+                <a href="index.html" class="link hover--translate-y-1 active--translate-y-scale-9">
+                    <img src="assets/images/logo/logo-three.png" alt="Logo" class="max-w-200-px">
+                </a>
+            </div>
+            <!-- Logo End  -->
+
+            <!-- Menu Start  -->
+            <div class="header-menu d-lg-block d-none">
+                @@include('../partials/_nav-menu.html', {
+                    "class" : "tw-gap-14"
+                })
+            </div>
+            <!-- Menu End  -->
+
+            <!-- Header Right start -->
+             <div class="d-flex align-items-center tw-gap-6">
+                <a href="register.html" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main hover-style-one button--stroke d-sm-inline-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 tw-px-9 rounded-pill tw-py-4 fw-semibold" data-block="button">
+                    <span class="button__flair"></span>
+                    <span class="button__label">Sign Up Now</span>
+                </a>
+                <button type="button" class="toggle-mobileMenu leading-none d-lg-none text-neutral-800 tw-text-9"> 
+                    <i class="ph ph-list"></i>
+                </button>
+             </div>
+            <!-- Header Right End  -->
+        </nav>
+    </div>
+</header>
+<!-- ==================== Header Five End Here ==================== -->

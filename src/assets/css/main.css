@@ -11,6 +11,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   /* Font Family Variable */
     --heading-font: "Satoshi", sans-serif;
@@ -7335,6 +7337,99 @@ svg.radial-progress text {
     visibility: visible;
     -webkit-transform: translateY(0);
     transform: translateY(0);
+}
+
+.home-five:root {
+    --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 4.375rem);
+    --heading-one: clamp(2.25rem, -0.0733rem + 5.5vw, 5.625rem);
+    --heading-two: clamp(2rem, 0.3353rem + 2.1661vw, 3.5rem);
+    --heading-three: clamp(1.5rem, 0.7133rem + 2.8846vw, 1.75rem);
+    --heading-four: clamp(1.25rem, 1.2rem + 0.722vw, 1.5rem);
+    --heading-five: clamp(1.125rem, 0.769rem + 0.6813vw, 1.25rem);
+    --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.125rem);
+  /* template main color */
+    --main-h: 184;
+    --main-s: 84%;
+    --main-l: 30%;
+    --main: var(--main-h) var(--main-s) var(--main-l);
+  /* template main two color */
+    --main-two-h: 205;
+    --main-two-s: 75%;
+    --main-two-l: 11%;
+    --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
+    --heading-color: #072032;
+}
+
+.home-five h1, .home-five .h1, .home-five h2, .home-five .h2, .home-five h3, .home-five .h3, .home-five h4, .home-five .h4, .home-five h5, .home-five .h5, .home-five h6, .home-five .h6 {
+    color: var(--heading-color);
+}
+
+.home-five h1, .home-five .h1 {
+    font-size: var(--heading-one);
+}
+
+.home-five h2, .home-five .h2 {
+    font-size: var(--heading-two);
+}
+
+.home-five h3, .home-five .h3 {
+    font-size: var(--heading-three);
+}
+
+.home-five h4, .home-five .h4 {
+    font-size: var(--heading-four);
+}
+
+.home-five h5, .home-five .h5 {
+    font-size: var(--heading-five);
+}
+
+.home-five h6, .home-five .h6 {
+    font-size: var(--heading-six);
+}
+
+.home-five .font-dm-serif {
+    font-family: var(--dm-serif);
+}
+
+.home-five .text-heading {
+    color: var(--heading-color);
+}
+
+.home-five .bg-main-three {
+    background-color: var(--bg-main-green);
+}
+
+.home-five .btn-main {
+    background: var(--main-600);
+}
+
+.home-five .btn-main-two {
+    background-color: var(--main-two-600) !important;
+    color: hsl(var(--white)) !important;
+}
+
+.home-five .btn-main-two:hover, .home-five .btn-main-two:hover span {
+    color: hsl(var(--white)) !important;
+}
+
+.home-five .hover-style-two .button__flair::before {
+    background: var(--main-600);
+}
+
+.home-five .hover-style-one .button__flair::before {
+    background-color: var(--main-two-600) !important;
+}
+
+.home-five .header.fixed-header {
+    position: fixed !important;
+    margin-block-start: 0;
+    background-color: #0f6555;
+}
+
+.home-five .header.fixed-header .header-three__inner {
+    box-shadow: none !important;
+    background-color: transparent;
 }
 
 /* ==================== Breadcrumb Start Here ==================== */
