@@ -5359,6 +5359,10 @@ input:focus, input:focus-visible {
     box-shadow: 0px 6px 17px 0px #0000000D;
 }
 
+.common-shadow-twentyEight {
+    box-shadow: 0px 4px 11px 0px #0000000D;
+}
+
 .common-shadow-inset-one {
     box-shadow: -2px -2px 2px 0px #070D1D4D inset;
 }
@@ -6277,6 +6281,10 @@ input:focus, input:focus-visible {
 
 .gradient-bg-bottom-top {
     background: linear-gradient(0deg, #F7F6FC 0%, #F5F5FD 74.92%, #FFFFFF 100%);
+}
+
+.gradient-line {
+    background: linear-gradient(90deg, #FFFFFF 0%, #E5E3E3 7%, #E6E3E3 50%, #E5E3E3 94%, #FFFFFF 100%);
 }
 
 /* Gradient bg end */
