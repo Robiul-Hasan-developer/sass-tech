@@ -4039,6 +4039,10 @@ input:focus, input:focus-visible {
     max-width: 780px;
 }
 
+.max-w-910-px {
+    max-width: 910px;
+}
+
 .max-w-830-px {
     max-width: 830px;
 }
