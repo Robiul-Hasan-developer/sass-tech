@@ -6170,8 +6170,8 @@ input:focus, input:focus-visible {
 }
 
 .dot {
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
     background-color: hsl(var(--white));
     mix-blend-mode: difference;
 }
