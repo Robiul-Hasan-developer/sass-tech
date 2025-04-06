@@ -6259,6 +6259,10 @@ input:focus, input:focus-visible {
     background: linear-gradient(0deg, #DAF2FF 0%, #DAF2FF 100%);
 }
 
+.gradient-bg-nine {
+    background: linear-gradient(0deg, #ACE7EB 0%, #F5F5FD 74.92%, #FFFFFF 100%);
+}
+
 .gradient-bg-80-percent::before {
     position: absolute;
     content: "";
@@ -6740,6 +6744,10 @@ svg.radial-progress text {
     animation: rotateLeft 30s linear infinite;
 }
 
+.animation-rotate-center {
+    animation: rotateCenter 10s linear infinite;
+}
+
 @keyframes rotateRight {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -6757,6 +6765,16 @@ svg.radial-progress text {
 
     100% {
         transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes rotateCenter {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
     }
 }
 
