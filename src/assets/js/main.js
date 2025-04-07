@@ -261,33 +261,60 @@ var testimonialsFour = new Swiper('.testimonials-four-slider', {
 //   }
 // });
 
-var testimonialsFive = new Swiper('.testimonials-five-slider', {
+var testimonialsFive = new Swiper(".testimonials-five-slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  grabCursor: true,
+  speed: 500,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
-  effect: "fade",
-  speed: 500,
-  grabCursor: true,
-  loop: true,
-  slidesPerView: 3,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: "#testimonials-five-next",
-    prevEl: "#testimonials-five-prev"
+  pagination: {
+    el: ".testimonials-five-slider-pagination",
+    clickable: true,
   },
-  // breakpoints: {
-  //   300: {
-  //     slidesPerView: 1,
-  //   },
-  //   768: {
-  //     slidesPerView: 2,
-  //   },
-  //   1200: {
-  //     slidesPerView: 3,
-  //   },
-  // }
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
+  }
 });
+
+// var testimonialsFive = new Swiper('.testimonials-five-slider', {
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
+//   effect: "fade",
+//   speed: 500,
+//   grabCursor: true,
+//   loop: true,
+//   slidesPerView: 3,
+//   spaceBetween: 30,
+//   navigation: {
+//     nextEl: "#testimonials-five-next",
+//     prevEl: "#testimonials-five-prev"
+//   },
+//   breakpoints: {
+//     300: {
+//       slidesPerView: 1,
+//     },
+//     768: {
+//       slidesPerView: 2,
+//     },
+//     1200: {
+//       slidesPerView: 3,
+//     },
+//   }
+// });
 // ================================= Testimonials Five slider End =========================
 
 // ========================= Counter Up Js Start ===================

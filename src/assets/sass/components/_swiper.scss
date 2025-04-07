@@ -25,6 +25,37 @@
     }
 }
 
+.pagination-style-four {
+    .swiper-pagination-bullet {
+        margin: 0px !important;
+        opacity: 1;
+        background-color: #D6D1D1;
+        width: 9px;
+        height: 9px;
+        position: relative;
+        transition: .3s linear;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 26px;
+            height: 26px;
+            border: 2px solid #fff;
+            border-radius: inherit;
+            inset-inline-start: 50%;
+            inset-block-start: 50%;
+            transform: translate(-50%, -50%) scale(.2);
+            transition: inherit;
+        }
+        &-active {
+            background: var(--main-600) !important;
+            &::before {
+                border: 2px solid var(--main-600);
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+}
+
 
 .shop-small-thumbs .swiper-slide.swiper-slide-thumb-active > div {
     border-color: var(--main-600) !important;
