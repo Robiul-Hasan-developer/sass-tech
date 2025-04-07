@@ -750,7 +750,7 @@ input[type=number] {
     border-radius: inherit;
     inset-inline-start: 50%;
     inset-block-start: 50%;
-    transform: translate(-50%, -50%) scale(0.2);
+    transform: translate(-50%, -50%) scale(0);
     transition: inherit;
 }
 
@@ -2749,6 +2749,10 @@ input:focus, input:focus-visible {
 
 .tw-gap-26-px {
     gap: clamp(1rem, 0.0938rem + 4.5vw, 1.625rem);
+}
+
+.tw-gap-48-px {
+    gap: clamp(1.5rem, -4.48rem + 7.98vw, 3rem);
 }
 
 .tw-gap-56-px {
@@ -4843,6 +4847,10 @@ input:focus, input:focus-visible {
 
 .tw-p-54-px {
     padding: clamp(1rem, -6.1013rem + 9.4763vw, 3.375rem) !important;
+}
+
+.tw-p-44-px {
+    padding: clamp(1.5rem, -6.1013rem + 9.4763vw, 2.75rem) !important;
 }
 
 .tw-p-60-px {
