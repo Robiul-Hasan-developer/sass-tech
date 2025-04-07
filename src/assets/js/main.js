@@ -212,7 +212,7 @@ var brandSlider = new Swiper('.brand-slider', {
 // ================================= Brand slider End =========================
 
 
-// ================================= Brand slider Start =========================
+// ================================= Testimonials slider Start =========================
 var testimonialsFour = new Swiper('.testimonials-four-slider', {
   autoplay: {
     delay: 1000,
@@ -229,7 +229,66 @@ var testimonialsFour = new Swiper('.testimonials-four-slider', {
     prevEl: "#testimonials-four-prev"
   }
 });
-// ================================= Brand slider End =========================
+// ================================= Testimonials slider End =========================
+
+
+// ================================= Testimonials Five slider Start =========================
+// var testimonialsFive = new Swiper('.testimonials-five-slider', {
+//   autoplay: {
+//     delay: 1000,
+//     disableOnInteraction: false
+//   },
+//   effect: "fade",
+//   autoplay: true,
+//   speed: 500,
+//   grabCursor: true,
+//   loop: true,
+//   slidesPerView: 3,
+//   navigation: {  // ✅ Add navigation settings
+//     nextEl: "#testimonials-five-next",
+//     prevEl: "#testimonials-five-prev"
+//   },
+//   breakpoints: {
+//     300: {
+//         slidesPerView: 1,
+//     },
+//     1200: {
+//         slidesPerView: 2,
+//     },
+//     1201: {
+//         slidesPerView: 3,
+//     },
+//   }
+// });
+
+var testimonialsFive = new Swiper('.testimonials-five-slider', {
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  effect: "fade",
+  speed: 500,
+  grabCursor: true,
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: "#testimonials-five-next",
+    prevEl: "#testimonials-five-prev"
+  },
+  // breakpoints: {
+  //   300: {
+  //     slidesPerView: 1,
+  //   },
+  //   768: {
+  //     slidesPerView: 2,
+  //   },
+  //   1200: {
+  //     slidesPerView: 3,
+  //   },
+  // }
+});
+// ================================= Testimonials Five slider End =========================
 
 // ========================= Counter Up Js Start ===================
 const counterUp = window.counterUp.default;
