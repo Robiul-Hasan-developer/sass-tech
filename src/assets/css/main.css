@@ -763,6 +763,23 @@ input[type=number] {
     transform: translate(-50%, -50%) scale(1);
 }
 
+.pagination-style-five .swiper-pagination-bullet {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.pagination-style-five .swiper-pagination-bullet-active {
+    background: transparent !important;
+    color: var(--heading-color);
+}
+
 .shop-small-thumbs .swiper-slide.swiper-slide-thumb-active > div {
     border-color: var(--main-600) !important;
 }

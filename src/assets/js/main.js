@@ -231,36 +231,7 @@ var testimonialsFour = new Swiper('.testimonials-four-slider', {
 });
 // ================================= Testimonials slider End =========================
 
-
 // ================================= Testimonials Five slider Start =========================
-// var testimonialsFive = new Swiper('.testimonials-five-slider', {
-//   autoplay: {
-//     delay: 1000,
-//     disableOnInteraction: false
-//   },
-//   effect: "fade",
-//   autoplay: true,
-//   speed: 500,
-//   grabCursor: true,
-//   loop: true,
-//   slidesPerView: 3,
-//   navigation: {  // ✅ Add navigation settings
-//     nextEl: "#testimonials-five-next",
-//     prevEl: "#testimonials-five-prev"
-//   },
-//   breakpoints: {
-//     300: {
-//         slidesPerView: 1,
-//     },
-//     1200: {
-//         slidesPerView: 2,
-//     },
-//     1201: {
-//         slidesPerView: 3,
-//     },
-//   }
-// });
-
 var testimonialsFive = new Swiper(".testimonials-five-slider", {
   slidesPerView: 3,
   spaceBetween: 30,
@@ -287,34 +258,35 @@ var testimonialsFive = new Swiper(".testimonials-five-slider", {
     },
   }
 });
+// ================================= Testimonials Five slider End =========================
 
-// var testimonialsFive = new Swiper('.testimonials-five-slider', {
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
-//   effect: "fade",
-//   speed: 500,
-//   grabCursor: true,
-//   loop: true,
-//   slidesPerView: 3,
-//   spaceBetween: 30,
-//   navigation: {
-//     nextEl: "#testimonials-five-next",
-//     prevEl: "#testimonials-five-prev"
-//   },
-//   breakpoints: {
-//     300: {
-//       slidesPerView: 1,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//     },
-//     1200: {
-//       slidesPerView: 3,
-//     },
-//   }
-// });
+// ================================= Testimonials Five slider Start =========================
+var pricingFive = new Swiper(".pricing-five-slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  grabCursor: true,
+  speed: 500,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".pricing-five-slider-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+    },
+    992: {
+      slidesPerView: 2,
+    },
+  }
+});
 // ================================= Testimonials Five slider End =========================
 
 // ========================= Counter Up Js Start ===================
