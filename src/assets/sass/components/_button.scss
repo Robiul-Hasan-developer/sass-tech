@@ -82,6 +82,18 @@
             }
         }
     }
+    &-white {
+        background-color: hsl(var(--white)) !important;
+        color: var(--heading-color) !important;
+        &:hover {
+            color: hsl(var(--white)) !important;
+        }
+        &.button--stroke {
+            &::after {
+                border-color: transparent;
+            }
+        }
+    }
 }
 
 .hover-style {
