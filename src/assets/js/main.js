@@ -684,25 +684,25 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
         priceGap = 1000;
   
     // Update the range and price inputs when the price input fields change
-    $priceInput.on("input", function (e) {
-      var minPrice = parseInt($priceInput.eq(0).val()),
-          maxPrice = parseInt($priceInput.eq(1).val());
+    $priceInput.on("input", function () {
+      var minPrice = parseInt($priceInput.eq(0).val(), 10),
+          maxPrice = parseInt($priceInput.eq(1).val(), 10);
   
-      if (maxPrice - minPrice >= priceGap && maxPrice <= $rangeInput.eq(1).attr("max")) {
+      if (maxPrice - minPrice >= priceGap && maxPrice <= parseInt($rangeInput.eq(1).attr("max"), 10)) {
         if ($(this).hasClass("input-min")) {
           $rangeInput.eq(0).val(minPrice);
-          $range.css("left", (minPrice / $rangeInput.eq(0).attr("max")) * 100 + "%");
+          $range.css("left", (minPrice / parseInt($rangeInput.eq(0).attr("max"), 10)) * 100 + "%");
         } else {
           $rangeInput.eq(1).val(maxPrice);
-          $range.css("right", 100 - (maxPrice / $rangeInput.eq(1).attr("max")) * 100 + "%");
+          $range.css("right", 100 - (maxPrice / parseInt($rangeInput.eq(1).attr("max"), 10)) * 100 + "%");
         }
       }
     });
   
     // Update the price input fields and range visual when the range slider is dragged
-    $rangeInput.on("input", function (e) {
-      var minVal = parseInt($rangeInput.eq(0).val()),
-          maxVal = parseInt($rangeInput.eq(1).val());
+    $rangeInput.on("input", function () {
+      var minVal = parseInt($rangeInput.eq(0).val(), 10),
+          maxVal = parseInt($rangeInput.eq(1).val(), 10);
   
       if (maxVal - minVal < priceGap) {
         if ($(this).hasClass("range-min")) {
@@ -713,8 +713,8 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
       } else {
         $priceInput.eq(0).val(minVal);
         $priceInput.eq(1).val(maxVal);
-        $range.css("left", (minVal / $rangeInput.eq(0).attr("max")) * 100 + "%");
-        $range.css("right", 100 - (maxVal / $rangeInput.eq(1).attr("max")) * 100 + "%");
+        $range.css("left", (minVal / parseInt($rangeInput.eq(0).attr("max"), 10)) * 100 + "%");
+        $range.css("right", 100 - (maxVal / parseInt($rangeInput.eq(1).attr("max"), 10)) * 100 + "%");
       }
     });
   });
