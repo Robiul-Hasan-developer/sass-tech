@@ -677,46 +677,44 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   // ========================= List gird View Js End =====================
 
   // ========================= Range Slider Js Start =====================
-  const rangeInputs = document.querySelectorAll(".range-input input"),
-  priceInputs = document.querySelectorAll(".price-input input"),
-  range = document.querySelector(".slider .progress");
-  let priceGap = 1000;
-
-  // Update range and price inputs based on user input
-  priceInputs.forEach(input => {
-    input.addEventListener("input", (e) => {
-      let minPrice = parseInt(priceInputs[0].value),
-          maxPrice = parseInt(priceInputs[1].value);
-
-      if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInputs[1].max) {
-        if (e.target.classList.contains("input-min")) {
-          rangeInputs[0].value = minPrice;
-          range.style.left = (minPrice / rangeInputs[0].max) * 100 + "%";
+  $(document).ready(function () {
+    var $rangeInput = $(".range-input input"),
+        $priceInput = $(".price-input input"),
+        $range = $(".slider .progress"),
+        priceGap = 1000;
+  
+    // Update the range and price inputs when the price input fields change
+    $priceInput.on("input", function (e) {
+      var minPrice = parseInt($priceInput.eq(0).val()),
+          maxPrice = parseInt($priceInput.eq(1).val());
+  
+      if (maxPrice - minPrice >= priceGap && maxPrice <= $rangeInput.eq(1).attr("max")) {
+        if ($(this).hasClass("input-min")) {
+          $rangeInput.eq(0).val(minPrice);
+          $range.css("left", (minPrice / $rangeInput.eq(0).attr("max")) * 100 + "%");
         } else {
-          rangeInputs[1].value = maxPrice;
-          range.style.right = 100 - (maxPrice / rangeInputs[1].max) * 100 + "%";
+          $rangeInput.eq(1).val(maxPrice);
+          $range.css("right", 100 - (maxPrice / $rangeInput.eq(1).attr("max")) * 100 + "%");
         }
       }
     });
-  });
-
-  // Update price input fields and range visual when slider is dragged
-  rangeInputs.forEach(input => {
-    input.addEventListener("input", (e) => {
-      let minVal = parseInt(rangeInputs[0].value),
-          maxVal = parseInt(rangeInputs[1].value);
-
+  
+    // Update the price input fields and range visual when the range slider is dragged
+    $rangeInput.on("input", function (e) {
+      var minVal = parseInt($rangeInput.eq(0).val()),
+          maxVal = parseInt($rangeInput.eq(1).val());
+  
       if (maxVal - minVal < priceGap) {
-        if (e.target.classList.contains("range-min")) {
-          rangeInputs[0].value = maxVal - priceGap;
+        if ($(this).hasClass("range-min")) {
+          $rangeInput.eq(0).val(maxVal - priceGap);
         } else {
-          rangeInputs[1].value = minVal + priceGap;
+          $rangeInput.eq(1).val(minVal + priceGap);
         }
       } else {
-        priceInputs[0].value = minVal;
-        priceInputs[1].value = maxVal;
-        range.style.left = (minVal / rangeInputs[0].max) * 100 + "%";
-        range.style.right = 100 - (maxVal / rangeInputs[1].max) * 100 + "%";
+        $priceInput.eq(0).val(minVal);
+        $priceInput.eq(1).val(maxVal);
+        $range.css("left", (minVal / $rangeInput.eq(0).attr("max")) * 100 + "%");
+        $range.css("right", 100 - (maxVal / $rangeInput.eq(1).attr("max")) * 100 + "%");
       }
     });
   });
