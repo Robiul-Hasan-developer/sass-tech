@@ -46,6 +46,10 @@ input[type="range"]::-webkit-slider-thumb {
   pointer-events: auto;
   -webkit-appearance: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: .2s linear;
+  &:hover {
+    transform: scale(1.6);
+  }
 }
 input[type="range"]::-moz-range-thumb {
   height: 17px;
@@ -56,5 +60,9 @@ input[type="range"]::-moz-range-thumb {
   pointer-events: auto;
   -moz-appearance: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: .2s linear;
+  &:hover {
+    transform: scale(1.6);
+  }
 }
 /* Range slider End */
