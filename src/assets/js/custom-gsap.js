@@ -8,23 +8,11 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 // =================================== Smooth Scroller Js Start =====================================
 ScrollSmoother.create({
-  smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+  smooth: .8, // how long (in seconds) it takes to "catch up" to the native scroll position
   effects: true, // looks for data-speed and data-lag attributes on elements
   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
   ease: "power4.out",
 });
-
-  // if ($('#smooth-wrapper').length > 0) {
-  //   gsap.registerPlugin(ScrollSmoother);
-    
-  //   let smoother = ScrollSmoother.create({
-  //     wrapper : '#smooth-wrapper',
-  //     content : '#smooth-content',
-  //     smooth: 2,
-  //     effects: true        
-  //   })
-  // }
-
 // =================================== Smooth Scroller End Start =====================================
 
 // =================================== Custom Cursor Js Start =====================================
