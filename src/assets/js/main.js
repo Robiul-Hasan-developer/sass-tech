@@ -91,70 +91,67 @@
 
   // ********************* Toast Notification Js start *********************
   function toastMessage(messageType, messageTitle, messageText, messageIcon) {
-    let toastContainer = document.querySelector('#toast-container'); 
-
-    let toast = document.createElement('div');
-    toast.className = `toast-message ${messageType}`;
-
-    toast.innerHTML = `
+    let $toastContainer = $('#toast-container');
+  
+    let $toast = $('<div>', {
+      class: `toast-message ${messageType}`,
+      html: `
         <div class="toast-message__content">
-            <span class="toast-message__icon">
-                <i class="${messageIcon}"></i>
-            </span>
-            <div class="flex-grow-1">
-                <div class="d-flex align-items-start justify-content-between mb-1">
-                    <h6 class="toast-message__title">${messageTitle}</h6>
-                    <button type="button" class="toast-message__close">
-                        <i class="ph-bold ph-x"></i>
-                    </button>
-                </div>
-                <span class="toast-message__text">${messageText}</span>
+          <span class="toast-message__icon">
+            <i class="${messageIcon}"></i>
+          </span>
+          <div class="flex-grow-1">
+            <div class="d-flex align-items-start justify-content-between mb-1">
+              <h6 class="toast-message__title">${messageTitle}</h6>
+              <button type="button" class="toast-message__close">
+                <i class="ph-bold ph-x"></i>
+              </button>
             </div>
+            <span class="toast-message__text">${messageText}</span>
+          </div>
         </div>
         <div class="progress__bar"></div>
-    `;
-
-    toastContainer.appendChild(toast);
-    
+      `
+    });
+  
+    $toastContainer.append($toast);
+  
     setTimeout(() => {
-        toast.classList.add('active');
+      $toast.addClass('active');
     }, 50);
-
+  
     let totalDuration = 3500;
     let startTime = Date.now();
     let remainingTime = totalDuration;
     let toastTimeout = setTimeout(hideToast, remainingTime);
-
+  
     function hideToast() {
-        toast.classList.remove('active');
-        setTimeout(() => {
-            toast.remove();
-        }, 500);
+      $toast.removeClass('active');
+      setTimeout(() => {
+        $toast.remove();
+      }, 500);
     }
-
-    // Remove Toast
-    let closeToast = toast.querySelector('.toast-message__close');
-    closeToast.addEventListener('click', function () {
-        toast.classList.remove('active');
-        setTimeout(() => {
-            toast.remove();
-        }, 500);
+  
+    // Remove Toast on Close Button Click
+    $toast.find('.toast-message__close').on('click', function () {
+      $toast.removeClass('active');
+      setTimeout(() => {
+        $toast.remove();
+      }, 500);
     });
-    // Remove Toast
-
-
+  
     // Pause Timeout on Hover
-    toast.addEventListener('mouseenter', function () {
-        remainingTime -= Date.now() - startTime;
-        clearTimeout(toastTimeout);
+    $toast.on('mouseenter', function () {
+      remainingTime -= Date.now() - startTime;
+      clearTimeout(toastTimeout);
     });
-
+  
     // Resume Timeout on Mouse Leave
-    toast.addEventListener('mouseleave', function () {
-        startTime = Date.now();
-        toastTimeout = setTimeout(hideToast, remainingTime);
+    $toast.on('mouseleave', function () {
+      startTime = Date.now();
+      toastTimeout = setTimeout(hideToast, remainingTime);
     });
-}
+  }
 // ********************* Toast Notification Js End *********************
 
 
@@ -392,38 +389,24 @@ var showCaseSlider = new Swiper('.show-case-slider', {
 
 
 // ========================= Accordion Tabs Image Change Js Start ===================
-  const accordionButtons = document.querySelectorAll(".accordion-button");
-  const faqImage = document.getElementById("faqImage");
+  $(document).on("click", ".accordion-button", function () {
+    const $faqImage = $("#faqImage");
+    const newImageSrc = $(this).data("img");
   
-  if(accordionButtons && faqImage) {
-    accordionButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const newImageSrc = this.getAttribute("data-img");
-  
-            if (newImageSrc && faqImage.src !== newImageSrc) {
-              faqImage.style.opacity = ".3";
-              setTimeout(() => {
-                  faqImage.src = newImageSrc;
-                  faqImage.style.opacity = "1";
-              }, 300); 
-            }
-        });
-    });
-  }
+    if (newImageSrc && $faqImage.attr("src") !== newImageSrc) {
+      $faqImage.css("opacity", ".3");
+      setTimeout(() => {
+        $faqImage.attr("src", newImageSrc).css("opacity", "1");
+      }, 300);
+    }
+  });
 // ========================= Accordion Tabs Image Change Js End ===================
 
 // ========================= Testimonials Tab Js start ===================
-let testimonialsItems = document.querySelectorAll('.testimonials-item');
-
-if (testimonialsItems.length) {
-  testimonialsItems.forEach(testimonialsItem => {
-    testimonialsItem.addEventListener('click', function () {
-      testimonialsItems.forEach(item => item.classList.remove('active'));
-
-      this.classList.add('active');
-    });
-  });
-}
+$(document).on('click', '.testimonials-item', function () {
+  $('.testimonials-item').removeClass('active');
+  $(this).addClass('active');
+});
 // ========================= Testimonials Tab Js End ===================
 
 // ========================== Set Text In Custom dropdown Js Start =================================
@@ -439,30 +422,19 @@ $('.selectable-text-list li').each(function () {
 
 
 // ========================== Domain Select Js Start =================================
-let selectDomainWrappers = document.querySelectorAll('.select-domain-wrapper'); 
+$(document).on('click', '.domain-item-button', function () {
+  const selectedDomain = $(this).data('domain');
 
-selectDomainWrappers.forEach(selectDomainWrapper => {
-  let selectDomain = selectDomainWrapper.querySelector('.select-domain');
-  let domainItemButtons = selectDomainWrapper.querySelectorAll('.domain-item-button'); 
-  
-  domainItemButtons.forEach(domainItemButton => {
-    domainItemButton.addEventListener('click', function () {
-      let selectedDomain = this.getAttribute("data-domain");
-      console.log(selectedDomain);
-      
-      selectDomain.value = selectedDomain;
-  
-      domainItemButtons.forEach(button => {
-        button.classList.remove('active-domain');
-      });
-      this.classList.add('active-domain');
-      // domainItemButtons.forEach(button => {
-      //   button.style.boxShadow = 'none';
-      // });
-      // this.style.boxShadow = '0px 4px 15px 0px #00000029';
-    });
-  });
+  const $wrapper = $(this).closest('.select-domain-wrapper'); 
+  const $select = $wrapper.find('.select-domain');
+
+  $select.val(selectedDomain);
+
+  // Remove and add active class
+  $wrapper.find('.domain-item-button').removeClass('active-domain');
+  $(this).addClass('active-domain');
 });
+
 // ========================== Domain Select Js End =================================
   
 // ========================== About Two Js Start =====================
@@ -683,65 +655,68 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
   // ========================= magnific Popup Js End =====================
 
   // ========================= List gird View Js Start =====================
-  let listViewBtn = document.querySelector('.list-view-btn');
-  let gridViewBtn = document.querySelector('.grid-view-btn');
-
-  if(listViewBtn && gridViewBtn) {
-    listViewBtn.addEventListener('click', function () {
-      body.classList.remove('grid-view');
-      this.classList.remove('text-heading');
-      gridViewBtn.classList.remove('text-main-600');
-      this.classList.add('text-main-600');
-    });
+  $(document).on('click', '.list-view-btn', function () {
+    const $btn = $(this);
+    const $gridViewBtn = $('.grid-view-btn');
+    const $body = $('body');
   
-    gridViewBtn.addEventListener('click', function () {
-      body.classList.add('grid-view');
-      this.classList.remove('text-heading');
-      listViewBtn.classList.remove('text-main-600');
-      this.classList.add('text-main-600');
-    });
-  }
+    $body.removeClass('grid-view');
+    $btn.removeClass('text-heading').addClass('text-main-600');
+    $gridViewBtn.removeClass('text-main-600');
+  });
+  
+  $(document).on('click', '.grid-view-btn', function () {
+    const $btn = $(this);
+    const $listViewBtn = $('.list-view-btn');
+    const $body = $('body');
+  
+    $body.addClass('grid-view');
+    $btn.removeClass('text-heading').addClass('text-main-600');
+    $listViewBtn.removeClass('text-main-600');
+  });
   // ========================= List gird View Js End =====================
 
   // ========================= Range Slider Js Start =====================
-  const rangeInput = document.querySelectorAll(".range-input input"),
-  priceInput = document.querySelectorAll(".price-input input"),
+  const rangeInputs = document.querySelectorAll(".range-input input"),
+  priceInputs = document.querySelectorAll(".price-input input"),
   range = document.querySelector(".slider .progress");
   let priceGap = 1000;
 
-  priceInput.forEach((input) => {
+  // Update range and price inputs based on user input
+  priceInputs.forEach(input => {
     input.addEventListener("input", (e) => {
-      let minPrice = parseInt(priceInput[0].value),
-        maxPrice = parseInt(priceInput[1].value);
+      let minPrice = parseInt(priceInputs[0].value),
+          maxPrice = parseInt(priceInputs[1].value);
 
-      if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-        if (e.target.className === "input-min") {
-          rangeInput[0].value = minPrice;
-          range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+      if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInputs[1].max) {
+        if (e.target.classList.contains("input-min")) {
+          rangeInputs[0].value = minPrice;
+          range.style.left = (minPrice / rangeInputs[0].max) * 100 + "%";
         } else {
-          rangeInput[1].value = maxPrice;
-          range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+          rangeInputs[1].value = maxPrice;
+          range.style.right = 100 - (maxPrice / rangeInputs[1].max) * 100 + "%";
         }
       }
     });
   });
 
-  rangeInput.forEach((input) => {
+  // Update price input fields and range visual when slider is dragged
+  rangeInputs.forEach(input => {
     input.addEventListener("input", (e) => {
-      let minVal = parseInt(rangeInput[0].value),
-        maxVal = parseInt(rangeInput[1].value);
+      let minVal = parseInt(rangeInputs[0].value),
+          maxVal = parseInt(rangeInputs[1].value);
 
       if (maxVal - minVal < priceGap) {
-        if (e.target.className === "range-min") {
-          rangeInput[0].value = maxVal - priceGap;
+        if (e.target.classList.contains("range-min")) {
+          rangeInputs[0].value = maxVal - priceGap;
         } else {
-          rangeInput[1].value = minVal + priceGap;
+          rangeInputs[1].value = minVal + priceGap;
         }
       } else {
-        priceInput[0].value = minVal;
-        priceInput[1].value = maxVal;
-        range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-        range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        priceInputs[0].value = minVal;
+        priceInputs[1].value = maxVal;
+        range.style.left = (minVal / rangeInputs[0].max) * 100 + "%";
+        range.style.right = 100 - (maxVal / rangeInputs[1].max) * 100 + "%";
       }
     });
   });
@@ -771,84 +746,58 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
 
   
   // ========================= Color Picker Js Start =====================
-  let colorPickers = document.querySelectorAll('.color-picker');
-
-  colorPickers.forEach(colorPicker => {
-    colorPicker.addEventListener('click', function () {
-      document.querySelectorAll('.color-picker__color').forEach(color => {
-        color.style.transform = 'scale(1)';
-      });
+  $(document).on('click', '.color-picker', function () {
+    $('.color-picker__color').css('transform', 'scale(1)');
   
-      this.querySelector('.color-picker__color').style.transform = 'scale(2)';
-    });
+    $(this).find('.color-picker__color').css('transform', 'scale(2)');
   });
   // ========================= Color Picker Js End =====================
 
   // ========================= Size Picker Js Start =====================
-  let sizeBtns = document.querySelectorAll('.size-btn');
-
-  sizeBtns.forEach(sizeBtn => {
-    sizeBtn.addEventListener('click', function () {
-      sizeBtns.forEach(btn => btn.classList.remove('bg-main-600', 'text-white', 'border-main-600'));
-      this.classList.add('bg-main-600', 'text-white', 'border-main-600');
-    });
-  });
+  $(document).on('click', '.size-btn', function () {
+    $('.size-btn').removeClass('bg-main-600 text-white border-main-600');
   
+    $(this).addClass('bg-main-600 text-white border-main-600');
+  });
   // ========================= Size Picker Js End =====================
 
   
   // ========================= Increment & Decrement Js Start =====================
-  let decrementBtns = document.querySelectorAll('.decrement-btn');
-  let incrementBtns = document.querySelectorAll('.increment-btn');
-  
-  incrementBtns.forEach(incrementBtn => {
-    incrementBtn.addEventListener('click', function () {
-      let input = this.parentElement.querySelector('.input-value');
-      let count = parseInt(input.value);
-      input.value = count + 1;
-    });
+  $(document).on('click', '.increment-btn', function () {
+    const $input = $(this).siblings('.input-value');
+    let count = parseInt($input.val(), 10);
+    $input.val(count + 1);
   });
   
-  decrementBtns.forEach(decrementBtn => {
-    decrementBtn.addEventListener('click', function () {
-      let input = this.parentElement.querySelector('.input-value');
-      let count = parseInt(input.value);
-      if (count > 0) {
-        input.value = count - 1;
-      }
-    });
+  $(document).on('click', '.decrement-btn', function () {
+    const $input = $(this).siblings('.input-value');
+    let count = parseInt($input.val(), 10);
+    if (count > 0) {
+      $input.val(count - 1);
+    }
   });
   // ========================= Increment & Decrement Js End =====================
 
 
   // ========================= Delete Item Js start ===================
-  let deleteButtons = document.querySelectorAll('.delete-button');
-
-  deleteButtons.forEach(deleteButton => {
-    deleteButton.addEventListener('click', function () {
-      this.closest('.delete-item').classList.add('d-none');
-      toastMessage("danger", "Deleted", "You deleted successfully!", 'ph-bold ph-trash');
-    });
+  $(document).on('click', '.delete-button', function () {
+    $(this).closest('.delete-item').addClass('d-none');
+    
+    toastMessage("danger", "Deleted", "You deleted successfully!", 'ph-bold ph-trash');
   });
+  
   // ========================= Delete Item Js End ===================
 
   // ========================= Form Submit Js Start ===================
-  let formSubmit = document.querySelector('.form-submit');
-  let fields = document.querySelectorAll('input');
-  let textarea = document.querySelector('textarea');
-
-  if(formSubmit && fields) {
-    formSubmit.addEventListener('submit', function (e) {
-      e.preventDefault();
-      fields.forEach(field => {
-        field.value = "";
-      });
-      if(textarea) {
-        textarea.value = "";
-      }
-      toastMessage("success", "Success", "Form submitted successfully!", 'ph-fill ph-check-circle');
-    });
-  }
+  $(document).on('submit', '.form-submit', function (e) {
+    e.preventDefault();
+  
+    $('input').val('');
+    
+    $('textarea').val('');
+  
+    toastMessage("success", "Success", "Form submitted successfully!", 'ph-fill ph-check-circle');
+  });
   // ========================= Form Submit Js End ===================
   
   // ================== Password Show Hide Js Start ==========
@@ -894,71 +843,52 @@ var planExecuteSlider = new Swiper('.testimonials-three-slider', {
 
   
   // ========================= See All Feature pricing plan Js Start ===================
-  let seeAllBtns = document.querySelectorAll('.see-all-btn');
-
-  if(seeAllBtns) {
-    seeAllBtns.forEach(seeAllBtn => {
-      seeAllBtn.addEventListener('click', function () {
-        let pricingItem = this.closest('.pricing-item');
-        pricingItem.classList.toggle('expand');
-
-        // this.innerHTML = "Less Features";
-        if(pricingItem.classList.contains('expand')) {
-          this.innerHTML = `
-            <button type="button" class="see-all-btn d-flex align-items-center justify-content-center tw-gap-305 text-main-600 fw-bold hover-underline d-lg-flex align-items-center tw-gap-305">
-                Less features
-                <i class="ph-bold ph-caret-up"></i>
-            </button>`;
-        } else {
-          this.innerHTML = `
-            <button type="button" class="see-all-btn d-flex align-items-center justify-content-center tw-gap-305 text-main-600 fw-bold hover-underline d-lg-flex align-items-center tw-gap-305">
-                See all features
-                <i class="ph-bold ph-caret-down"></i>
-          </button>`;
-        }
-      });
-    });
-  }
+  $(document).on('click', '.see-all-btn', function () {
+    const $pricingItem = $(this).closest('.pricing-item');
+    $pricingItem.toggleClass('expand');
+  
+    // Check if 'expand' class is added and update the button content accordingly
+    if ($pricingItem.hasClass('expand')) {
+      $(this).html(`
+        Less features
+        <i class="ph-bold ph-caret-up"></i>
+      `);
+    } else {
+      $(this).html(`
+        See all features
+        <i class="ph-bold ph-caret-down"></i>
+      `);
+    }
+  });
   // ========================= See All Feature pricing plan Js End ===================
 
   
   // ========================= Toggle Monthly Yearly duration pricing plan Js Start ===================
-  let pricingItemToggles = document.querySelectorAll('.pricing-item-toggle');
-
-  if(pricingItemToggles) {
-    pricingItemToggles.forEach(pricingItemToggle => {
-      pricingItemToggle.addEventListener('change', function () {
-
-        let pricingItem = this.closest('.pricing-item');
-        let pricingDuration = pricingItem.querySelector('.pricing-duration');
-        let currentPrice = pricingItem.querySelector('.current-price');
-        // Get the text content and remove the `$` and `.`
-        let priceValue = parseFloat(currentPrice.textContent.replace(/[^\d.-]/g, ''));
-        
-        if(pricingItemToggle.checked) {
-          if(pricingDuration.innerHTML === "/Monthly") {
-            pricingDuration.innerHTML = "/Yearly";
-            currentPrice.textContent = (priceValue * 10).toFixed(2);
-            
-          } else if(pricingDuration.innerHTML === "/Yearly") {
-            pricingDuration.innerHTML = "/Monthly";
-            currentPrice.textContent = (priceValue / 10).toFixed(2);
-          }
-        }
-        else {
-          if(pricingDuration.innerHTML === "/Monthly") {
-            pricingDuration.innerHTML = "/Yearly";
-            currentPrice.textContent = (priceValue * 10).toFixed(2);
-            
-          } else if(pricingDuration.innerHTML === "/Yearly") {
-            pricingDuration.innerHTML = "/Monthly";
-            currentPrice.textContent = (priceValue / 10).toFixed(2);
-          }
-        }
-
-      });
-    });
-  }
+  $(document).on('change', '.pricing-item-toggle', function () {
+    const $pricingItem = $(this).closest('.pricing-item');
+    const $pricingDuration = $pricingItem.find('.pricing-duration');
+    const $currentPrice = $pricingItem.find('.current-price');
+    
+    let priceValue = parseFloat($currentPrice.text().replace(/[^\d.-]/g, ''));
+  
+    if ($(this).prop('checked')) {
+      if ($pricingDuration.text() === '/Monthly') {
+        $pricingDuration.text('/Yearly');
+        $currentPrice.text((priceValue * 10).toFixed(2));
+      } else if ($pricingDuration.text() === '/Yearly') {
+        $pricingDuration.text('/Monthly');
+        $currentPrice.text((priceValue / 10).toFixed(2));
+      }
+    } else {
+      if ($pricingDuration.text() === '/Monthly') {
+        $pricingDuration.text('/Yearly');
+        $currentPrice.text((priceValue * 10).toFixed(2));
+      } else if ($pricingDuration.text() === '/Yearly') {
+        $pricingDuration.text('/Monthly');
+        $currentPrice.text((priceValue / 10).toFixed(2));
+      }
+    }
+  });
   // ========================= Toggle Monthly Yearly duration pricing plan Js End ===================
 
 
