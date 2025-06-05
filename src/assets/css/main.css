@@ -7031,6 +7031,10 @@ svg.radial-progress text {
     animation: rotateCenter 10s linear infinite;
 }
 
+.animation-rotate {
+    animation: animationRotate 2s linear infinite;
+}
+
 @keyframes rotateRight {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -7058,6 +7062,16 @@ svg.radial-progress text {
 
     100% {
         transform: rotate(-360deg);
+    }
+}
+
+@keyframes animationRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
