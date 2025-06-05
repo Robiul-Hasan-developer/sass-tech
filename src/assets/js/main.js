@@ -100,17 +100,6 @@
     // ========================== add active class to navbar menu current page Js End =====================
 
     // ========================== Settings Panel Js Start =====================
-    // $(document).on(
-    //   "click",
-    //   ".settings-panel__buttons .settings-panel__button",
-    //   function () {
-    //     $(".settings-panel__buttons .settings-panel__button").removeClass(
-    //       "active"
-    //     );
-    //     $(this).toggleClass("active");
-    //   }
-    // );
-
     $(document).on(
       "click",
       ".settings-panel__buttons .settings-panel__button",
@@ -120,6 +109,25 @@
       }
     );
 
+    // Cursor start
+    $(".cursor-animate").on("click", function () {
+      $("body").removeClass("remove-animate-cursor");
+    });
+
+    $(".cursor-default").on("click", function () {
+      $("body").addClass("remove-animate-cursor");
+    });
+    // Cursor end
+
+    // Direction start
+    $(".direction-ltr").on("click", function () {
+      $("html").attr("dir", "ltr");
+    });
+
+    $(".direction-rtl").on("click", function () {
+      $("html").attr("dir", "rtl");
+    });
+    // Direction end
     // ========================== Settings Panel Js End =====================
 
     // ********************* Toast Notification Js start *********************

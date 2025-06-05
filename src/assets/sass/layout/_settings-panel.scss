@@ -11,8 +11,15 @@
   }
   &__button {
     &.active {
-        background-color: var(--main-600) !important;
+      background-color: var(--main-600) !important;
     }
+  }
+}
+
+.remove-animate-cursor {
+  .cursor,
+  .dot {
+    display: none;
   }
 }
 /* ========================== Settings panel css end ======================================= */

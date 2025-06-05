@@ -6416,7 +6416,8 @@ input:focus, input:focus-visible {
 
 /* ===================== Scroll to Top End ================================= */
 /* Custom Cursor Css Start */
-.cursor, .dot {
+.cursor,
+.dot {
     width: 32px;
     height: 32px;
     border: 1px solid hsl(var(--white));
@@ -6461,6 +6462,11 @@ input:focus, input:focus-visible {
 
 .settings-panel__button.active {
     background-color: var(--main-600) !important;
+}
+
+.remove-animate-cursor .cursor,
+.remove-animate-cursor .dot {
+    display: none;
 }
 
 /* ========================== Settings panel css end ======================================= */
