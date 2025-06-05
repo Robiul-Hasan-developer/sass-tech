@@ -1,49 +1,71 @@
 <!-- ==================== Header Three Start Here ==================== -->
-<header class="header py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-8 position-absolute">
-    <div class="container">
-        <div class="header-three__inner py-2 py-lg-0 tw-lg-ps-12 ps-4 tw-pe-705 bg-white-06 transition-all tw-rounded-lg common-shadow-eleven">
-            <nav class="d-flex align-items-center justify-content-between">
-                <!-- Logo Start -->
-                <div class="logo">
-                    <a href="index.html" class="link hover--translate-y-1 active--translate-y-scale-9">
-                        <img src="assets/images/logo/logo-white-two.png" alt="Logo" class="max-w-200-px">
-                    </a>
-                </div>
-                <!-- Logo End  -->
-    
-                <!-- Menu Start  -->
-                <div class="header-menu d-lg-block d-none">
-                    @@include('../partials/_nav-menu-three.html', {
-                        "class" : "tw-gap-7"
-                    })
-                </div>
-                <!-- Menu End  -->
-                
-                <!-- Header Right start -->
-                 <div class="d-flex align-items-center tw-gap-6">
-                    <div class="d-flex align-items-center tw-gap-6">
-                        <a href="login.html" class="d-flex align-items-center tw-gap-105 d-xl-flex d-none text-white">
-                            <span class="text-spring-green d-flex tw-leading-none">
-                                <i class="ph-bold ph-user"></i>
-                            </span>
-                            <span class="fw-semibold tw-text-sm ">Sign in</span>
-                        </a>
-
-                        <a href="register.html" class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main-two hover-style-two button--stroke d-lg-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 px-xl-4 px-3 tw-rounded-md tw-py-405 fw-bold" data-block="button">
-                            <span class="button__flair"></span>
-                            <div class="d-flex align-items-center tw-gap-2 z-1">
-                                <span class="button__label">Start Free Trial</span>
-                                <span class="icon"><i class="ph-fill ph-cloud-arrow-down"></i></span>
-                            </div>
-                        </a>
-                    </div>
-                    <button type="button" class="toggle-mobileMenu leading-none d-lg-none text-white tw-text-9"> 
-                        <i class="ph ph-list"></i>
-                    </button>
-                 </div>
-                <!-- Header Right End  -->
-            </nav>
+<header
+  class="header py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 tw-mt-8 position-absolute"
+>
+  <div class="container">
+    <div
+      class="header-three__inner py-2 py-lg-0 tw-lg-ps-12 ps-4 tw-pe-705 bg-white-06 transition-all tw-rounded-lg common-shadow-eleven"
+    >
+      <nav class="d-flex align-items-center justify-content-between">
+        <!-- Logo Start -->
+        <div class="logo">
+          <a
+            href="index.html"
+            class="link hover--translate-y-1 active--translate-y-scale-9"
+          >
+            <img
+              src="assets/images/logo/logo-white-two.png"
+              alt="Logo"
+              class="max-w-200-px"
+            />
+          </a>
         </div>
+        <!-- Logo End  -->
+
+        <!-- Menu Start  -->
+        <div class="header-menu d-lg-block d-none">
+          @@include('../partials/_nav-menu-three.html', { "class" : "tw-gap-7"
+          })
+        </div>
+        <!-- Menu End  -->
+
+        <!-- Header Right start -->
+        <div class="d-flex align-items-center tw-gap-6">
+          <div class="d-flex align-items-center tw-gap-6">
+            <a
+              href="login.html"
+              class="d-flex align-items-center tw-gap-105 d-xl-flex d-none text-white"
+            >
+              <span class="text-spring-green d-flex tw-leading-none">
+                <i class="ph-bold ph-user"></i>
+              </span>
+              <span class="fw-semibold tw-text-sm">Sign in</span>
+            </a>
+
+            <a
+              href="register.html"
+              class="hover--translate-y-1 active--translate-y-scale-9 btn btn-main-two hover-style-two button--stroke d-lg-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 px-xl-4 px-3 tw-rounded-md tw-py-405 fw-bold"
+              data-block="button"
+            >
+              <span class="button__flair"></span>
+              <div class="d-flex align-items-center tw-gap-2 z-1">
+                <span class="button__label">Start Free Trial</span>
+                <span class="icon z-1"
+                  ><i class="ph-fill ph-cloud-arrow-down"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+          <button
+            type="button"
+            class="toggle-mobileMenu leading-none d-lg-none text-white tw-text-9"
+          >
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+        <!-- Header Right End  -->
+      </nav>
     </div>
+  </div>
 </header>
 <!-- ==================== Header Three End Here ==================== -->

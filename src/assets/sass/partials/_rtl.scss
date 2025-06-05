@@ -1,0 +1,32 @@
+/* ================================== rtl css start ================================== */
+.text-start {
+  text-align: start !important;
+}
+
+[dir="rtl"] {
+  .tw-translate-x-50 {
+    transform: translateX(50%);
+  }
+  .ph-bold.ph-caret-right:before {
+    content: "\E138";
+  }
+  .select-domain {
+    margin-inline-end: 0;
+  }
+  .pricing-plan .form-check {
+    padding-left: 0 !important;
+  }
+  .common-check-two .form-check-input::before {
+    transform: translate(50%, -50%);
+  }
+  .distraction-icon.seven {
+    transform: translate(50%, -50%);
+  }
+  .translate-middle-x {
+    transform: translateX(50%) !important;
+  }
+  .ph-bold.ph-arrow-up-right:before {
+    content: "\e090";
+  }
+}
+/* ================================== rtl css End ================================== */

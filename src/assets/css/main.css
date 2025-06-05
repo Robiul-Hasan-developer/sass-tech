@@ -8076,4 +8076,42 @@ svg.radial-progress text {
 }
 
 /* ========================================== Shop page css End ========================================== */
+/* ================================== rtl css start ================================== */
+.text-start {
+    text-align: start !important;
+}
+
+[dir=rtl] .tw-translate-x-50 {
+    transform: translateX(50%);
+}
+
+[dir=rtl] .ph-bold.ph-caret-right:before {
+    content: "\e138";
+}
+
+[dir=rtl] .select-domain {
+    margin-inline-end: 0;
+}
+
+[dir=rtl] .pricing-plan .form-check {
+    padding-left: 0 !important;
+}
+
+[dir=rtl] .common-check-two .form-check-input::before {
+    transform: translate(50%, -50%);
+}
+
+[dir=rtl] .distraction-icon.seven {
+    transform: translate(50%, -50%);
+}
+
+[dir=rtl] .translate-middle-x {
+    transform: translateX(50%) !important;
+}
+
+[dir=rtl] .ph-bold.ph-arrow-up-right:before {
+    content: "\e090";
+}
+
+/* ================================== rtl css End ================================== */
 /*# sourceMappingURL=main.css.map */
