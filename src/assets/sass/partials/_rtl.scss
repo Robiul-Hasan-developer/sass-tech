@@ -28,5 +28,20 @@
   .ph-bold.ph-arrow-up-right:before {
     content: "\e090";
   }
+  .ph.ph-caret-right:before {
+    content: "\E138";
+  }
+  .ph.ph-caret-left:before {
+    content: "\E13A";
+  }
+  .ph.ph-arrow-right:before {
+    content: "\E058";
+  }
+  .ph-bold.ph-caret-left:before {
+    content: "\E13A";
+  }
+  .translate-x-100-16 {
+    transform: translateX(calc(100% - 105px));
+  }
 }
 /* ================================== rtl css End ================================== */
