@@ -1,7 +1,20 @@
 /* ========================== Settings panel css start ======================================= */
+.settings-button {
+  .close-icon {
+    display: none;
+  }
+  &.active {
+    .setting-icon {
+      display: none;
+    }
+    .close-icon {
+      display: block;
+    }
+  }
+}
+
 .settings-panel {
-  inset-inline-end: -280px !important;
-  inset-inline-end: 0px !important;
+  inset-inline-end: -280px;
   transition: 0.3s;
   &.active {
     inset-inline-end: 0px !important;

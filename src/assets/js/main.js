@@ -100,6 +100,11 @@
     // ========================== add active class to navbar menu current page Js End =====================
 
     // ========================== Settings Panel Js Start =====================
+    $(".settings-button").on("click", function () {
+      $(".settings-panel").toggleClass("active");
+      $(this).toggleClass("active");
+    });
+
     $(document).on(
       "click",
       ".settings-panel__buttons .settings-panel__button",

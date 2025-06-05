@@ -6446,9 +6446,20 @@ input:focus, input:focus-visible {
 
 /* Custom Cursor Css End */
 /* ========================== Settings panel css start ======================================= */
+.settings-button .close-icon {
+    display: none;
+}
+
+.settings-button.active .setting-icon {
+    display: none;
+}
+
+.settings-button.active .close-icon {
+    display: block;
+}
+
 .settings-panel {
-    inset-inline-end: -280px !important;
-    inset-inline-end: 0px !important;
+    inset-inline-end: -280px;
     transition: 0.3s;
 }
 
