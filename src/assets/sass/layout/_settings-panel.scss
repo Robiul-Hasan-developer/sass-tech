@@ -1,0 +1,18 @@
+/* ========================== Settings panel css start ======================================= */
+.settings-panel {
+  inset-inline-end: -280px !important;
+  inset-inline-end: 0px !important;
+  transition: 0.3s;
+  &.active {
+    inset-inline-end: 0px !important;
+  }
+  &__content {
+    width: 280px;
+  }
+  &__button {
+    &.active {
+        background-color: var(--main-600) !important;
+    }
+  }
+}
+/* ========================== Settings panel css end ======================================= */

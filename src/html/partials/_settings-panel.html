@@ -1,6 +1,6 @@
 <!-- ========================== Settings Panel start ==================================== -->
 <div
-  class="settings-panel position-fixed top-50 translate-middle-y tw-end-0 tw-z-999 bg-white"
+  class="settings-panel position-fixed top-50 translate-middle-y tw-z-999 d-flex align-items-center"
 >
   <button
     type="button"
@@ -10,5 +10,43 @@
       <i class="ph-fill ph-gear-six"></i>
     </span>
   </button>
+  <div class="settings-panel__content bg-white tw-px-6 tw-py-13 shadow-lg">
+    <div class="d-flex flex-column tw-gap-10">
+      <div class="">
+        <h6 class="text-center tw-mb-6 text-uppercase">Cursor</h6>
+        <div class="settings-panel__buttons d-flex tw-gap-4">
+          <button
+            type="button"
+            class="settings-panel__button bg-main-two-600 hover-bg-main-600 tw-duration-300 text-white tw-text-base tw-py-305 tw-px-3 fw-medium active-scale-094 flex-grow-1"
+          >
+            Animated
+          </button>
+          <button
+            type="button"
+            class="settings-panel__button bg-main-two-600 hover-bg-main-600 tw-duration-300 text-white tw-text-base tw-py-305 tw-px-3 fw-medium active-scale-094 flex-grow-1"
+          >
+            Default
+          </button>
+        </div>
+      </div>
+      <div class="">
+        <h6 class="text-center tw-mb-6 text-uppercase">Direction</h6>
+        <div class="settings-panel__buttons d-flex tw-gap-4">
+          <button
+            type="button"
+            class="settings-panel__button bg-main-two-600 hover-bg-main-600 tw-duration-300 text-white tw-text-base tw-py-305 tw-px-3 fw-medium active-scale-094 flex-grow-1"
+          >
+            LTR
+          </button>
+          <button
+            type="button"
+            class="settings-panel__button bg-main-two-600 hover-bg-main-600 tw-duration-300 text-white tw-text-base tw-py-305 tw-px-3 fw-medium active-scale-094 flex-grow-1"
+          >
+            RTL
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- ========================== Settings Panel end ==================================== -->

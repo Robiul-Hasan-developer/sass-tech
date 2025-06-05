@@ -6444,6 +6444,26 @@ input:focus, input:focus-visible {
 }
 
 /* Custom Cursor Css End */
+/* ========================== Settings panel css start ======================================= */
+.settings-panel {
+    inset-inline-end: -280px !important;
+    inset-inline-end: 0px !important;
+    transition: 0.3s;
+}
+
+.settings-panel.active {
+    inset-inline-end: 0px !important;
+}
+
+.settings-panel__content {
+    width: 280px;
+}
+
+.settings-panel__button.active {
+    background-color: var(--main-600) !important;
+}
+
+/* ========================== Settings panel css end ======================================= */
 /* Top Features Css Start */
 .js-marquee {
     display: flex;
