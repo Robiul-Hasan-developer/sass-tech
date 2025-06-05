@@ -6469,6 +6469,8 @@ input:focus, input:focus-visible {
 
 .settings-panel__content {
     width: 280px;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
 .settings-panel__button.active {
@@ -8163,6 +8165,10 @@ svg.radial-progress text {
 
 [dir=rtl] .left-right-gradient::after {
     background: linear-gradient(-90deg, transparent, #ffffff);
+}
+
+[dir=rtl] .tw--translate-x-full {
+    transform: translateX(100%);
 }
 
 [dir=rtl] .ph-bold.ph-caret-right:before {
