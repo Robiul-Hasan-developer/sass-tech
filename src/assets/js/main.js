@@ -216,24 +216,6 @@
         startVisible: true,
       });
     }
-
-    // $(document).ready(function () {
-    //   if ($(".top-features-slider").length > 0) {
-    //     $(".top-features-slider").marquee({
-    //       pauseOnHover: true,
-    //       duplicated: true,
-    //       allowCss3Support: true,
-    //       css3easing: "linear",
-    //       easing: "linear",
-    //       delayBeforeStart: 0,
-    //       duration: 24000,
-    //       direction: $("html").attr("dir") === "rtl" ? "right" : "left",
-    //       gap: 32,
-    //       pauseOnCycle: false,
-    //       startVisible: true,
-    //     });
-    //   }
-    // });
     // ======================== Top Features Slider end ==========================
 
     // ================================= Brand slider Start =========================

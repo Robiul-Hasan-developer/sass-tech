@@ -50,6 +50,9 @@
     margin-right: -1.5em;
   }
 
+  .top-features-slider {
+    direction: rtl;
+  }
   .left-right-gradient::before {
     background: linear-gradient(-90deg, #fff, transparent);
   }

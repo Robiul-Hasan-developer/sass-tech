@@ -8153,6 +8153,10 @@ svg.radial-progress text {
     margin-right: -1.5em;
 }
 
+[dir=rtl] .top-features-slider {
+    direction: rtl;
+}
+
 [dir=rtl] .left-right-gradient::before {
     background: linear-gradient(-90deg, #fff, transparent);
 }
