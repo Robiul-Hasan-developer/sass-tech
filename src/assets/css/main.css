@@ -8081,12 +8081,20 @@ svg.radial-progress text {
     text-align: start !important;
 }
 
-[dir=rtl] .tw-translate-x-50 {
-    transform: translateX(50%);
+.form-check {
+    padding-left: 0;
 }
 
-[dir=rtl] .ph-bold.ph-caret-right:before {
-    content: "\e138";
+.form-check {
+    padding-inline-start: 1.5em;
+}
+
+.form-check .form-check-input {
+    margin-left: 0;
+}
+
+[dir=rtl] .tw-translate-x-50 {
+    transform: translateX(50%);
 }
 
 [dir=rtl] .select-domain {
@@ -8109,6 +8117,34 @@ svg.radial-progress text {
     transform: translateX(50%) !important;
 }
 
+[dir=rtl] .translate-x-100-16 {
+    transform: translateX(calc(100% - 105px));
+}
+
+[dir=rtl] .toast-message {
+    transform: translateX(-110%);
+}
+
+[dir=rtl] .toast-message.active {
+    transform: translateX(0) !important;
+}
+
+[dir=rtl] .arrow-long {
+    transform: scaleX(-1);
+}
+
+[dir=rtl] .common-check .form-check-input::before {
+    transform: translate(50%, -50%);
+}
+
+[dir=rtl] .form-check .form-check-input {
+    margin-right: -1.5em;
+}
+
+[dir=rtl] .ph-bold.ph-caret-right:before {
+    content: "\e138";
+}
+
 [dir=rtl] .ph-bold.ph-arrow-up-right:before {
     content: "\e090";
 }
@@ -8129,8 +8165,8 @@ svg.radial-progress text {
     content: "\e13a";
 }
 
-[dir=rtl] .translate-x-100-16 {
-    transform: translateX(calc(100% - 105px));
+[dir=rtl] .ph-bold.ph-caret-left:before {
+    content: "\e13a";
 }
 
 /* ================================== rtl css End ================================== */

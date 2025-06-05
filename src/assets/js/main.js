@@ -742,14 +742,14 @@
           if ($(this).hasClass("input-min")) {
             $rangeInput.eq(0).val(minPrice);
             $range.css(
-              "left",
+              "inset-inline-start",
               (minPrice / parseInt($rangeInput.eq(0).attr("max"), 10)) * 100 +
                 "%"
             );
           } else {
             $rangeInput.eq(1).val(maxPrice);
             $range.css(
-              "right",
+              "inset-inline-end",
               100 -
                 (maxPrice / parseInt($rangeInput.eq(1).attr("max"), 10)) * 100 +
                 "%"
@@ -773,11 +773,11 @@
           $priceInput.eq(0).val(minVal);
           $priceInput.eq(1).val(maxVal);
           $range.css(
-            "left",
+            "inset-inline-start",
             (minVal / parseInt($rangeInput.eq(0).attr("max"), 10)) * 100 + "%"
           );
           $range.css(
-            "right",
+            "inset-inline-end",
             100 -
               (maxVal / parseInt($rangeInput.eq(1).attr("max"), 10)) * 100 +
               "%"

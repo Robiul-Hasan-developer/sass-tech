@@ -2,13 +2,19 @@
 .text-start {
   text-align: start !important;
 }
+.form-check {
+  padding-left: 0;
+}
+.form-check {
+  padding-inline-start: 1.5em;
+}
+.form-check .form-check-input {
+  margin-left: 0;
+}
 
 [dir="rtl"] {
   .tw-translate-x-50 {
     transform: translateX(50%);
-  }
-  .ph-bold.ph-caret-right:before {
-    content: "\E138";
   }
   .select-domain {
     margin-inline-end: 0;
@@ -25,6 +31,28 @@
   .translate-middle-x {
     transform: translateX(50%) !important;
   }
+  .translate-x-100-16 {
+    transform: translateX(calc(100% - 105px));
+  }
+  .toast-message {
+    transform: translateX(-110%);
+  }
+  .toast-message.active {
+    transform: translateX(0) !important;
+  }
+  .arrow-long {
+    transform: scaleX(-1);
+  }
+  .common-check .form-check-input::before {
+    transform: translate(50%, -50%);
+  }
+  .form-check .form-check-input {
+    margin-right: -1.5em;
+  }
+
+  .ph-bold.ph-caret-right:before {
+    content: "\E138";
+  }
   .ph-bold.ph-arrow-up-right:before {
     content: "\e090";
   }
@@ -40,8 +68,8 @@
   .ph-bold.ph-caret-left:before {
     content: "\E13A";
   }
-  .translate-x-100-16 {
-    transform: translateX(calc(100% - 105px));
+  .ph-bold.ph-caret-left:before {
+    content: "\E13A";
   }
 }
 /* ================================== rtl css End ================================== */
