@@ -6509,6 +6509,18 @@ input:focus, input:focus-visible {
     width: 200px;
 }
 
+.top-features-slider {
+    display: flex;
+    white-space: nowrap;
+}
+
+.top-features-slider > div {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-inline-start: 2rem;
+}
+
 /* Top Features Css End */
 .clip-path-one {
     clip-path: polygon(0 0, 75% 0%, 100% 23%, 100% 100%, 0 100%, 0% 50%);
@@ -8139,6 +8151,14 @@ svg.radial-progress text {
 
 [dir=rtl] .form-check .form-check-input {
     margin-right: -1.5em;
+}
+
+[dir=rtl] .left-right-gradient::before {
+    background: linear-gradient(-90deg, #fff, transparent);
+}
+
+[dir=rtl] .left-right-gradient::after {
+    background: linear-gradient(-90deg, transparent, #ffffff);
 }
 
 [dir=rtl] .ph-bold.ph-caret-right:before {

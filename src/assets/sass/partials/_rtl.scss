@@ -50,6 +50,13 @@
     margin-right: -1.5em;
   }
 
+  .left-right-gradient::before {
+    background: linear-gradient(-90deg, #fff, transparent);
+  }
+  .left-right-gradient::after {
+    background: linear-gradient(-90deg, transparent, #ffffff);
+  }
+
   .ph-bold.ph-caret-right:before {
     content: "\E138";
   }
