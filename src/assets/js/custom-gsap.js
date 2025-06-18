@@ -4,7 +4,6 @@
 
 var tl = gsap.timeline(); 
 gsap.registerPlugin(ScrollTrigger, SplitText);
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 // =================================== Smooth Scroller Js Start =====================================
 ScrollSmoother.create({
