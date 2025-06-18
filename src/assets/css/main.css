@@ -6445,7 +6445,11 @@ input:focus, input:focus-visible {
 }
 
 /* Custom Cursor Css End */
-/* ========================== Settings panel css start ======================================= */
+/* ========================== Settings panel css start =========================== */
+.settings-button {
+    pointer-events: all;
+}
+
 .settings-button .close-icon {
     display: none;
 }
@@ -6460,6 +6464,7 @@ input:focus, input:focus-visible {
 
 .settings-panel {
     inset-inline-end: -280px;
+    pointer-events: none;
     transition: 0.3s;
 }
 
@@ -6468,6 +6473,7 @@ input:focus, input:focus-visible {
 }
 
 .settings-panel__content {
+    pointer-events: all;
     width: 280px;
     max-height: 100vh;
     overflow-y: auto;
@@ -6482,7 +6488,20 @@ input:focus, input:focus-visible {
     display: none;
 }
 
-/* ========================== Settings panel css end ======================================= */
+.animation-rotate {
+    animation: animationRotate 2s linear infinite;
+}
+
+@keyframes animationRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ========================== Settings panel css end =========================== */
 /* Top Features Css Start */
 .js-marquee {
     display: flex;
