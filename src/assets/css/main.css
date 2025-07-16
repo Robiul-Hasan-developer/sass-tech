@@ -121,7 +121,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap");
 
 :root {
   /* Font Family Variable */
@@ -7940,7 +7940,7 @@ svg.radial-progress text {
 
 /* Offer Five section End */
 .home-six:root {
-    --heading-one: clamp(2.125rem, -0.0733rem + 5.5vw, 5.625rem);
+    --heading-one: clamp(2.25rem, -0.0733rem + 5.5vw, 5.625rem);
     --heading-two: clamp(2rem, 0.3353rem + 2.1661vw, 3.5rem);
     --heading-three: clamp(1.5rem, 0.7133rem + 2.8846vw, 1.75rem);
     --heading-four: clamp(1.25rem, 1.2rem + 0.722vw, 1.5rem);
@@ -8005,16 +8005,12 @@ svg.radial-progress text {
     font-size: var(--heading-six);
 }
 
-.home-six .font-dm-serif {
-    font-family: var(--dm-serif);
+.home-six .font-caveat {
+    font-family: "Caveat", cursive;
 }
 
 .home-six .text-heading {
     color: var(--heading-color);
-}
-
-.home-six .bg-main-three {
-    background-color: var(--bg-main-green);
 }
 
 .home-six .btn-main {
@@ -8078,6 +8074,22 @@ svg.radial-progress text {
     color: var(--heading-color);
 }
 
+/* Banner Six Css start */
+.banner-six {
+    padding: 250px 0 230px;
+}
+
+@media (max-width: 991px) {
+    .banner-six {
+        padding: 170px 0 200px;
+    }
+}
+
+.payment-cards {
+    max-width: 45%;
+}
+
+/* Banner Six Css end */
 /* ==================== Breadcrumb Start Here ==================== */
 .breadcrumb {
     padding-block-start: 270px;
