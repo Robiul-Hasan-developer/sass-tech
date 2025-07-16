@@ -2840,6 +2840,10 @@ input:focus, input:focus-visible {
     height: 424px;
 }
 
+.tw-h-440-px {
+    height: 440px;
+}
+
 .tw-h-screen {
     height: 100vh;
 }
@@ -6206,7 +6210,8 @@ input:focus, input:focus-visible {
     color: hsl(var(--heading-color));
 }
 
-.has-submenu.active > a, .has-submenu.active > a::before {
+.has-submenu.active > a,
+.has-submenu.active > a::before {
     color: var(--main-600);
 }
 
@@ -6223,7 +6228,7 @@ input:focus, input:focus-visible {
 .has-submenu:hover .nav-submenu {
     visibility: visible;
     opacity: 1;
-    margin-block-start: 0;
+    transform: scaleY(1);
 }
 
 @media (min-width: 992px) {
@@ -6254,12 +6259,14 @@ input:focus, input:focus-visible {
     color: hsl(var(--white));
 }
 
-/* Submenu Start */
 .nav-submenu {
     box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
     min-width: 190px;
     visibility: hidden;
     opacity: 0;
+    transform: scaleY(0);
+    transition: 0.4s ease;
+    transform-origin: top center;
 }
 
 @media (min-width: 992px) {
@@ -6502,6 +6509,50 @@ input:focus, input:focus-visible {
     }
 }
 /* ========================== Settings panel css end =========================== */
+/* Mega menu css start */
+.mega-menu {
+    position: absolute;
+    inset-block-start: 100%;
+    background-color: #fff;
+    width: 100%;
+    inset-inline-start: 0;
+    z-index: 99;
+    box-shadow: 0px 20px 30px rgba(1, 15, 28, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    max-height: 540px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media (max-width: 991px) {
+    .mega-menu {
+        margin-block: 16px !important;
+        margin-inline-start: 0 !important;
+        padding-inline-end: 4px !important;
+    }
+}
+
+.mega-menu-item__buttons {
+    transition: all 0.5s;
+}
+
+.mega-menu-item__overlay {
+    background-color: #0000008c;
+    transition: all 0.25s;
+}
+
+.mega-menu-item__buttons {
+    margin-top: -60px;
+    transform: scale(0.8);
+}
+
+.mega-menu-item:hover .mega-menu-item__buttons {
+    transition-delay: 0.1s;
+    margin-top: 0px;
+    transform: scale(1);
+}
+
+/* Mega menu css end */
 /* Top Features Css Start */
 .js-marquee {
     display: flex;
