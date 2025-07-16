@@ -1,21 +1,19 @@
-<!-- ==================== Header Two Start Here ==================== -->
-<header class="header home-two-header @@headerClass">
-    <div class="container">
-        <div
-            class="header-box-inner py-2 py-lg-0 tw-gap-4 tw-lg-ps-12 tw-ps-6 tw-pe-705 bg-white transition-all tw-rounded-lg">
+<!-- ==================== Header Three Start Here ==================== -->
+<header class="header py-0 top-0 tw-start-0 tw-end-0 w-100 tw-z-99 position-absolute">
+    <div class="container max-w-1720-px">
+        <div class="header-three__inner py-2 py-lg-0 transition-all">
             <nav class="d-flex align-items-center justify-content-between position-relative">
                 <!-- Logo Start -->
                 <div class="logo">
                     <a href="index.html" class="link hover--translate-y-1 active--translate-y-scale-9">
-                        <img src="assets/images/logo/@@logoText" alt="Logo" class="max-w-200-px">
+                        <img src="assets/images/logo/logo-white-three.png" alt="Logo" class="max-w-200-px" />
                     </a>
                 </div>
                 <!-- Logo End  -->
 
                 <!-- Menu Start  -->
                 <div class="header-menu d-lg-block d-none">
-                    @@include('../partials/@@navMenu', {
-                    "class" : "tw-gap-7"
+                    @@include('../partials/_nav-menu-three.html', { "class" : "tw-gap-7"
                     })
                 </div>
                 <!-- Menu End  -->
@@ -24,7 +22,7 @@
                 <div class="d-flex align-items-center tw-gap-6">
                     <div class="d-flex align-items-center tw-gap-6">
                         <a href="login.html"
-                            class="d-flex align-items-center tw-gap-105 d-xl-flex d-none text-heading hover-text-main-600">
+                            class="d-flex align-items-center tw-gap-105 d-xl-flex d-none text-white hover-text-main-600">
                             <span class="tw-text-base text-main-600 d-flex tw-leading-none">
                                 <i class="ph-bold ph-user"></i>
                             </span>
@@ -32,7 +30,7 @@
                         </a>
 
                         <a href="register.html"
-                            class="hover--translate-y-1 active--translate-y-scale-9 btn button--stroke d-lg-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 px-xxl-5 px-xl-4 px-3 tw-py-405 fw-medium @@btnClass"
+                            class="hover--translate-y-1 active--translate-y-scale-9 btn button--stroke d-lg-flex d-none align-items-center justify-content-center tw-gap-5 group active--translate-y-2 px-xxl-5 px-xl-4 px-3 tw-py-405 fw-medium rounded-pill btn-main hover-style-one common-shadow-inset-one"
                             data-block="button">
                             <span class="button__flair"></span>
                             <span class="button__label">Get Started</span>
@@ -47,4 +45,4 @@
         </div>
     </div>
 </header>
-<!-- ==================== Header Two End Here ==================== -->
+<!-- ==================== Header Three End Here ==================== -->
