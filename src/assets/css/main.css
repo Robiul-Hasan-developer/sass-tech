@@ -4091,6 +4091,10 @@ input:focus, input:focus-visible {
     max-height: 410px;
 }
 
+.tw-max-h-110-px {
+    max-height: 110px;
+}
+
 .tw-max-h-588-px {
     max-height: 588px;
 }
@@ -6505,11 +6509,16 @@ input:focus, input:focus-visible {
     inset-inline-end: 0px !important;
 }
 
+.settings-panel.active .settings-panel__content {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
 .settings-panel__content {
     pointer-events: all;
     width: 280px;
     max-height: 100vh;
     overflow-y: auto;
+    transition: inherit;
 }
 
 .settings-panel__button.active {
@@ -8123,7 +8132,7 @@ svg.radial-progress text {
 }
 /* About Six Css end */
 /* Service Six Css start */
-.service-six {
+.section-box {
     border-radius: 20px;
     overflow: hidden;
     margin-inline: 24px;
@@ -8131,7 +8140,7 @@ svg.radial-progress text {
 }
 
 @media (min-width: 1200px) {
-    .service-six {
+    .section-box {
         margin-inline: 40px;
         padding-inline: 24px;
     }
