@@ -98,15 +98,13 @@
         }
     }
 
+    .hover-style-one .button__flair::before {
+        background-color: #164333 !important;
+    }
+
     .hover-style-two {
         .button__flair::before {
             background: var(--main-600);
-        }
-    }
-
-    .hover-style-one {
-        .button__flair::before {
-            background-color: var(--main-two-600) !important;
         }
     }
 

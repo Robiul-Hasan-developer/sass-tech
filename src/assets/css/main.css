@@ -5118,6 +5118,10 @@ input:focus, input:focus-visible {
     padding-inline: clamp(1rem, -1rem + 8vw, 2.25rem);
 }
 
+.tw-px-44-px {
+    padding-inline: clamp(1rem, -1rem + 8vw, 2.75rem);
+}
+
 .tw-px-54-px {
     padding-inline: clamp(1rem, -6.1013rem + 9.4763vw, 3.375rem);
 }
@@ -5144,6 +5148,10 @@ input:focus, input:focus-visible {
 
 .tw-py-54-px {
     padding-block: clamp(1.5rem, -0.2308rem + 3.6058vw, 3.375rem);
+}
+
+.tw-py-66-px {
+    padding-block: clamp(1.5rem, -0.2308rem + 3.6058vw, 4.125rem);
 }
 
 .tw-py-76-px {
@@ -5691,6 +5699,10 @@ input:focus, input:focus-visible {
 
 .hover-common-shadow-sixteen:hover {
     box-shadow: 0px 14px 31px -2px #2021241A;
+}
+
+.hover-common-shadow-thirty:hover {
+    box-shadow: 7px 7px 0px #164333;
 }
 
 .hover-shadow-none:hover {
@@ -8057,12 +8069,12 @@ svg.radial-progress text {
     color: hsl(var(--white)) !important;
 }
 
-.home-six .hover-style-two .button__flair::before {
-    background: var(--main-600);
+.home-six .hover-style-one .button__flair::before {
+    background-color: #164333 !important;
 }
 
-.home-six .hover-style-one .button__flair::before {
-    background-color: var(--main-two-600) !important;
+.home-six .hover-style-two .button__flair::before {
+    background: var(--main-600);
 }
 
 .home-six .header.fixed-header {
