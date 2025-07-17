@@ -8146,6 +8146,12 @@ svg.radial-progress text {
     }
 }
 /* Service Six Css end */
+/* download app six css start */
+.download-app-six-thumbs {
+    inset-inline-start: 45%;
+}
+
+/* download app six css end */
 /* ==================== Breadcrumb Start Here ==================== */
 .breadcrumb {
     padding-block-start: 270px;
