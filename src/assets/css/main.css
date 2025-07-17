@@ -5126,8 +5126,16 @@ input:focus, input:focus-visible {
     padding-inline: clamp(1.5rem, -1rem + 8vw, 3.5rem);
 }
 
+.tw-px-48-px {
+    padding-inline: clamp(1.5rem, 0.1154rem + 2.8846vw, 3rem);
+}
+
 .tw-px-88-px {
     padding-inline: clamp(1.5rem, -1rem + 8vw, 5.5rem);
+}
+
+.tw-py-54-px {
+    padding-block: clamp(1.5rem, -0.2308rem + 3.6058vw, 3.375rem);
 }
 
 .tw-py-76-px {
@@ -5657,6 +5665,10 @@ input:focus, input:focus-visible {
     box-shadow: 0px 4px 4px 0px #0000000D;
 }
 
+.common-shadow-thirty {
+    box-shadow: 7px 7px 0px #164333;
+}
+
 .common-shadow-inset-one {
     box-shadow: -2px -2px 2px 0px #070D1D4D inset;
 }
@@ -5671,6 +5683,10 @@ input:focus, input:focus-visible {
 
 .hover-common-shadow-sixteen:hover {
     box-shadow: 0px 14px 31px -2px #2021241A;
+}
+
+.hover-shadow-none:hover {
+    box-shadow: none;
 }
 
 .active-domain {
@@ -7941,11 +7957,6 @@ svg.radial-progress text {
 /* Offer Five section End */
 .home-six:root {
     --heading-one: clamp(2.25rem, -0.0733rem + 5.5vw, 5.625rem);
-    --heading-two: clamp(2rem, 0.3353rem + 2.1661vw, 3.5rem);
-    --heading-three: clamp(1.5rem, 0.7133rem + 2.8846vw, 1.75rem);
-    --heading-four: clamp(1.25rem, 1.2rem + 0.722vw, 1.5rem);
-    --heading-five: clamp(1.125rem, 0.769rem + 0.6813vw, 1.25rem);
-    --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.125rem);
   /* template main color */
     color: #e7fd58;
     --main-h: 68;
