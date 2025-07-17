@@ -7974,6 +7974,7 @@ svg.radial-progress text {
     --main-two-l: 11%;
     --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
     --heading-color: #0F2F0B;
+    --heading-font: "Space Grotesk", sans-serif;
 }
 
 .home-six h1,
@@ -7989,6 +7990,7 @@ svg.radial-progress text {
 .home-six h6,
 .home-six .h6 {
     color: var(--heading-color);
+    font-family: var(--heading-font);
 }
 
 .home-six h1,
@@ -8023,6 +8025,10 @@ svg.radial-progress text {
 
 .home-six .font-caveat {
     font-family: "Caveat", cursive;
+}
+
+.home-six .font-heading {
+    font-family: var(--heading-font);
 }
 
 .home-six .text-heading {
@@ -8116,6 +8122,21 @@ svg.radial-progress text {
     }
 }
 /* About Six Css end */
+/* Service Six Css start */
+.service-six {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-inline: 24px;
+    padding-inline: 8px;
+}
+
+@media (min-width: 1200px) {
+    .service-six {
+        margin-inline: 40px;
+        padding-inline: 24px;
+    }
+}
+/* Service Six Css end */
 /* ==================== Breadcrumb Start Here ==================== */
 .breadcrumb {
     padding-block-start: 270px;

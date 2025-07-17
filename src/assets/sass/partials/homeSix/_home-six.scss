@@ -23,6 +23,7 @@
         --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
 
         --heading-color: #0F2F0B;
+        --heading-font: "Space Grotesk", sans-serif;
     }
 
     h1,
@@ -38,6 +39,7 @@
     h6,
     .h6 {
         color: var(--heading-color);
+        font-family: var(--heading-font);
     }
 
     h1,
@@ -72,6 +74,10 @@
 
     .font-caveat {
         font-family: "Caveat", cursive;
+    }
+
+    .font-heading {
+        font-family: var(--heading-font);
     }
 
     .text-heading {
