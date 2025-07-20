@@ -6048,6 +6048,10 @@ input:focus, input:focus-visible {
     line-height: 1.53;
 }
 
+.tw-leading-18 {
+    line-height: 1.8;
+}
+
 .tw-leading-212 {
     line-height: 2.125;
 }

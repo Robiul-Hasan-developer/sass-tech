@@ -807,6 +807,31 @@
       },
     });
     // ========================= Shop Details Slider Js End =====================
+    
+    // ========================= Testimonials Six Slider Js Start =====================
+    var testimonialsSixSlider = new Swiper(".testimonials-six-slider", {
+      slidesPerView: 2,
+      spaceBetween: 24,
+      centeredSlides: true,
+      grabCursor: true,
+      loop: true,
+      speed: 1000,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        300: {
+          centeredSlides: false,
+          slidesPerView: 1,
+        },
+        768: {
+          centeredSlides: true,
+          slidesPerView: 2,
+        },
+      },
+    });
+    // ========================= Testimonials Six Slider Js End =====================
 
     // ========================= Color Picker Js Start =====================
     $(document).on("click", ".color-picker", function () {
