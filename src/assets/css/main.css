@@ -241,7 +241,8 @@
     border-left: 4px solid transparent !important;
 }
 
-.accordion-border-left .accordion-item:has(.accordion-collapse.show), .accordion-border-left .accordion-item:has(.accordion-button[aria-expanded=true]) {
+.accordion-border-left .accordion-item:has(.accordion-collapse.show),
+.accordion-border-left .accordion-item:has(.accordion-button[aria-expanded=true]) {
     border-left: 4px solid var(--main-600) !important;
     background: #fff !important;
 }
@@ -255,7 +256,8 @@
     border-radius: 0 !important;
 }
 
-.accordion.style-two .accordion-item:has(.accordion-collapse.show), .accordion.style-two .accordion-item:has(.accordion-button[aria-expanded=true]) {
+.accordion.style-two .accordion-item:has(.accordion-collapse.show),
+.accordion.style-two .accordion-item:has(.accordion-button[aria-expanded=true]) {
     border-left: 0 !important;
     background: #fff !important;
     box-shadow: 0 20px 20px 0 #03041C14;
@@ -298,7 +300,8 @@
     margin-bottom: 16px !important;
 }
 
-.accordion.style-two-three .accordion-item:has(.accordion-collapse.show), .accordion.style-two-three .accordion-item:has(.accordion-button[aria-expanded=true]) {
+.accordion.style-two-three .accordion-item:has(.accordion-collapse.show),
+.accordion.style-two-three .accordion-item:has(.accordion-button[aria-expanded=true]) {
     background: var(--neutral-100) !important;
     box-shadow: none;
     border-radius: 14px !important;
@@ -308,6 +311,22 @@
 .accordion.style-two-three .accordion-button::before {
     border: 1px solid var(--neutral-600);
     font-weight: 900;
+}
+
+.accordion.style-three .accordion-button::before {
+    position: absolute;
+    content: "\e136";
+    font-family: "Phosphor";
+    font-size: 1rem;
+    font-weight: 800;
+    inset-inline-end: 0;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    color: var(--neutral-500);
+}
+
+.accordion.style-three .accordion-button[aria-expanded=true]::before {
+    content: "\e13c";
 }
 
 .accordion.arrow-bg-orange .accordion-button[aria-expanded=true]::before {
